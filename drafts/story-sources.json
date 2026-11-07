@@ -1,0 +1,306 @@
+{
+  "status": "Local story animation for feedback; excluded from the release package",
+  "duration_seconds": 41,
+  "video_fps": 30,
+  "gif_fps": 25,
+  "video_size": [
+    720,
+    1280
+  ],
+  "gif_size": [
+    540,
+    960
+  ],
+  "plot": "Radar polygons show annual mean framing scores, not individual-paper profiles.",
+  "radial_scale": {
+    "minimum": -0.6,
+    "maximum": 0.6,
+    "units": "full-corpus standard deviations",
+    "shared_across_all_axes_and_frames": true
+  },
+  "interpolation": "C1 shape-preserving PCHIP interpolation through all ten observed annual means, with a continuously and linearly moving year cursor during the six-second middle section. No within-year measurements are asserted.",
+  "illustrations": "The proof/error-bound curve, assumptions-to-proof-to-guarantee sequence and web-to-dataset flow are conceptual animations, not empirical figures.",
+  "yearly": [
+    {
+      "year": 2015,
+      "n_papers": 403,
+      "means": {
+        "resource_benchmark_genre": -0.4060927201971117,
+        "formal_theory_genre": 0.5492067220691568,
+        "empirical_performance_evidence": -0.3852624018246101,
+        "scale_capability_rhetoric": -0.2829961142797504,
+        "artifact_release_orientation": -0.12207252648345386
+      }
+    },
+    {
+      "year": 2016,
+      "n_papers": 569,
+      "means": {
+        "resource_benchmark_genre": -0.34560123638569784,
+        "formal_theory_genre": 0.41278297090173305,
+        "empirical_performance_evidence": -0.29528212673838433,
+        "scale_capability_rhetoric": -0.2393612254878448,
+        "artifact_release_orientation": -0.12482921053595424
+      }
+    },
+    {
+      "year": 2017,
+      "n_papers": 679,
+      "means": {
+        "resource_benchmark_genre": -0.33214276375977114,
+        "formal_theory_genre": 0.34418861071462237,
+        "empirical_performance_evidence": -0.25505898967051693,
+        "scale_capability_rhetoric": -0.1921971326551175,
+        "artifact_release_orientation": -0.050991494426495504
+      }
+    },
+    {
+      "year": 2018,
+      "n_papers": 1009,
+      "means": {
+        "resource_benchmark_genre": -0.248168594575738,
+        "formal_theory_genre": 0.2627660840775846,
+        "empirical_performance_evidence": -0.22188924108042074,
+        "scale_capability_rhetoric": -0.22631267098510077,
+        "artifact_release_orientation": -0.04845903129623713
+      }
+    },
+    {
+      "year": 2019,
+      "n_papers": 1428,
+      "means": {
+        "resource_benchmark_genre": -0.26888187961669585,
+        "formal_theory_genre": 0.26765616696609634,
+        "empirical_performance_evidence": -0.24528147828946434,
+        "scale_capability_rhetoric": -0.19286158106063328,
+        "artifact_release_orientation": -0.0967421597533911
+      }
+    },
+    {
+      "year": 2020,
+      "n_papers": 1898,
+      "means": {
+        "resource_benchmark_genre": -0.24730459583443812,
+        "formal_theory_genre": 0.20546104252679429,
+        "empirical_performance_evidence": -0.2132403977242308,
+        "scale_capability_rhetoric": -0.1783082449565979,
+        "artifact_release_orientation": -0.05368020675864768
+      }
+    },
+    {
+      "year": 2021,
+      "n_papers": 2508,
+      "means": {
+        "resource_benchmark_genre": -0.06849070163850093,
+        "formal_theory_genre": 0.05155852730030636,
+        "empirical_performance_evidence": -0.06902718184281825,
+        "scale_capability_rhetoric": -0.05740392815422258,
+        "artifact_release_orientation": -0.018515376003059334
+      }
+    },
+    {
+      "year": 2022,
+      "n_papers": 2834,
+      "means": {
+        "resource_benchmark_genre": -0.06281894837782911,
+        "formal_theory_genre": 0.0378989061521603,
+        "empirical_performance_evidence": -0.07282893070980492,
+        "scale_capability_rhetoric": -0.025010431660760436,
+        "artifact_release_orientation": -0.013852551050239631
+      }
+    },
+    {
+      "year": 2023,
+      "n_papers": 3540,
+      "means": {
+        "resource_benchmark_genre": 0.12229775913270564,
+        "formal_theory_genre": -0.1267599088772817,
+        "empirical_performance_evidence": 0.10644909361718403,
+        "scale_capability_rhetoric": 0.07170199558823115,
+        "artifact_release_orientation": 0.02354331895241047
+      }
+    },
+    {
+      "year": 2024,
+      "n_papers": 4493,
+      "means": {
+        "resource_benchmark_genre": 0.35754428607421723,
+        "formal_theory_genre": -0.33723595352074826,
+        "empirical_performance_evidence": 0.3289622462613784,
+        "scale_capability_rhetoric": 0.2635108495195576,
+        "artifact_release_orientation": 0.09929348239874265
+      }
+    }
+  ],
+  "examples": [
+    {
+      "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+      "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/c058f544c737782deacefa532d9add4c-Abstract.html",
+      "scores": {
+        "resource_benchmark_genre": -1.924,
+        "formal_theory_genre": 1.8985,
+        "empirical_performance_evidence": -0.9307,
+        "scale_capability_rhetoric": -1.4429,
+        "artifact_release_orientation": -0.5336
+      },
+      "citation_snapshot": {
+        "provider": "Semantic Scholar",
+        "count": 473,
+        "accessed": "2026-10-23",
+        "record_url": "https://www.semanticscholar.org/paper/8b56449fa9aeadcf86181697e9ec2269419d8817",
+        "api_url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1511.05932?fields=title,year,citationCount,influentialCitationCount,url,externalIds,venue",
+        "displayed_in_animation": false,
+        "note": "Used only when selecting an influential example; not a quality score or cross-year citation comparison."
+      },
+      "contribution": "Global linear convergence results for four Frank-Wolfe variants under relaxed assumptions.",
+      "selection": "One influential theory-focused example, not an average or representative 2015 paper."
+    },
+    {
+      "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+      "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+      "year": 2024,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/370df50ccfdf8bde18f8f9c2d9151bda-Abstract-Datasets_and_Benchmarks_Track.html",
+      "scores": {
+        "resource_benchmark_genre": 2.6199,
+        "formal_theory_genre": -1.7029,
+        "empirical_performance_evidence": 1.4267,
+        "scale_capability_rhetoric": 2.7881,
+        "artifact_release_orientation": 1.4296
+      },
+      "dataset_snapshot": {
+        "label": "2024 paper release",
+        "tokens": 15000000000000,
+        "common_crawl_snapshots": 96,
+        "source_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/370df50ccfdf8bde18f8f9c2d9151bda-Abstract-Datasets_and_Benchmarks_Track.html",
+        "accessed": "2026-10-23",
+        "note": "These are the original paper's figures, not the subsequently expanded live dataset."
+      },
+      "selection": "An illustrative resource-building paper in the Datasets and Benchmarks track."
+    }
+  ],
+  "scrolling_examples": [
+    {
+      "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+      "title": "Algorithmic Stability and Uniform Generalization",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/6512bd43d9caa6e02c990b0a82652dca-Abstract.html"
+    },
+    {
+      "paper_id": "main_2015_404dcc91b2aeaa7caa47487d1483e48a_default",
+      "title": "Convergence rates of sub-sampled Newton methods",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/404dcc91b2aeaa7caa47487d1483e48a-Abstract.html"
+    },
+    {
+      "paper_id": "main_2015_0ebcc77dc72360d0eb8e9504c78d38bd_default",
+      "title": "Bayesian Optimization with Exponential Convergence",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/0ebcc77dc72360d0eb8e9504c78d38bd-Abstract.html"
+    },
+    {
+      "paper_id": "main_2015_c0f168ce8900fa56e57789e2a2f2c9d0_default",
+      "title": "Finite-Time Analysis of Projected Langevin Monte Carlo",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/c0f168ce8900fa56e57789e2a2f2c9d0-Abstract.html"
+    },
+    {
+      "paper_id": "main_2015_7fec306d1e665bc9c748b5d2b99a6e97_default",
+      "title": "Communication Complexity of Distributed Convex Learning and Optimization",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/7fec306d1e665bc9c748b5d2b99a6e97-Abstract.html"
+    },
+    {
+      "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+      "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+      "year": 2015,
+      "proceedings_url": "https://proceedings.neurips.cc/paper_files/paper/2015/hash/309fee4e541e51de2e41f21bebb342aa-Abstract.html"
+    }
+  ],
+  "scrolling_selection": "Six selected 2015 theory-focused papers illustrate the contribution style. Their number is not a sample proportion; no scores or author rankings are shown.",
+  "theory_extrema": {
+    "maximum_year": 2015,
+    "minimum_year": 2024,
+    "scope": "Annual mean formal-theory framing, not counts of paper types or popularity. Overlapping axes are separately standardized and cannot establish which paper type is most or least common."
+  },
+  "storyboard": [
+    {
+      "seconds": [
+        0,
+        7.5
+      ],
+      "scene": "2015 theory paper: a drawn convergence bound and assumptions leading through proof to a mathematical guarantee"
+    },
+    {
+      "seconds": [
+        7.5,
+        13.5
+      ],
+      "scene": "Six real 2015 theory-paper titles scroll beneath the decade-high theory-framing headline"
+    },
+    {
+      "seconds": [
+        13.5,
+        15
+      ],
+      "scene": "The examples recede and the view widens to the conference"
+    },
+    {
+      "seconds": [
+        15,
+        21
+      ],
+      "scene": "The radar and timeline move continuously from 2015 through 2024 as contribution emphases change"
+    },
+    {
+      "seconds": [
+        21,
+        25
+      ],
+      "scene": "The 2024 profile holds as the headline identifies the decade-low theory-framing mean"
+    },
+    {
+      "seconds": [
+        25,
+        27
+      ],
+      "scene": "Radar recedes into the background as the 2024 paper enters"
+    },
+    {
+      "seconds": [
+        27,
+        35
+      ],
+      "scene": "FineWeb, flowing web pages and its 2024 dataset scale"
+    },
+    {
+      "seconds": [
+        35,
+        41
+      ],
+      "scene": "The current FineWeb headline fades into the unchanged approved final slide"
+    }
+  ],
+  "headlines": [
+    "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
+    "Back then, formal-theory framing was at its highest level of the decade.",
+    "But as time went on, accepted papers placed more emphasis on other contributions.",
+    "By 2024, formal-theory framing had fallen to its decade low.",
+    "By contrast, FineWeb builds a resource that other researchers can use.",
+    "NeurIPS framing shifted away from formal theory and toward resources and benchmarks."
+  ],
+  "headline_layout": "Each scene has one complete sentence in a fixed top-third reading area. Temporal and contrastive transitions connect the sentences into a continuous account of the paper's central finding. A separate large current-year label updates from 2015 to 2024 while the chart and timeline cursor move continuously. The year stays fully legible between updates.",
+  "closing_sentence": "NeurIPS framing shifted away from formal theory and toward resources and benchmarks.",
+  "interpretation": "Accepted papers' titles and abstracts, 2015–2024. Examples illustrate framing, not typicality or research quality. Annual averages are unadjusted and partly reflect topic and track composition. Formal-theory framing declined; it did not disappear.",
+  "artifacts": {
+    "evidence-framing-shift.gif": {
+      "bytes": 20826904,
+      "sha256": "46e5722fee5cace5c51866bbf57d2e97d7e1ba773c6e04ecab147ae5c389a62a"
+    },
+    "evidence-framing-shift.mp4": {
+      "bytes": 2173988,
+      "sha256": "e919421cce0e989b94855e4820911e72db9d5c1d82f589ae473fd9a438a4f396"
+    }
+  }
+}

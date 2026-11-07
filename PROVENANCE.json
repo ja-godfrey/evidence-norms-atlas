@@ -1,0 +1,63 @@
+{
+  "source_release": "https://www.kaggle.com/datasets/jasongodfrey/neurips-evidence-framing-audit/versions/4",
+  "source_directory": "reproducibility-code/atlas/",
+  "source_asset_sha256": {
+    "prose_shift_atlas.html": "751131589e235269133862ec0c120abb73016800446a6f9ec602d5ffd44cc72c",
+    "animation-preview.html": "263fb3bd60d4493650fc43d6163925ad1bc506c6a594a1f17af550f7eb47d71f",
+    "papers.html": "20a7fa25953728873bbff4d6001313c5d5c9e0ef5e51762249c5b3a8eda7ebdc",
+    "drafts/story-sources-wide.json": "98dee4035fe3c5d5682c1d90501aece1c5345d1c48437f31b1e03439ebe7deca",
+    "drafts/evidence-framing-shift-wide-comparison.png": "3a5b938155e52e48d3ef8704e47cfa2679eddfe279d0c63eaabf63457be2d4ab",
+    "drafts/evidence-framing-shift-comparison.png": "75803f5051ef30b82b50e1c66b30eda42d63b55e90ee068ff685b6964d57b9fe",
+    "drafts/paper-galaxy.json": "c89e4a5c545a00963e72e12527909dcaa68d1f0346ee2d02246d4a9013961277",
+    "drafts/evidence-framing-shift-wide-2015-papers.png": "78a3e82c12ad182a38ffae8754c7873e79885f18ac384335312540ed5652a09e",
+    "drafts/evidence-framing-shift-2015-papers.png": "5a79ccec7e064c1d23e419957a35286ebff4ac24654f300e8c0754e614a0968b",
+    "drafts/evidence-framing-shift-poster.png": "b9c48bcac03f6e06969de667c02a596f11e28983f773baf7ad6764fdc2daac34",
+    "drafts/evidence-framing-shift-wide-poster.png": "1085dfc9ba5fa82d072ece1282948db28222ecbbb812e0aad564fbb575c5fe27",
+    "drafts/evidence-framing-shift-wide-2024.png": "be474faf1d5d4e7a73d4c3fe7dcb009e80af7979fd76a1f8a58ba8f17b1e18d7",
+    "drafts/evidence-framing-shift-morph.png": "4447f82bb55b70abfe32a195b9545ec60f876f17fa16b44086cad63e503b978f",
+    "drafts/story-sources.json": "83bc3f68e621f1fb3f325df226757ee0e8b3b1c57a6956be6e5777c3796d07b0",
+    "drafts/framing-galaxy-method.json": "1d8e00ec0ed4bb24bf9d95ac930baa7b4d1a97a501f7683a2c3351a7a855cee7",
+    "drafts/framing-galaxy.json": "85142cfeeccc4b23cb91b04386c6cf0099155d20a1123f57ba04a7299c2fee46",
+    "drafts/paper-galaxy-method.json": "b6a1613f62e9d5c10a462d3bf1c6191743ad063d02957184e8aa22e58ef95966",
+    "drafts/evidence-framing-shift-wide-2024-theory.png": "e8748dc67a30641af753a496c8b455aa2b1eaba86b10f229571fc974ec21f2a1",
+    "drafts/evidence-framing-shift.gif": "46e5722fee5cace5c51866bbf57d2e97d7e1ba773c6e04ecab147ae5c389a62a",
+    "drafts/evidence-framing-shift-wide.mp4": "bf9e4cd3b5a129cf82fe5d1e4f5839d3ae63fe73a0704e95c6648fffca27e662",
+    "drafts/evidence-framing-shift-2024-theory.png": "b9ea5714c5f91b3ff3c2db47e31972a6f42d31057af12f144dd543bd3ca505a7",
+    "drafts/evidence-framing-shift-wide.gif": "ca99b199101584777c1d7ed8110eb5803f0a46fcebb031f81ec499ff8670c1a9",
+    "drafts/evidence-framing-shift.mp4": "e919421cce0e989b94855e4820911e72db9d5c1d82f589ae473fd9a438a4f396",
+    "drafts/evidence-framing-shift-wide-morph.png": "ca9a45edbe411b80d329b25aa3147804362218772d5aabd8ff275139b4c1717a",
+    "drafts/evidence-framing-shift-2024.png": "98f3b5484a376e52a115aa497cf46a496a6bccd473dc5c901a221415ade8aae6"
+  },
+  "hosted_url": "https://ja-godfrey.github.io/evidence-norms-atlas/",
+  "repository": "https://github.com/ja-godfrey/evidence-norms-atlas",
+  "prepared_at_utc": "2026-11-07T03:20:26.594098+00:00",
+  "hosting_changes": [
+    "Page title, research navigation and metadata",
+    "Root index.html and animation-preview.html alias",
+    "Hosting README, licenses and provenance",
+    "Relative release-note link adapted to the site root; original published release notes included unchanged"
+  ],
+  "embedded_payload_sha256": {
+    "atlasData": "0785af1200f240f757af4f2eecab6aa6789a04183c31c704688a84f8d9e842b8",
+    "galaxyData": "84b3707b2304727855333243a19dbc071806370c73c2ff506c80298fd1176829"
+  },
+  "all_embedded_payloads_byte_identical_to_release": true,
+  "paper_count": 19361,
+  "data_and_reproduction_code_remain_at": "https://www.kaggle.com/datasets/jasongodfrey/neurips-evidence-framing-audit/versions/4",
+  "relative_link_changes": [
+    {
+      "file": "prose_shift_atlas.html",
+      "from": "../docs/RELEASE_NOTES.md",
+      "to": "docs/RELEASE_NOTES.md",
+      "copied_doc_sha256": "4994bebc8306117b85bf8e6905a3536dee84fd9af51805ebfa0e9803a461b853"
+    }
+  ],
+  "all_original_script_elements_byte_identical_to_release": true,
+  "script_element_sha256": [
+    "78d1818e43d6971948205914faa586bdad9af146414dae338aa4307970faa96a",
+    "7fee043447a81f10b2a46ee28a901cf5e8b8413814ccc14913f7cdd428a81eab",
+    "9514ed5f234bf2d2f6d3067a376c22967369f3e7f9b1fb89b16de4746b6c9f48",
+    "9f752055f25afda72a544200579a8cc872267773e1ff9fb0c859e42759c69b5f",
+    "4aadb78d97a642f150dc253da4a6a1f48189a98fec74a7d18fec40f97b531733"
+  ]
+}

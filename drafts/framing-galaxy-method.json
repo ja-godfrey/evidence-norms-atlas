@@ -1,0 +1,3233 @@
+{
+  "generated_at": "2026-10-24T03:27:50.427396+00:00",
+  "scope": "Local evidence-framing presentation view; separate from semantic topic embeddings and not a new manuscript result.",
+  "paper_count": 19361,
+  "score_axes": [
+    "resource_benchmark_genre",
+    "formal_theory_genre",
+    "empirical_performance_evidence",
+    "scale_capability_rhetoric",
+    "artifact_release_orientation"
+  ],
+  "source_sha256": "bb78f5a2421132856099a04e9221345bb220c696de8d4ffee8eed65709b4d69c",
+  "source_hash_definition": "SHA256 of UTF-8 json.dumps({'paper_ids': ids, 'score_axes': payload['focus_axes'], 'scores': [[p['scores'][a] for a in axes] for p in papers]}, ensure_ascii=False, allow_nan=False, separators=(',', ':')); original payload numeric values are preserved.",
+  "source_files": {
+    "atlas": {
+      "path": "atlas/papers.html",
+      "sha256": "20a7fa25953728873bbff4d6001313c5d5c9e0ef5e51762249c5b3a8eda7ebdc"
+    },
+    "generator": {
+      "path": "scripts/build_framing_galaxy.py",
+      "sha256": "10b4bb7903c625097e5159e95ed6b82fc8e8dd6cda8cf1d9a95c50161f457d75"
+    }
+  },
+  "paper_order": "Exact canonical atlas paper_axis_index order. Neighbor indices address this order.",
+  "input_checks": {
+    "means": [
+      5.1650224070220144e-08,
+      7.231031481144885e-08,
+      -1.0846547242366066e-07,
+      1.652807189034672e-07,
+      2.7891121323152005e-07
+    ],
+    "population_standard_deviations": [
+      0.9999995522399683,
+      1.0000003218877622,
+      1.0000001110771515,
+      0.99999969495785,
+      1.000000194273484
+    ]
+  },
+  "projection": {
+    "method": "UMAP",
+    "n_components": 3,
+    "metric": "euclidean",
+    "input_scaling": "Existing five corpus-standardized scores; no whitening or re-standardization.",
+    "orientation_convention": "Native seeded UMAP coordinates; no post-fit rotation, centering, or per-coordinate scaling.",
+    "all_parameters": {
+      "a": null,
+      "angular_rp_forest": false,
+      "b": null,
+      "dens_frac": 0.3,
+      "dens_lambda": 2.0,
+      "dens_var_shift": 0.1,
+      "densmap": false,
+      "disconnection_distance": null,
+      "force_approximation_algorithm": false,
+      "init": "spectral",
+      "learning_rate": 1.0,
+      "local_connectivity": 1.0,
+      "low_memory": true,
+      "metric": "euclidean",
+      "metric_kwds": null,
+      "min_dist": 0.1,
+      "n_components": 3,
+      "n_epochs": null,
+      "n_jobs": 1,
+      "n_neighbors": 15,
+      "negative_sample_rate": 5,
+      "output_dens": false,
+      "output_metric": "euclidean",
+      "output_metric_kwds": null,
+      "precomputed_knn": [
+        null,
+        null,
+        null
+      ],
+      "random_state": 42,
+      "repulsion_strength": 1.0,
+      "set_op_mix_ratio": 1.0,
+      "spread": 1.0,
+      "target_metric": "categorical",
+      "target_metric_kwds": null,
+      "target_n_neighbors": -1,
+      "target_weight": 0.5,
+      "tqdm_kwds": {
+        "desc": "Epochs completed",
+        "bar_format": "{desc}: {percentage:3.0f}%| {bar} {n_fmt}/{total_fmt} [{elapsed}]",
+        "disable": true
+      },
+      "transform_mode": "embedding",
+      "transform_queue_size": 4.0,
+      "transform_seed": 42,
+      "unique": false,
+      "verbose": false
+    },
+    "numba_num_threads": "1",
+    "blas_thread_limit": 4,
+    "coordinate_rounding_decimals": 6
+  },
+  "parameter_comparison": {
+    "available": true,
+    "report_path": "scratch/framing-layout-comparison/results.json",
+    "report_sha256": "7d206f3d5caff5aeb1ebb896686ee3cc3240d76be4c1962c2d5e15c767c90640",
+    "predefined_configurations": [
+      {
+        "n_neighbors": 15,
+        "min_dist": 0.1,
+        "random_state": 42
+      },
+      {
+        "n_neighbors": 15,
+        "min_dist": 0.35,
+        "random_state": 42
+      },
+      {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "random_state": 42
+      },
+      {
+        "n_neighbors": 30,
+        "min_dist": 0.35,
+        "random_state": 42
+      },
+      {
+        "n_neighbors": 60,
+        "min_dist": 0.1,
+        "random_state": 42
+      },
+      {
+        "n_neighbors": 60,
+        "min_dist": 0.35,
+        "random_state": 42
+      }
+    ],
+    "selection_rule": "Highest selection-query mean exact-neighbor recall@15 among configurations with an improvement of at least0.02 over PCA, trustworthiness no worse than PCA minus0.001, and no top-decile axis group recall regression worse than0.02. Trustworthiness breaks exact recall ties. A second seed is fitted only for the selected parameter setting. Selection ignores visual islands and theory purity.",
+    "selected_seed42_configuration": "u15_m010_s42",
+    "selection_query_seed": 42,
+    "selection_query_ids": [
+      "main_2023_d1d3cdc9e28b0c67b9df90fca4d1c1b3_conference",
+      "main_2024_e6c2e85db1f1039177c4495ccd399ac4_conference",
+      "main_2020_2f3bbb9730639e9ea48f309d9a79ff01_default",
+      "main_2020_865dfbde8a344b44095495f3591f7407_default",
+      "main_2020_4dd9cec1c21bc54eecb53786a2c5fa09_default",
+      "main_2022_93e4d161bdd93d1dc0202b4044159edb_datasets_and_benchmarks",
+      "main_2022_15dce910311b9bd82ca24f634148519a_conference",
+      "main_2020_96fca94df72984fc97ee5095410d4dec_default",
+      "main_2024_5e364212327fa3a59ae3595b025c469f_conference",
+      "main_2024_c4f3846c9a230cfd3373ff419b202bd5_conference",
+      "main_2023_531998dc1fc858b5857a90b74d96ecab_conference",
+      "main_2018_7876acb66640bad41f1e1371ef30c180_default",
+      "main_2021_e0cd3f16f9e883ca91c2a4c24f47b3d9_default",
+      "main_2024_9f9e2982759f384495f4b75a33f3dd72_datasets_and_benchmarks_track",
+      "main_2024_f6adf61977467560f79b95485d1f3a79_conference",
+      "main_2018_8f7d807e1f53eff5f9efbe5cb81090fb_default",
+      "main_2021_c559da2ba967eb820766939a658022c8_default",
+      "main_2020_befe5b0172188ad14d48c3ebe9cf76bf_default",
+      "main_2023_106b2434b8d496c6aed9235d478678af_conference",
+      "main_2023_dcc337bb2a4d25afefd9ab800721debb_conference",
+      "main_2024_5f1b350fc0c2affd56f465faa36be343_conference",
+      "main_2024_a76653a4209b5d098107e5e7e9295ba8_conference",
+      "main_2023_14ecbfb2216bab76195b60bfac7efb1f_conference",
+      "main_2023_ee1e549d6fb7c58ed06557bfc264335c_conference",
+      "main_2022_944618542d80a63bbec16dfbd2bd689a_conference",
+      "main_2021_21ca6d0cf2f25c4dbb35d8dc0b679c3f_default",
+      "main_2020_24bcb4d0caa4120575bb45c8a156b651_default",
+      "main_2022_266983d0949aed78a16fa4782237dea7_conference",
+      "main_2024_14c018d2e72c521605b0567029ef0efb_conference",
+      "main_2020_567b8f5f423af15818a068235807edc0_default",
+      "main_2024_36b6180f3dab4025ba763e853b044814_conference",
+      "main_2020_b90c46963248e6d7aab1e0f429743ca0_default",
+      "main_2018_65b1e92c585fd4c2159d5f33b5030ff2_default",
+      "main_2023_64e2449d74f84e5b1a5c96ba7b3d308e_conference",
+      "main_2015_d9731321ef4e063ebbee79298fa36f56_default",
+      "main_2024_484201c6ad50072c99baa1b26228f714_conference",
+      "main_2024_0735ab358bf9bf0f30af6c871b666ec8_conference",
+      "main_2023_3c0a4c8c236144f1b99b7e1531debe9c_datasets_and_benchmarks",
+      "main_2022_2e32d3a10985fc94c7e11ee6ea165cca_conference",
+      "main_2021_ef1e491a766ce3127556063d49bc2f98_default",
+      "main_2024_1cb57fcf7ff3f6d37eebae5becc9ea6d_conference",
+      "main_2023_c9cde817d04811ba28e44071bd9f76a5_conference",
+      "main_2024_a7f67788f7b4d77fa7cd6887de3dcbe7_datasets_and_benchmarks_track",
+      "main_2019_8a0e1141fd37fa5b98d5bb769ba1a7cc_default",
+      "main_2023_06fc7ae4a11a7eb5e20fe018db6c036f_conference",
+      "main_2019_564645fbd0332f066cbd9d083ddd077c_default",
+      "main_2024_cbc50abfb446dce0caae140b89d6ca12_datasets_and_benchmarks_track",
+      "main_2015_459a4ddcb586f24efd9395aa7662bc7c_default",
+      "main_2021_d4c2e4a3297fe25a71d030b67eb83bfc_default",
+      "main_2023_d84c0dd9b1bfeee361f3268dcaebf849_conference",
+      "main_2018_fdaa09fc5ed18d3226b3a1a00f1bc48c_default",
+      "main_2023_b41907dd4df5c60f86216b73fe0c7465_conference",
+      "main_2018_54fe976ba170c19ebae453679b362263_default",
+      "main_2024_4309616aaed8e848009bc4a7ef73b493_conference",
+      "main_2023_3c557a3d6a48cc99444f85e924c66753_datasets_and_benchmarks",
+      "main_2019_1770ae9e1b6bc9f5fd2841f141557ffb_default",
+      "main_2022_c1f7b1ed763e9c75e4db74b49b76db5f_conference",
+      "main_2023_08f9de0232c0b485110237f6e6cf88f1_conference",
+      "main_2016_1aa48fc4880bb0c9b8a3bf979d3b917e_default",
+      "main_2022_62e5721247075dd097023d077d8e22f7_conference",
+      "main_2024_a0da098e0031f58269efdcba40eedf47_conference",
+      "main_2024_c55aeaa3a85954615319a7e55c81197a_conference",
+      "main_2020_b6c8cf4c587f2ead0c08955ee6e2502b_default",
+      "main_2022_84bad835faaf48f24d990072bb5b80ee_conference",
+      "main_2024_c0f7ee1901fef1da4dae2b88dfd43195_conference",
+      "main_2020_fae0b27c451c728867a567e8c1bb4e53_default",
+      "main_2023_656faa09eb6e82dd86de9a417111c3b0_conference",
+      "main_2022_71b17f00017da0d73823ccf7fbce2d4f_conference",
+      "main_2022_5297e56ac65ba2bfa70ee9fc4818c042_conference",
+      "main_2018_d43ab110ab2489d6b9b2caa394bf920f_default",
+      "main_2020_ddd808772c035aed516d42ad3559be5f_default",
+      "main_2024_d4b6ccf3acd6ccbc1093e093df345ba2_conference",
+      "main_2021_a7d8ae4569120b5bec12e7b6e9648b86_default",
+      "main_2017_da0d1111d2dc5d489242e60ebcbaf988_default",
+      "main_2024_a40ff56daab9f4808b1e18350c8a11ce_conference",
+      "main_2022_d791394d32c428aecc7a5b101fb47799_conference",
+      "main_2018_aa0d2a804a3510442f2fd40f2100b054_default",
+      "main_2021_f3a4ff4839c56a5f460c88cce3666a2b_default",
+      "main_2018_cebd648f9146a6345d604ab093b02c73_default",
+      "main_2024_34d3cf97696022b179171e5abda42c0b_conference",
+      "main_2023_ccf6d8b4a1fe9d9c8192f00c713872ea_conference",
+      "main_2017_ef0d3930a7b6c95bd2b32ed45989c61f_default",
+      "main_2023_abf3682c9cf9245a0294a4bebe4544ff_conference",
+      "main_2016_1f34004ebcb05f9acda6016d5cc52d5e_default",
+      "main_2024_1e027da6bec9ceb2ec37951ceeccae93_conference",
+      "main_2024_5e88ccc6d03f08e426de9bb918aa1bca_conference",
+      "main_2019_cb3ce9b06932da6faaa7fc70d5b5d2f4_default",
+      "main_2021_d1588e685562af341ff2448de4b674d1_default",
+      "main_2022_f0722b58f02d7793acf7d328928f933a_conference",
+      "main_2023_f25602918e8a0d0c86e3c752ecfbbaa1_conference",
+      "main_2023_903f778fe1341e5351b5b63e0e6b197f_conference",
+      "main_2024_a4c680b456b9750003c8a494a5b165dc_conference",
+      "main_2022_6fb83b240844d0e3eb8d457072a071ad_conference",
+      "main_2020_d3b1fb02964aa64e257f9f26a31f72cf_default",
+      "main_2018_a01a0380ca3c61428c26a231f0e49a09_default",
+      "main_2024_d16152d53088ad779ffa634e7bf66166_conference",
+      "main_2023_7a0f7e9d9b42b26e5bfc9ba4c6e5287c_conference",
+      "main_2015_dbe272bab69f8e13f14b405e038deb64_default",
+      "main_2018_d3157f2f0212a80a5d042c127522a2d5_default",
+      "main_2020_a5585a4d4b12277fee5cad0880611bc6_default",
+      "main_2020_2051bd70fc110a2208bdbd4a743e7f79_default",
+      "main_2019_7283518d47a05a09d33779a17adf1707_default",
+      "main_2015_a9eb812238f753132652ae09963a05e9_default",
+      "main_2024_ad217e0c7fecc71bdf48660ad6714b07_conference",
+      "main_2019_0c215f194276000be6a6df6528067151_default",
+      "main_2021_f44ec26e2ac3f1ab8c2472d4b1c2ea86_default",
+      "main_2022_66f09010d989c83faeeac2617464b6a4_conference",
+      "main_2022_65338cfb603d4871a2c38e53a3e039c9_conference",
+      "main_2024_d52ae52af3e3fcf1266fb1f282fd7206_conference",
+      "main_2021_0919b5c38396c3f0c41f1112d538e42c_default",
+      "main_2024_02ee6b7295f720407b56c457b34c54d5_datasets_and_benchmarks_track",
+      "main_2024_f03fc3545c3cfb3aa696ad6d58eed1a7_conference",
+      "main_2020_f50a6c02a3fc5a3a5d4d9391f05f3efc_default",
+      "main_2020_a8acc28734d4fe90ea24353d901ae678_default",
+      "main_2019_bf499a12e998d178afd964adf64a60cb_default",
+      "main_2016_c4492cbe90fbdbf88a5aec486aa81ed5_default",
+      "db_2021_c9e1074f5b3f9fc8ea15d152add07294_round2",
+      "main_2023_b316495425d076b4abffc065a64c2cca_conference",
+      "main_2023_0fa81c3f0d57f95b8776de3a248ef0ed_conference",
+      "main_2021_6a30e32e56fce5cf381895dfe6ca7b6f_default",
+      "main_2019_8471bda5e6201d30893c3582ee131d4d_default",
+      "main_2023_d94b46ec30adee2bbb134f813fc9dde0_conference",
+      "main_2019_2d44e06a7038f2dd98f0f54c4be35e22_default",
+      "main_2024_81858558b55a8c63763cfe088090242a_conference",
+      "main_2024_3bf80b34f731313b8292f4578e820c90_conference",
+      "main_2017_7876acb66640bad41f1e1371ef30c180_default",
+      "main_2018_a50abba8132a77191791390c3eb19fe7_default",
+      "main_2016_55b1927fdafef39c48e5b73b5d61ea60_default",
+      "main_2020_3f8b2a81da929223ae025fcec26dde0d_default",
+      "main_2024_bbd7d8bd780fcf7143add2317ba04638_conference",
+      "main_2024_b09e445cd23b356589e8a0e39e84549f_conference",
+      "main_2015_38ca89564b2259401518960f7a06f94b_default",
+      "main_2020_788d986905533aba051261497ecffcbb_default",
+      "main_2021_8606f35ec6c77858dfb80a385d0d1151_default",
+      "main_2023_da31f4275972a58406b95c277ce7bc8d_conference",
+      "main_2023_ccba10dd4e80e7276054222bb95d467c_conference",
+      "main_2018_1f4fe6a4411edc2ff625888b4093e917_default",
+      "main_2024_7b78a2a7360d5a9ad750834dc5a33bfb_conference",
+      "main_2021_793bc52a941b3951dfdb85fb04f9fd06_default",
+      "main_2021_c61aed648da48aa3893fb3eaadd88a7f_default",
+      "main_2023_67089958e98b243d5cc1881ad60418b8_conference",
+      "main_2021_286674e3082feb7e5afb92777e48821f_default",
+      "main_2023_fd750154df5f199f94df897975621306_conference",
+      "main_2016_07563a3fe3bbe7e3ba84431ad9d055af_default",
+      "main_2021_019f8b946a256d9357eadc5ace2c8678_default",
+      "main_2022_372593bd318ad8b34b3a8da77e20272b_conference",
+      "main_2022_8511d06d5590f4bda24d42087802cc81_conference",
+      "db_2021_4734ba6f3de83d861c3176a6273cac6d_round2",
+      "main_2024_837b396039248acb08c385bebb6291b4_conference",
+      "main_2020_13f3cf8c531952d72e5847c4183e6910_default",
+      "main_2024_8198901c33d24a391b4c6b3f30f253ce_conference",
+      "main_2024_4c8c6de56ecdd05e61abcd9e057c6142_datasets_and_benchmarks_track",
+      "main_2023_ddfe6bae7b869e819f842753009b94ad_conference",
+      "db_2021_fe131d7f5a6b38b23cc967316c13dae2_round2",
+      "main_2024_824f98c4e9bb301b0b96fa2ae071360b_conference",
+      "main_2019_26cd8ecadce0d4efd6cc8a8725cbd1f8_default",
+      "main_2024_ed165f2ff227cf36c7e3ef88957dadd9_conference",
+      "main_2024_d52d2281babd36913643392a09a56832_conference",
+      "main_2021_fa246d0262c3925617b0c72bb20eeb1d_default",
+      "main_2020_daf642455364613e2120c636b5a1f9c7_default",
+      "main_2016_c5ff2543b53f4cc0ad3819a36752467b_default",
+      "main_2022_9f81a6e7081497b2d458689a4ce39fc7_conference",
+      "main_2019_5446f217e9504bc593ad9dcf2ec88dda_default",
+      "main_2019_8b5040a8a5baf3e0e67386c2e3a9b903_default",
+      "main_2024_b1762f00cbbcd8dd879ddcea41b04b91_conference",
+      "main_2024_ec3c79dc0c2b85532cfd1012a4aaa923_conference",
+      "main_2020_6925f2a16026e36e4fc112f82dd79406_default",
+      "main_2024_9149fc44c95ce58e3ca529a1e34c2691_conference",
+      "main_2022_7f9a44cb707ede42a659ad85d940dd55_conference",
+      "main_2023_31994923f58ae5b2d661b300bd439107_conference",
+      "main_2020_c8067ad1937f728f51288b3eb986afaa_default",
+      "main_2023_42a0de6b8a1809ceba8fdad1661be06c_conference",
+      "main_2024_c3909e3abe8ebdb20c42a42ce0bc907d_conference",
+      "main_2019_d69768b3da745b77e82cdbddcc8bac98_default",
+      "main_2021_05d8cccb5f47e5072f0a05b5f514941a_default",
+      "main_2024_cfc1924c62e72e2cb0e0feeecb963241_conference",
+      "main_2024_2676109d49d1eb26d6bc584a8f556305_conference",
+      "main_2022_27c852e9d6c76890ca633f111c556a4f_conference",
+      "main_2024_3d5aa9a7ce28cdc710fbd044fd3610f3_datasets_and_benchmarks_track",
+      "main_2020_f5f3b8d720f34ebebceb7765e447268b_default",
+      "main_2021_7504adad8bb96320eb3afdd4df6e1f60_default",
+      "main_2022_b931c44c35ce09e942edab7003eb3daa_conference",
+      "main_2022_c76f18e65d16cd2786e50a88db00cde4_conference",
+      "main_2019_043c2ec6c6390dd0ac5519190a57c88c_default",
+      "main_2016_854d6fae5ee42911677c739ee1734486_default",
+      "main_2020_33dd6dba1d56e826aac1cbf23cdcca87_default",
+      "main_2020_23ad3e314e2a2b43b4c720507cec0723_default",
+      "main_2024_dc9544b26ad3579477e567588db18cfc_conference",
+      "main_2024_9d6d351ba8028a50382f42a065d31bf0_conference",
+      "main_2023_298281b9e89197195eb461e68ad20136_conference",
+      "main_2018_6459257ddab7b85bf4b57845e875e4d4_default",
+      "main_2021_0c215f194276000be6a6df6528067151_default",
+      "main_2023_fb8e5f198c7a5dcd48860354e38c0edc_conference",
+      "main_2024_b6145836acf918800b4b025f842512de_conference",
+      "main_2023_c20ac0df6c213db6d3a930fe9c7296c8_conference",
+      "main_2023_c72861451d6fa9dfa64831102b9bb71a_conference",
+      "main_2023_66772e6aa61e54ae16443ae1d78a7319_conference",
+      "main_2020_49ca03822497d26a3943d5084ed59130_default",
+      "main_2020_acaa23f71f963e96c8847585e71352d6_default",
+      "main_2018_94ef7214c4a90790186e255304f8fd1f_default",
+      "main_2023_7749f9c0d5ff109231be21e910a3ced2_conference",
+      "main_2023_6ed9931d6e1fb6a85efa1b2c014a47e1_conference",
+      "main_2018_66808e327dc79d135ba18e051673d906_default",
+      "main_2021_03a3655fff3e9bdea48de9f49e938e32_default",
+      "main_2022_c7589a96e8adfcf5a006c452b3758fd5_datasets_and_benchmarks",
+      "main_2020_e6384711491713d29bc63fc5eeb5ba4f_default",
+      "main_2019_024d2d699e6c1a82c9ba986386f4d824_default",
+      "main_2022_b2cac94f82928a85055987d9fd44753f_conference",
+      "main_2024_8936fa1691764912d9519e1b5673ea66_conference",
+      "main_2015_7bcdf75ad237b8e02e301f4091fb6bc8_default",
+      "main_2024_3acc054949b6948d4444b35d412cab56_conference",
+      "main_2021_671f0311e2754fcdd37f70a8550379bc_default",
+      "main_2016_03e7ef47cee6fa4ae7567394b99912b7_default",
+      "main_2020_b71f5aaf3371c2cdfb7a7c0497f569d4_default",
+      "main_2022_04543a88eae2683133c1acbef5a6bf77_datasets_and_benchmarks",
+      "main_2024_54fa8255cdf30736ecad38e842725e7f_conference",
+      "main_2022_8b21a7ea42cbcd1c29a7a88c444cce45_conference",
+      "main_2022_b734c30b9c955c535e333f0301f5e45c_conference",
+      "main_2021_23451391cd1399019fa0421129066bc6_default",
+      "main_2024_c6ec4a25a11393f277cfd64b7ea4d106_datasets_and_benchmarks_track",
+      "main_2020_8b4066554730ddfaa0266346bdc1b202_default",
+      "main_2024_28312c9491d60ed0c77f7fff4ad86dd1_conference",
+      "main_2022_3fbcfbc2b4009ae8dfa17a562532d123_conference",
+      "main_2022_b2ba568effcc3ab221912db2fb095ea9_conference",
+      "main_2022_e7feb9dbd9a94b6c552fc403fcebf2ef_conference",
+      "main_2019_48fbab00052197bc8bd943498b89dd71_default",
+      "main_2024_b6d0df730c5976ad918bbf4fb30afe7d_conference",
+      "main_2022_0904c7edde20d7134a77fc7f9cd86ea2_conference",
+      "main_2022_5c60ee4d6e8faf0f3b2f2701c983dc8c_conference",
+      "main_2023_7721f1fea280e9ffae528dc78c732576_conference",
+      "main_2022_5692c7dbc4abcaa50f9ce609819212e5_conference",
+      "main_2020_a18aa23ee676d7f5ffb34cf16df3e08c_default",
+      "main_2017_e702e51da2c0f5be4dd354bb3e295d37_default",
+      "main_2017_68053af2923e00204c3ca7c6a3150cf7_default",
+      "main_2024_0e705ac30e573d1526f81a0fd071a151_conference",
+      "main_2022_36474dd150d970be6fcb17035ecc4dce_conference",
+      "main_2022_4f550cb7b30b59553e50cd08a9dbf068_conference",
+      "main_2021_db182d2552835bec774847e06406bfa2_default",
+      "main_2024_cdcc6d47c1627350014a3076112ab824_conference",
+      "main_2019_2a845d4d23b883acb632fefd814e175f_default",
+      "db_2021_069059b7ef840f0c74a814ec9237b6ec_round2",
+      "main_2020_d530d454337fb09964237fecb4bea6ce_default",
+      "main_2023_08342dc6ab69f23167b4123086ad4d38_conference",
+      "main_2023_28bf1419b9a1f908c15f6195f58cb865_conference",
+      "main_2021_464074179972cbbd75a39abc6954cd12_default",
+      "main_2022_13f17f74ec061f1e3e231aca9a43ff23_conference",
+      "main_2022_fa567e2b2c870f8f09a87b6e73370869_conference",
+      "main_2024_eeab2e00835c71d64458ad1821e05664_conference",
+      "main_2024_aa7eb65738b5bc71c81848fba9111c97_conference",
+      "main_2020_e3251075554389fe91d17a794861d47b_default",
+      "main_2019_6a8018b3a00b69c008601b8becae392b_default",
+      "main_2024_1a63a6a092a95bd45f0237766ac878ba_conference",
+      "main_2023_052e22cfdd344c79634f7ec76fa03e22_datasets_and_benchmarks",
+      "main_2019_7a2b33c672ce223b2aa5789171ddde2f_default",
+      "main_2018_4e5046fc8d6a97d18a5f54beaed54dea_default",
+      "main_2023_819cebb05f993840e8a52d7564c5c282_conference",
+      "main_2019_1138d90ef0a0848a542e57d1595f58ea_default",
+      "main_2023_6ae7df1f40f5faeda474b36b61197822_conference",
+      "main_2021_217c0e01c1828e7279051f1b6675745d_default",
+      "main_2019_a6e4f250fb5c56aaf215a236c64e5b0a_default",
+      "main_2022_631f99d8e860054410c239fc90d18270_conference",
+      "main_2019_8a146f1a3da4700cbf03cdc55e2daae6_default",
+      "main_2016_aa486f25175cbdc3854151288a645c19_default",
+      "main_2024_14bb27f680bee45d83bc769738e7f9b5_conference",
+      "main_2021_d71fa38b648d86602d14ac610f2e6194_default",
+      "main_2023_efe36e55d80a94d1726f660b8d237a0f_conference",
+      "main_2017_f4552671f8909587cf485ea990207f3b_default",
+      "main_2023_3eceb70f47690051d6769739fbf6294b_conference",
+      "main_2023_5d1233f819202ade06023346df80a6d2_conference",
+      "main_2018_22fb0cee7e1f3bde58293de743871417_default",
+      "main_2023_0113ef4642264adc2e6924a3cbbdf532_conference",
+      "main_2019_03573b32b2746e6e8ca98b9123f2249b_default",
+      "main_2023_3d17b7f7d52c83ab6e97e2dc0bda2e71_conference",
+      "main_2020_f6876a9f998f6472cc26708e27444456_default",
+      "main_2021_f8905bd3df64ace64a68e154ba72f24c_default",
+      "main_2023_6ec2be0bb10be9a0e5db4cc2a921f301_conference",
+      "main_2023_bbb330189ce02be00cf7346167028ab1_datasets_and_benchmarks",
+      "main_2022_623307df18da128262aaf394cdcfb235_conference",
+      "main_2023_f249db9ab5975586f36df46f8958c008_conference",
+      "main_2015_f18a6d1cde4b205199de8729a6637b42_default",
+      "main_2024_6008facedac886858acdb76c09da2097_conference",
+      "main_2024_ffee3090eac0aae698b2d77ac5642c2c_conference",
+      "main_2019_812b4ba287f5ee0bc9d43bbf5bbe87fb_default",
+      "main_2022_be7b70477c8fca697f14b1dbb1c086d1_conference",
+      "main_2022_f94d5edb5c01715d879693ddbfdc1b98_datasets_and_benchmarks",
+      "main_2024_2c23b3c72127e15fedc276722faee927_conference",
+      "main_2020_f10f2da9a238b746d2bac55759915f0d_default",
+      "main_2023_bf215fa7fe70a38c5e967e59c44a99d0_conference",
+      "main_2019_d921c3c762b1522c475ac8fc0811bb0f_default",
+      "main_2023_a74b697bce4cac6c91896372abaa8863_datasets_and_benchmarks",
+      "main_2022_24f420aa4c99642dbb9aae18b166bbbc_conference",
+      "main_2018_c3a690be93aa602ee2dc0ccab5b7b67e_default",
+      "main_2024_942d5e890e4e0ab0e7a5f8cbcef5b9ff_conference",
+      "main_2022_15d45097f9806983f0629a77e93ee60f_conference",
+      "main_2018_2ba8698b79439589fdd2b0f7218d8b07_default",
+      "main_2017_d3a7f48c12e697d50c8a7ae7684644ef_default",
+      "main_2020_9b72e31dac81715466cd580a448cf823_default",
+      "main_2023_d5c56ec4f69c9a473089b16000d3f8cd_conference",
+      "main_2022_190dd6a5735822f05646dc27decff19b_datasets_and_benchmarks",
+      "main_2024_179a2b276b954a1369ec9119c4badabb_conference",
+      "main_2023_b8e2046160a568145af6d42eeef199f4_conference",
+      "main_2020_7b41bfa5085806dfa24b8c9de0ce567f_default",
+      "main_2024_0d11b4035d54e449320fc36b0f64ebb7_conference",
+      "main_2020_83eaa6722798a773dd55e8fc7443aa09_default",
+      "main_2024_dc89a0709f213fd0ac4b1172719b2c38_conference",
+      "main_2023_fba4a59c7a569fce120eea9aa9227052_conference",
+      "main_2020_8b9e7ab295e87570551db122a04c6f7c_default",
+      "main_2022_286a371d8a0a559281f682f8fbf89834_conference",
+      "main_2023_a237f11d6aad94f59a182d70405d3fdb_conference",
+      "main_2022_666dd0d92a64396e753c691db93493d4_conference",
+      "main_2024_9b77f07301b1ef1fe810aae96c12cb7b_conference",
+      "main_2021_6ffad86b9a8dd4a3e98df1b0830d1c8c_default",
+      "main_2024_d5a1f97d2b922da92e880d13b7d2bf02_conference",
+      "main_2021_347665597cbfaef834886adbb848011f_default",
+      "main_2018_93d65641ff3f1586614cf2c1ad240b6c_default",
+      "main_2021_3df1d4b96d8976ff5986393e8767f5b2_default",
+      "main_2018_0655f117444fc1911ab9c6f6b0139051_default",
+      "main_2024_d37c9ad425fe5b65304d500c6edcba00_conference",
+      "main_2021_678004486c119599ed7d199f47da043a_default",
+      "main_2023_2432e9646556f3a98dc78c1f4a10481b_datasets_and_benchmarks",
+      "main_2023_42eb37cdbefd7abae0835f4b67548c39_conference",
+      "main_2023_8d7060b2ee6ff728692398783e3d59d1_conference",
+      "main_2020_e94550c93cd70fe748e6982b3439ad3b_default",
+      "main_2020_3fe94a002317b5f9259f82690aeea4cd_default",
+      "main_2021_8fd7f981e10b41330b618129afcaab2d_default",
+      "main_2019_5e69fda38cda2060819766569fd93aa5_default",
+      "main_2022_159f7fe5b51ecd663b85337e8e28ce65_conference",
+      "main_2022_677ccf45da6d04ac8e76600821bd05ce_conference",
+      "main_2023_9ed1c94a6c87276f25ebb65231c86c3e_conference",
+      "main_2022_6a934325ec64639ba83b492b9c317085_conference",
+      "main_2019_2f4fe03d77724a7217006e5d16728874_default",
+      "main_2024_bc427eb348789b190e3ea050cceff8a3_conference",
+      "main_2022_710aae9186778a91b656e609778f7898_conference",
+      "main_2024_9421261e06f1a63a352b068f1ac90609_conference",
+      "main_2019_4eff0720836a198b6174eecf02cbfdbf_default",
+      "main_2023_bad8ddaed5feb552f9e8f2e37c0531a1_conference",
+      "main_2022_31421b112e5f7faf4fc577b74e45dab2_conference",
+      "main_2023_9f94298bac4668db4dc77ddb0a244301_conference",
+      "main_2023_c3532dd633e600e9f6db57aa7ae0c858_conference",
+      "main_2024_061d5d1b7d97117764f205d4e038f9eb_conference",
+      "main_2018_125b93c9b50703fe9dac43ec231f5f83_default",
+      "main_2018_5f93f983524def3dca464469d2cf9f3e_default",
+      "main_2016_0d73a25092e5c1c9769a9f3255caa65a_default",
+      "main_2021_2c7f9ccb5a39073e24babc3a4cb45e60_default",
+      "main_2019_60cb558c40e4f18479664069d9642d5a_default",
+      "main_2021_1371bccec2447b5aa6d96d2a540fb401_default",
+      "main_2024_3477ca0ce484aa2fa42c1361ab601c25_conference",
+      "main_2021_dfccdb8b1cc7e4dab6d33db0fef12b88_default",
+      "main_2021_c7502c55f8db540625b59d9a42638520_default",
+      "main_2021_cca289d2a4acd14c1cd9a84ffb41dd29_default",
+      "main_2023_746cf1bc2337700f7f0c35c7b02638cc_conference",
+      "main_2024_fc9f83d9925e6885e8f1ae1e17b3c44b_conference",
+      "main_2024_1529a05fdff470f4e7c239c80d85e28e_conference",
+      "main_2022_782b6152c04e9948c2cb3833e9a288ef_conference",
+      "main_2022_d36dfcdb14473a8526111c221660f2ab_conference",
+      "main_2018_c042f4db68f23406c6cecf84a7ebb0fe_default",
+      "main_2023_707a2d58641b2192203b4bf4c532cfe1_conference",
+      "main_2022_020e313d40a7c060ed07a10cef287750_conference",
+      "main_2020_d714d2c5a796d5814c565d78dd16188d_default",
+      "main_2024_a7f89793b9e6f8c6568dbbb6ff727b9b_conference",
+      "main_2020_b599e8250e4481aaa405a715419c8179_default",
+      "main_2024_630d25bf5c0862dc1c49ba2096cedc2d_conference",
+      "main_2017_35936504a37d53e03abdfbc7318d9ec7_default",
+      "main_2024_3d4c0a618d0acd7921493e4f30395c22_conference",
+      "main_2020_33a5435d4f945aa6154b31a73bab3b73_default",
+      "main_2016_7750ca3559e5b8e1f44210283368fc16_default",
+      "main_2024_60f81431bdf32f139438c69787e12b3f_conference",
+      "main_2024_f9743a7bfee6592e3ff913ffadd8a857_conference",
+      "main_2021_cc4af25fa9d2d5c953496579b75f6f6c_default",
+      "main_2020_a851bd0d418b13310dd1e5e3ac7318ab_default",
+      "main_2020_05128e44e27c36bdba71221bfccf735d_default",
+      "main_2024_ee5bb72130c332c3d4bf8d231e617506_conference",
+      "main_2022_075b2875e2b671ddd74aeec0ac9f0357_conference",
+      "main_2021_4be49c79f233b4f4070794825c323733_default",
+      "main_2016_51ef186e18dc00c2d31982567235c559_default",
+      "main_2023_1f69928210578f4cf5b538a8c8806798_conference",
+      "main_2020_f02208a057804ee16ac72ff4d3cec53b_default",
+      "main_2024_21315abf210cef71317e887e9cda78b3_conference",
+      "main_2022_d9888cc7baa04c2e44e8115588133515_conference",
+      "main_2018_1458e7509aa5f47ecfb92536e7dd1dc7_default",
+      "main_2022_cf78a15772ec1a6aee9bbee2d2b382c3_conference",
+      "db_2021_3988c7f88ebcb58c6ce932b957b6f332_round1",
+      "main_2023_4c5722bad9759216474df8fc46c97af2_conference",
+      "main_2022_f5537b8d8fd126c7fe9d7429b181b1eb_conference",
+      "main_2024_0147d967a5db3b8dde08d2a327b24568_conference",
+      "main_2017_d7a84628c025d30f7b2c52c958767e76_default",
+      "main_2022_e4bab1843c8d5a69f5abfd0824593493_conference",
+      "main_2024_63e8bc7bbf1cfea36d1d1b6538aecce5_conference",
+      "main_2022_429d69979c22b06d6baa65caf3ab1e10_conference",
+      "main_2023_68c33c4e6fc97f7b31c964dc83303a28_datasets_and_benchmarks",
+      "main_2023_7bc3fe234454107149fa9d44faacaa64_conference",
+      "main_2022_0cd1eec0eeaf5ce1bf6d8875a7c1d095_conference",
+      "main_2018_8643c8e2107ba86c47371e037059c4b7_default",
+      "main_2020_55d491cf951b1b920900684d71419282_default",
+      "main_2019_04df4d434d481c5bb723be1b6df1ee65_default",
+      "main_2016_872488f88d1b2db54d55bc8bba2fad1b_default",
+      "main_2022_eb3c8135137c8a60425a0320869ad87e_conference",
+      "main_2022_7b122d0a0dcb1a86ffa25ccba154652b_conference",
+      "main_2022_2eb74636e69ca26ab6cba8b724b0776e_conference",
+      "main_2022_d346d91999074dd8d6073d4c3b13733b_conference",
+      "main_2024_143ea4a156ef64f32d4d905206cf32e1_conference",
+      "main_2020_aa2a77371374094fe9e0bc1de3f94ed9_default",
+      "main_2023_ada418ae9b6677dcda32d9dca0f7441f_conference",
+      "main_2022_43f55776896a2e33239c2954519f605e_conference",
+      "main_2023_770cabd044c4eacb6dc5924d9a686dce_conference",
+      "main_2024_140edeced4facf41b14ca4f71a2322b7_conference",
+      "main_2024_1a000ee0f122d0bbd3edb9bf55170ea3_conference",
+      "main_2024_24c523085d10743633f9964e0623dbe0_conference",
+      "main_2015_51d92be1c60d1db1d2e5e7a07da55b26_default",
+      "main_2024_2d69e771d9f274f7c624198ea74f5b98_conference",
+      "main_2019_d5b3d8dadd770c460b1cde910a711987_default",
+      "db_2021_7cbbc409ec990f19c78c75bd1e06f215_round1",
+      "main_2019_05ae14d7ae387b93370d142d82220f1b_default",
+      "main_2023_510ad3018bbdc5b6e3b10646e2e35771_conference",
+      "main_2023_9032e5c9ec394ce768a2fa9bdc56af6c_conference",
+      "main_2020_45c166d697d65080d54501403b433256_default",
+      "main_2020_ca7be8306ecc3f5fa30ff2c41e64fa7b_default",
+      "main_2024_9566607d423f8c32a2d5ce09a8b62232_datasets_and_benchmarks_track",
+      "main_2021_a18aa23ee676d7f5ffb34cf16df3e08c_default",
+      "main_2024_5623c35f3ab5e2c72aeb3abce27dc28f_conference",
+      "main_2024_2d9c6cdb4cfe93869c090fea7375044b_conference",
+      "main_2022_062f9525a7476942f61a6c3b42d0a63f_conference",
+      "main_2024_4ae7d78ebbe48f772e31c5c3fcc04c43_conference",
+      "main_2024_05b69cc4c8ff6e24c5de1ecd27223d37_conference",
+      "main_2021_0415740eaa4d9decbc8da001d3fd805f_default",
+      "main_2018_331316d4efb44682092a006307b9ae3a_default",
+      "main_2023_a8e21789027e92739f89df92cc172bcf_conference",
+      "main_2023_46e37aeccafc3b4b697b17b8a36f3b30_conference",
+      "main_2024_4b70484ebef62484e0c8cdd269e482fd_conference",
+      "main_2019_4fc848051e4459b8a6afeb210c3664ec_default",
+      "main_2022_09d22e4155aa4fdadf3dac8c6bd940fe_conference",
+      "main_2024_c3fa3a7d50b34732c6d08f6f66380d75_conference",
+      "main_2023_7f77492bb8070a5c825a87c0c5181da2_conference",
+      "main_2022_e5daf532498ebba4fe6544d49c811678_conference",
+      "main_2020_23378a2d0a25c6ade2c1da1c06c5213f_default",
+      "main_2021_27debb435021eb68b3965290b5e24c49_default",
+      "main_2022_4ce7fe1d2730f53cb3857032952cd1b8_conference",
+      "main_2023_9690d4746230cfea3d067fca695ba648_conference",
+      "main_2018_d54e99a6c03704e95e6965532dec148b_default",
+      "main_2022_37a413841a614b5414b333585e7613b8_conference",
+      "main_2019_b139e104214a08ae3f2ebcce149cdf6e_default",
+      "main_2024_24f3041067ab24157912330344dc3bbd_conference",
+      "main_2022_421fa4f5e0bef2f044f1f4616fd17343_conference",
+      "main_2017_c24cd76e1ce41366a4bbe8a49b02a028_default",
+      "main_2021_806d926414ce19d907700e23177ab4ff_default",
+      "main_2024_9f7f063144103bf6debb09a3f15e00fb_conference",
+      "main_2021_204904e461002b28511d5880e1c36a0f_default",
+      "main_2021_d58e2f077670f4de9cd7963c857f2534_default",
+      "main_2024_e2ba11d128034f0c544693374c59e49a_conference",
+      "main_2021_76c538125fc5c9ec6ad1d05650a57de5_default",
+      "main_2023_e95da8078ec8389533c802e368da5298_conference",
+      "main_2024_b1c62bdeee97b38c34dcda152c829511_conference",
+      "main_2023_9278abf072b58caf21d48dd670b4c721_conference",
+      "main_2023_e75dce944052276caf89c17aca8963d3_conference",
+      "main_2019_392526094bcba21af9fd4102ce5ed092_default",
+      "main_2022_c6b71f8d79d0b2d7bdac66ff3a3ba243_conference",
+      "main_2016_c3395dd46c34fa7fd8d729d8cf88b7a8_default",
+      "main_2022_7103444259031cc58051f8c9a4868533_conference",
+      "main_2022_3df874367ce2c43891aab1ab23ae6959_conference",
+      "main_2021_70efdf2ec9b086079795c442636b55fb_default",
+      "main_2019_c46482dd5d39742f0bfd417b492d0e8e_default",
+      "main_2023_fe318a2b6c699808019a456b706cd845_conference",
+      "main_2024_14730e0dd6ac1c4a5765310909fd51b1_conference",
+      "main_2023_8c3c666820ea055a77726d66fc7d447f_datasets_and_benchmarks",
+      "main_2024_9328208f88ec69420031647e6ff97727_conference",
+      "main_2022_1968ea7d985aa377e3a610b05fc79be0_conference",
+      "main_2024_e6c967a0e4168df9614a81ed4195ba78_conference",
+      "main_2017_8208974663db80265e9bfe7b222dcb18_default",
+      "main_2021_5db60c98209913790e4fcce4597ee37c_default",
+      "main_2023_ab3f114401f0523ca1cc09de0621f400_conference",
+      "main_2023_fc0e3f908a2116ba529ad0a1530a3675_conference",
+      "main_2019_5f8e2fa1718d1bbcadf1cd9c7a54fb8c_default",
+      "main_2023_4c454d34f3a4c8d6b4ca85a918e5d7ba_conference",
+      "main_2020_abc99d6b9938aa86d1f30f8ee0fd169f_default",
+      "main_2024_4822d9adc9cec7a39e254d007aa78276_conference",
+      "main_2024_6d0f9c415e2d779c78f32b74668e9d02_datasets_and_benchmarks_track",
+      "main_2017_64a08e5f1e6c39faeb90108c430eb120_default",
+      "main_2024_8deff86036ee6a73cda883dc7d2d6b07_conference",
+      "main_2022_d6383e7643415842b48a5077a1b09c98_conference",
+      "main_2018_1c6a0198177bfcc9bd93f6aab94aad3c_default",
+      "main_2020_24bea84d52e6a1f8025e313c2ffff50a_default",
+      "main_2022_23ee05bf1f4ade71c0f8f5ca722df601_datasets_and_benchmarks",
+      "main_2022_16e71d1a24b98a02c17b1be1f634f979_conference",
+      "main_2022_c5ee2a08fbe743b171b0b4b2bdfd6f86_conference",
+      "main_2024_43d1d3bdd92204c96fa4ac3c578f6a33_conference",
+      "main_2021_c4d2ce3f3ebb5393a77c33c0cd95dc93_default",
+      "main_2023_5f02c76bc411a6f7c9a8bb2cbf981260_conference",
+      "main_2024_17bae482066287ce54814514cf12f248_conference",
+      "main_2024_b88318174aad2cc174a4e05ab6bfad80_conference",
+      "main_2019_9bdb8b1faffa4b3d41779bb495d79fb9_default",
+      "main_2021_82ca5dd156cc926b2992f73c2896f761_default",
+      "main_2022_76bea0a1cf7bf9b78f842009f6de15a1_conference",
+      "main_2022_2433fec2144ccf5fea1c9c5ebdbc3924_conference",
+      "main_2024_57f6683e550eb067936c9e9f0bcb8e31_datasets_and_benchmarks_track",
+      "main_2018_ce5140df15d046a66883807d18d0264b_default",
+      "main_2022_8b2fc235787852ead92da2268cd9e90c_conference",
+      "main_2024_1d3591b6746204b332acb464b775d38d_conference",
+      "main_2023_c4bf73386022473a652a18941e9ea6f8_conference",
+      "main_2024_0235cbb8cd6425d0b55daefce388fc0b_datasets_and_benchmarks_track",
+      "main_2023_ded1a89e2b3b925444ada973af66336e_datasets_and_benchmarks",
+      "main_2024_edcd1aa172dceda2ea9d45a48f25d3e3_conference",
+      "main_2022_a559a5a8aa5ae6682ced009ad97cdb16_conference",
+      "main_2018_27e8e17134dd7083b050476733207ea1_default",
+      "main_2019_ddb4955263e6c08179393d1beaf18602_default",
+      "main_2023_a8b148559549ce33261e79b4400e0d77_conference",
+      "main_2018_033cc385728c51d97360020ed57776f0_default",
+      "main_2024_6efcc7fd8efeee29a050a79c843c90e0_conference",
+      "main_2022_057405fd73dd7ba7f32a7cb34fb7c7f5_conference",
+      "main_2022_1074541383db5ef12d6ac66d2f8e8d34_conference",
+      "main_2023_6dea02c16a492682d66c6f626c306db2_conference",
+      "main_2024_1119587863e78451f080da2a768c4935_conference",
+      "main_2018_12092a75caa75e4644fd2869f0b6c45a_default"
+    ],
+    "validation_query_seed": 20260430,
+    "validation_query_ids": [
+      "main_2023_a2a544e43acb8b954dc5846ff0d77ad5_datasets_and_benchmarks",
+      "main_2024_d8577a93072ac583c1618746d757e411_conference",
+      "main_2020_d79c8788088c2193f0244d8f1f36d2db_default",
+      "main_2022_222a2a46018a1e7b55ba48ba11932d04_conference",
+      "main_2020_57cd30d9088b0185cf0ebca1a472ff1d_default",
+      "main_2024_a7fbf054c80d26e5b4ed67588ea384f0_conference",
+      "main_2021_a440a3d316c5614c7a9310e902f4a43e_default",
+      "main_2022_f0bc367ccb66afc776fcac8d15549516_conference",
+      "main_2024_38c5feed4b72c96f6cf925ccc9832ecf_conference",
+      "main_2024_57c5a7c83b056d74bc97b7db36bd3649_conference",
+      "main_2022_ebba182cb97864368fdb6ae00773a5e4_conference",
+      "main_2022_997089469acbeb410405e43f0011be1f_conference",
+      "main_2022_f9b8853ea81731f9bfc11820b064de96_conference",
+      "main_2023_18210aa6209b9adfc97b8c17c3741d95_conference",
+      "main_2024_cf5a019ae9c11b4be88213ce3f85d85c_conference",
+      "main_2018_24146db4eb48c718b84cae0a0799dcfc_default",
+      "main_2020_aba3b6fd5d186d28e06ff97135cade7f_default",
+      "main_2023_d0b2eda0386f477ab14d7e181e16c899_conference",
+      "main_2018_c90070e1f03e982448983975a0f52d57_default",
+      "main_2024_ae8d4084f418bb51575c2ca6c658a05b_conference",
+      "main_2022_a12c999be280372b157294e72a4bbc8b_conference",
+      "main_2022_935151cc6cb5d8b6816133b75233775a_conference",
+      "main_2023_563d94819f68cb73d6a382809e587b54_conference",
+      "main_2021_a6a38989dc7e433f1f42388e7afca318_default",
+      "main_2023_cc57fac10eacadb3b72a907ac48f9a98_conference",
+      "main_2024_387936a8cd02bf2ad745b751047b9d49_conference",
+      "main_2024_3191170938b6102e5c203b036b7c16dd_conference",
+      "main_2020_0cc6ee01c82fc49c28706e0918f57e2d_default",
+      "main_2018_e22dd5dabde45eda5a1a67772c8e25dd_default",
+      "main_2020_e97c864e8ac67f7aed5ce53ec28638f5_default",
+      "main_2022_9bcd1fa0c05e5f25ba7a1261f1852e82_conference",
+      "main_2015_f197002b9a0853eca5e046d9ca4663d5_default",
+      "main_2018_4fb8a7a22a82c80f2c26fe6c1e0dcbb3_default",
+      "main_2022_71c31ebf577ffdad5f4a74156daad518_conference",
+      "main_2020_0baf163c24ed14b515aaf57a9de5501c_default",
+      "main_2015_dc5689792e08eb2e219dce49e64c885b_default",
+      "main_2021_20885c72ca35d75619d6a378edea9f76_default",
+      "main_2021_85dca1d270f7f9aef00c9d372f114482_default",
+      "main_2023_f062da1973ac9ac61fc6d44dd7fa309f_conference",
+      "main_2023_c47ec10bc135be5c3663ba344d29a6a5_conference",
+      "main_2020_0b5e29aa1acf8bdc5d8935d7036fa4f5_default",
+      "main_2023_94d13c2401fe119e57ba325b6fe526e0_conference",
+      "main_2024_0e5cce15e1bfc6b3d7b71f24cc5da821_conference",
+      "main_2022_525338e0d98401a62950bc7c454eb83d_conference",
+      "main_2022_11fc8c98b46d4cbdfe8157267228f7d7_conference",
+      "main_2022_9c93b3cd3bc60c0fe7b0c2d74a2da966_conference",
+      "main_2024_d79792543133425ff79513c147dc8881_conference",
+      "main_2021_0e4f5cc9f4f3f7f1651a6b9f9214e5b1_default",
+      "main_2024_1dccfc3ee01871d05e33457c61037d59_conference",
+      "main_2023_42806406dd99e30c3796bc98b2670fa2_conference",
+      "main_2022_1e75f7539cbde5de895fab238ff42519_conference",
+      "main_2022_5c81ea77a383cc2848d721224717fa4b_conference",
+      "main_2024_8629b0fff229b8a27efb1422e990605f_conference",
+      "main_2024_c6776239514e90cbaa56b575a9f9e05c_conference",
+      "main_2024_e3301977b92f28e32639ec99eb08f4a1_datasets_and_benchmarks_track",
+      "main_2024_fcc3dc27672a12510babe448d665e152_conference",
+      "main_2021_1006ff12c465532f8c574aeaa4461b16_default",
+      "main_2019_043ab21fc5a1607b381ac3896176dac6_default",
+      "main_2024_38cc5cba8e513547b96bc326e25610dc_datasets_and_benchmarks_track",
+      "main_2024_028fcbcf85435d39a40c4d61b42c99a4_conference",
+      "main_2021_b3e3e393c77e35a4a3f3cbd1e429b5dc_default",
+      "main_2016_cfee398643cbc3dc5eefc89334cacdc1_default",
+      "main_2024_e6c185ba1ac2880d6f53aae3cfa80469_conference",
+      "main_2018_e22312179bf43e61576081a2f250f845_default",
+      "main_2020_012d9fe15b2493f21902cd55603382ec_default",
+      "main_2019_0e2db0cb2c4645904a054261104b7a14_default",
+      "main_2022_e67a667df97d44fa43ffe8d179b44dd8_conference",
+      "main_2023_678cffc05549fdabda971127602084c6_conference",
+      "main_2024_4c454d34f3a4c8d6b4ca85a918e5d7ba_conference",
+      "main_2021_597c7b407a02cc0a92167e7a371eca25_default",
+      "main_2024_0ad6ebd11593822b8a6d5873ca9c5b0b_conference",
+      "main_2021_76f1cfd7754a6e4fc3281bcccb3d0902_default",
+      "db_2021_4c56ff4ce4aaf9573aa5dff913df997a_round1",
+      "main_2022_84880289c9fcba0d4bdb198cdb8f5080_conference",
+      "main_2019_475fbefa9ebfba9233364533aafd02a3_default",
+      "main_2024_aec33ab89b5986605cd7c331396e7e5c_datasets_and_benchmarks_track",
+      "main_2019_f2201f5191c4e92cc5af043eebfd0946_default",
+      "main_2018_7e448ed9dd44e6e22442dac8e21856ae_default",
+      "main_2023_77307e2e3f326335dfeb94ab47f7a6c0_conference",
+      "main_2023_c9c54ac0dd5e942b99b2b51c297544fd_conference",
+      "main_2021_e614f646836aaed9f89ce58e837e2310_default",
+      "main_2018_f8da71e562ff44a2bc7edf3578c593da_default",
+      "main_2020_6740526b78c0b230e41ae61d8ca07cf5_default",
+      "main_2024_223df9b793a8b384bf38b963e35e2cac_conference",
+      "main_2024_7cdbd53dfbcf9a5263227555aac5b9cd_conference",
+      "main_2023_9f42f06a54ce3b709ad78d34c73e4363_conference",
+      "main_2023_f88bec15cc4cb56b432ee040bb63f94f_conference",
+      "main_2024_7d6930fd71740eae21224a5ffb70cb8c_conference",
+      "main_2019_d82c8d1619ad8176d665453cfb2e55f0_default",
+      "main_2023_1f96b24df4b06f5d68389845a9a13ed9_conference",
+      "main_2022_a548ef984f30bca3abdc09f43743827f_conference",
+      "main_2023_9b5c3e00d6ed30aad7adac9e7a664de1_datasets_and_benchmarks",
+      "main_2024_842714f78c95096e20ac7d2591c5a24b_conference",
+      "main_2019_b59a51a3c0bf9c5228fde841714f523a_default",
+      "main_2020_73b817090081cef1bca77232f4532c5d_default",
+      "main_2022_7efe88bb4138d602e56637cfcf713654_conference",
+      "main_2021_32b127307a606effdcc8e51f60a45922_default",
+      "main_2024_362d683723e7d6c12a093961ec2e5051_conference",
+      "main_2024_e01519b47118e2f51aa643151350c905_conference",
+      "main_2023_96aca14d6c4dcd3adf54bc2c5ad7f138_conference",
+      "main_2022_0d561979f0f4bc6127cfcfe9c46ee205_conference",
+      "main_2019_daea32adcae6abcb548134fa98f139f9_default",
+      "main_2024_2b22bacd7ad8677f4837b28a11fe496f_conference",
+      "main_2022_a705747417d32ebf1916169e1a442274_conference",
+      "main_2024_39c5871aa13be86ab978cba7069cbcec_conference",
+      "main_2021_c80bcf42c220b8f5c41f85344242f1b0_default",
+      "main_2017_38db3aed920cf82ab059bfccbd02be6a_default",
+      "main_2016_f2201f5191c4e92cc5af043eebfd0946_default",
+      "main_2016_5314b9674c86e3f9d1ba25ef9bb32895_default",
+      "main_2022_26300457961c3e056ea61c9d3ebec2a4_conference",
+      "main_2024_4eff61b79274124bc71efe2ee9772f95_conference",
+      "main_2015_4dcf435435894a4d0972046fc566af76_default",
+      "main_2017_c5a4e7e6882845ea7bb4d9462868219b_default",
+      "main_2023_4feccf7f781e1844f3a5d70eb779147a_conference",
+      "main_2021_cd0b43eac0392accf3624b7372dec36e_default",
+      "main_2023_8f182e220092f7f1fc44f3313023f5a0_conference",
+      "main_2024_f543648b4332a4d8b9e1b72c6b4e2e26_conference",
+      "main_2020_f5e62af885293cf4d511ceef31e61c80_default",
+      "main_2021_4a3e00961a08879c34f91ca0070ea2f5_default",
+      "main_2024_c13d5a10028586fdc15ee7da97b7563f_conference",
+      "main_2021_5fde40544cff0001484ecae2466ce96e_default",
+      "main_2024_e4c61f578ff07830f5c37378dd3ecb0d_conference",
+      "main_2022_5573c63e8a89e32086e5c71cf0cc8fe4_conference",
+      "main_2018_093f65e080a295f8076b1c5722a46aa2_default",
+      "main_2021_bc573864331a9e42e4511de6f678aa83_default",
+      "main_2024_47eb2874a790d5b1f554b9bb93b3de9d_conference",
+      "main_2023_d664de48bf5ad8e8e48c77e175eb0e80_conference",
+      "main_2021_856b503e276cc491e7e6e0ac1b9f4b17_default",
+      "main_2023_4078c8b648dc107aedbdf561dd4edc2a_conference",
+      "main_2020_fd9dd764a6f1d73f4340d570804eacc4_default",
+      "main_2021_e1021d43911ca2c1845910d84f40aeae_default",
+      "main_2023_63e8bc7bbf1cfea36d1d1b6538aecce5_conference",
+      "main_2022_76df3f555683bc6c4b988bb81b930d5b_conference",
+      "main_2020_a7453a5f026fb6831d68bdc9cb0edcae_default",
+      "main_2020_c6e81542b125c36346d9167691b8bd09_default",
+      "main_2020_4ee78d4122ef8503fe01cdad3e9ea4ee_default",
+      "main_2020_f9d3a954de63277730a1c66d8b38dee3_default",
+      "main_2021_50d2e70cdf7dd05be85e1b8df3f8ced4_default",
+      "main_2024_33b47b3d2441a17b95344cd635f3dd01_conference",
+      "main_2023_991c9324ca71aa85ab4dd11146b35fc3_conference",
+      "main_2019_9d8df73a3cfbf3c5b47bc9b50f214aff_default",
+      "main_2015_2bd7f907b7f5b6bbd91822c0c7b835f6_default",
+      "main_2024_833295cb9278a3ba973842a94ea68e3c_conference",
+      "main_2023_081b08068e4733ae3e7ad019fe8d172f_conference",
+      "main_2022_9daab3b451038ed1bc5d8e9b77996b99_conference",
+      "main_2024_9316769afaaeeaad42a9e3633b14e801_conference",
+      "main_2018_415185ea244ea2b2bedeb0449b926802_default",
+      "main_2019_7eea1f266bfc82028683ad15da46e05e_default",
+      "main_2019_65a99bb7a3115fdede20da98b08a370f_default",
+      "main_2019_a660d4563b8f62dd5282319cc643d950_default",
+      "main_2023_5fc47800ee5b30b8777fdd30abcaaf3b_conference",
+      "main_2024_8cc7e1509fbfee9cabaacd3ab0bfe2b1_conference",
+      "main_2016_84d2004bf28a2095230e8e14993d398d_default",
+      "main_2019_e6e713296627dff6475085cc6a224464_default",
+      "main_2024_95ddc8f24ad9698e3f2c4a014602ee74_conference",
+      "main_2024_b0313c2f4501a81d0e0d4a1e8fbf4995_conference",
+      "main_2023_2c23b3c72127e15fedc276722faee927_conference",
+      "main_2018_8bf1211fd4b7b94528899de0a43b9fb3_default",
+      "main_2019_01ce84968c6969bdd5d51c5eeaa3946a_default",
+      "main_2024_f0c68d99827dc09ed28aa073455efcbe_conference",
+      "main_2021_ee39e503b6bedf0c98c388b7e8589aca_default",
+      "main_2019_99607461cdb9c26e2bd5f31b12dcf27a_default",
+      "main_2023_a899a801fab59f14777fcc08842b6fc5_conference",
+      "main_2024_bd281779e603522d92aa4f59c36012e4_datasets_and_benchmarks_track",
+      "main_2024_d52dbd66219dc4e432e0bd4f9c25c4c3_conference",
+      "main_2024_94ffbc2939e18adac36eedf8d38d1ef3_conference",
+      "main_2016_d54e99a6c03704e95e6965532dec148b_default",
+      "main_2024_6a059625a6027aca18302803743abaa2_datasets_and_benchmarks_track",
+      "main_2022_1385753b9661cd2d9f2cb8958dec985b_conference",
+      "main_2023_9e15d892c63903ecc278e0dd05536951_conference",
+      "main_2016_0f96613235062963ccde717b18f97592_default",
+      "main_2020_022e0ee5162c13d9a7bb3bd00fb032ce_default",
+      "main_2024_047c84ec50bd8ea29349b996fc64af4b_conference",
+      "main_2024_7c8c0db90a14c7a2db9475e52dc343a9_conference",
+      "main_2023_0f2cd3d09a132757555b602e2dd43784_datasets_and_benchmarks",
+      "main_2024_b3cca813dcd78fe75e4d4df2e6a0b1a7_conference",
+      "main_2022_86b7128efa3950df7c0f6c0342e6dcc1_conference",
+      "main_2015_333222170ab9edca4785c39f55221fe7_default",
+      "main_2019_38faae069a1371784081ea9ad9b279d0_default",
+      "main_2020_72ab54f9b8c11fae5b923d7f854ef06a_default",
+      "main_2023_cc83e97320000f4e08cb9e293b12cf7e_conference",
+      "main_2024_22ae669a35bb9e70eb93ab77c1eff5b4_conference",
+      "main_2021_d785bf9067f8af9e078b93cf26de2b54_default",
+      "main_2018_de03beffeed9da5f3639a621bcab5dd4_default",
+      "main_2024_cb03b5108f1c3a38c990ef0b45bc8b31_conference",
+      "main_2022_a882dab38011264d2ca8dba3cca9faf1_conference",
+      "main_2023_e0982cbc81401df3430ee1ff780dc7a2_conference",
+      "main_2015_0966289037ad9846c5e994be2a91bafa_default",
+      "main_2024_bd0194a23b3b0787e54a0173d65b0b37_conference",
+      "main_2024_f30e35a09ac622dec1c121a13dd809d4_conference",
+      "main_2023_054e9f9a286671ababa3213d6e59c1c2_conference",
+      "main_2021_1a3650aedfdd3a21444047ed2d89458f_default",
+      "main_2018_e77dbaf6759253c7c6d0efc5690369c7_default",
+      "main_2019_5b168fdba5ee5ea262cc2d4c0b457697_default",
+      "main_2022_94f625dcdec313cd432d65f96fcc51c8_conference",
+      "main_2023_87571720167f7e88827c40e468e3101f_conference",
+      "main_2024_ca774047bc3b46cc81e53ead34cd5d5a_conference",
+      "main_2023_f2a11632520f4b7473d7838f074a7d25_conference",
+      "main_2020_60a70bb05b08d6cd95deb3bdb750dce8_default",
+      "main_2023_46c10f6c8ea5aa6f267bcdabcb123f97_conference",
+      "main_2017_0efbe98067c6c73dba1250d2beaa81f9_default",
+      "main_2021_a11ce019e96a4c60832eadd755a17a58_default",
+      "main_2017_2bb0502c80b7432eee4c5847a5fd077b_default",
+      "main_2021_6cdd60ea0045eb7a6ec44c54d29ed402_default",
+      "main_2019_f06ae085fe74cd78ad5e89496b197fe1_default",
+      "main_2023_f63f5fbed1a4ef08c857c5f377b5d33a_datasets_and_benchmarks",
+      "main_2021_a0160709701140704575d499c997b6ca_default",
+      "main_2023_4f86833d5cc98ec32e470ef1c8cb82e3_conference",
+      "main_2020_42299f06ee419aa5d9d07798b56779e2_default",
+      "main_2022_19a0a55fcb8fc0c31db093941fccd707_conference",
+      "main_2024_611e84703eac7cc03f78339df8aae2ed_conference",
+      "main_2019_eea5d933e9dce59c7dd0f6532f9ea81b_default",
+      "main_2024_32683193e1d0e7a5795b073acecb3549_datasets_and_benchmarks_track",
+      "db_2021_be83ab3ecd0db773eb2dc1b0a17836a1_round2",
+      "main_2022_a7667ee5d545a43d2f0fda98863c260e_conference",
+      "main_2018_57c0531e13f40b91b3b0f1a30b529a1d_default",
+      "main_2024_4964cd3f89ee5b57f07f4bc1824d2beb_conference",
+      "main_2024_377d0752059d3d4686aa021b664a25dd_conference",
+      "main_2019_82161242827b703e6acf9c726942a1e4_default",
+      "main_2021_5f1d3986fae10ed2994d14ecd89892d7_default",
+      "main_2023_90debc7cedb5cac83145fc8d18378dc5_conference",
+      "main_2018_bdb3c278f45e6734c35733d24299d3f4_default",
+      "main_2021_cc3f5463bc4d26bc38eadc8bcffbc654_default",
+      "main_2024_398b00a05b847ac65eb98c8e5e865fe8_conference",
+      "main_2016_aa169b49b583a2b5af89203c2b78c67c_default",
+      "main_2019_044a23cadb567653eb51d4eb40acaa88_default",
+      "main_2024_426fc72e404c4dfafc1edd62f4971dc2_conference",
+      "main_2017_ea8fcd92d59581717e06eb187f10666d_default",
+      "main_2023_b7216f4a324864e1f592c18de4d83d10_conference",
+      "main_2022_c1aaf7c3f306fe94f77236dc0756d771_conference",
+      "main_2024_e481829e70a46db98c0c2eb46ff91bac_conference",
+      "main_2021_c3e0c62ee91db8dc7382bde7419bb573_default",
+      "main_2020_8fc687aa152e8199fe9e73304d407bca_default",
+      "main_2020_551fdbb810aff145c114b93867dd8bfd_default",
+      "main_2024_8d8e060d9a3312ae12f42adf0da6ec7c_conference",
+      "main_2015_1be3bc32e6564055d5ca3e5a354acbef_default",
+      "main_2022_029f82afd78288059dc946b105c451fd_conference",
+      "main_2024_a178bd942c97f51ec069ddceeb55591b_conference",
+      "main_2024_14fc4a68da97a3d31eb11c642b0b10fc_conference",
+      "main_2022_7f2223201858b6ff4cc1832d8856459b_conference",
+      "main_2021_b2eeb7362ef83deff5c7813a67e14f0a_default",
+      "main_2024_34a1fc7890141f1ada3d8bc6199cce07_conference",
+      "main_2024_e7eb8128eb26eafbe901348df1dbacdc_conference",
+      "main_2020_7ec0dbeee45813422897e04ad8424a5e_default",
+      "main_2024_b4baac5d3f7508a4eb2b65376470a5a2_conference",
+      "main_2023_eef6cb60fd59b32d35718e176b4b08d6_conference",
+      "main_2020_c6dfc6b7c601ac2978357b7a81e2d7ae_default",
+      "main_2022_eee7ae5cf0c4356c2aeca400771791aa_conference",
+      "main_2024_f775e2e0e7e12227adecbbf945f43546_conference",
+      "main_2023_6f43166f50f26e8d8f3edc5545b0749f_conference",
+      "main_2018_e1314fc026da60d837353d20aefaf054_default",
+      "main_2024_8829f586a1ac0e6c41143f5d57b63c4b_conference",
+      "main_2018_64f1f27bf1b4ec22924fd0acb550c235_default",
+      "main_2024_f4dbdf190269a839704d9595bce2b11e_conference",
+      "main_2023_62bf42cc047db5b290e7d5737c1f6a8d_conference",
+      "main_2019_3430095c577593aad3c39c701712bcfe_default",
+      "main_2023_c23fdcb9f8e28af705a87de1375a705c_conference",
+      "main_2021_94739e5a5164b4d2396e253a11d57044_default",
+      "main_2016_743c41a921516b04afde48bb48e28ce6_default",
+      "main_2021_4be5a36cbaca8ab9d2066debfe4e65c1_default",
+      "main_2020_1e6e25d952a0d639b676ee20d0519ee2_default",
+      "main_2022_022a39052abf9ca467e268923057dfc0_conference",
+      "main_2022_f376f5dff6f6ec6364aea7a46ab49574_conference",
+      "main_2020_c3992e9a68c5ae12bd18488bc579b30d_default",
+      "main_2023_3d007df4ae13adf9001f8969555b11bd_conference",
+      "main_2015_14bfa6bb14875e45bba028a21ed38046_default",
+      "main_2022_7caf9d251b546bc78078b35b4a6f3b7e_conference",
+      "main_2022_1a774f3555593986d7d95e4780d9e4f4_conference",
+      "main_2020_70431e77d378d760c3c5456519f06efe_default",
+      "main_2019_83dd3f9f97ef6533766c39d5b2e5e565_default",
+      "main_2024_fad8e1915f66161581bb127ccf01092e_conference",
+      "main_2022_c8d2860e1b51a1ffadc7ed0a06f8d8f5_conference",
+      "main_2018_a292f1c5874b2be8395ffd75f313937f_default",
+      "main_2021_251bd0442dfcc53b5a761e050f8022b8_default",
+      "main_2021_b28d7c6b6aec04f5525b453411ff4336_default",
+      "main_2019_f56d8183992b6c54c92c16a8519a6e2b_default",
+      "main_2015_452bf208bf901322968557227b8f6efe_default",
+      "main_2023_9f4064d145bad5e361206c3303bda7b8_conference",
+      "main_2018_98b17f068d5d9b7668e19fb8ae470841_default",
+      "main_2023_2e19dab94882bc95ed094c4399cfda02_conference",
+      "main_2021_2f2cd5c753d3cee48e47dbb5bbaed331_default",
+      "main_2024_555479a201da27c97aaeed842d16ca49_conference",
+      "main_2018_976abf49974d4686f87192efa0513ae0_default",
+      "main_2022_3f52b555967a95ee850fcecbd29ee52d_conference",
+      "main_2021_2639ba2137371773aa1e64e7735cdb30_default",
+      "main_2019_23755432da68528f115c9633c0d7834f_default",
+      "main_2016_a01a0380ca3c61428c26a231f0e49a09_default",
+      "main_2021_a0d3973ad100ad83a64c304bb58677dd_default",
+      "main_2016_c21002f464c5fc5bee3b98ced83963b8_default",
+      "main_2021_868b7df964b1af24c8c0a9e43a330c6a_default",
+      "main_2021_50a074e6a8da4662ae0a29edde722179_default",
+      "main_2021_2a38a4a9316c49e5a833517c45d31070_default",
+      "main_2024_d7aa002885ccbe68cf6880da583761b2_conference",
+      "main_2021_701d804549a4a23d3cae801dac6c2c75_default",
+      "main_2024_d0822540916cd716add52e1846a6e18d_conference",
+      "main_2023_7b16688a2b053a1b01474ab5c78ce662_datasets_and_benchmarks",
+      "main_2022_390bb66a088d37f62ee9fb779c5953c2_conference",
+      "main_2024_1741917e3df34daa1a4c564e2980bb59_conference",
+      "main_2021_c315f0320b7cd4ec85756fac52d78076_default",
+      "main_2020_a96b65a721e561e1e3de768ac819ffbb_default",
+      "main_2022_27b51baca8377a0cf109f6ecc15a0f70_conference",
+      "main_2024_3b64416915026a6744bf10a819571041_conference",
+      "main_2020_37693cfc748049e45d87b8c7d8b9aacd_default",
+      "main_2020_3a37abdeefe1dab1b30f7c5c7e581b93_default",
+      "main_2023_59b7c1e1716c4feadefd6c70b1dd4630_conference",
+      "main_2024_1697e3fb412da11dc9488249f9e7bbc9_datasets_and_benchmarks_track",
+      "main_2023_31fc85f7461ce71eadf27fb7281973bd_conference",
+      "main_2022_1704fe7aaff33a54802b83a016050ab8_conference",
+      "main_2024_4dd0a016d7d253d02473e4778414ab0b_conference",
+      "main_2022_c47e6286162ec5442e06fe2b7cb7145f_conference",
+      "main_2024_1f59562caae05e6aae0ffd1145bea5da_conference",
+      "main_2022_718a3c5cf135894db6e718725f52ef9a_conference",
+      "main_2021_2a8009525763356ad5e3bb48b7475b4d_default",
+      "main_2022_6fcc2190f456464160921e98393bf50e_conference",
+      "main_2019_582967e09f1b30ca2539968da0a174fa_default",
+      "main_2021_4cc05b35c2f937c5bd9e7d41d3686fff_default",
+      "main_2019_6ea2ef7311b482724a9b7b0bc0dd85c6_default",
+      "main_2022_b3835dd49b7d5bb062aecccc14d8a675_datasets_and_benchmarks",
+      "main_2017_8fb5f8be2aa9d6c64a04e3ab9f63feee_default",
+      "main_2022_a60c43ba078b723d3d517d28c50ded4c_conference",
+      "main_2023_6feb9b30798abcfae937760d183605e1_conference",
+      "main_2024_a71c1931d3fb8ba564f7458d0657d0b1_conference",
+      "db_2021_0a09c8844ba8f0936c20bd791130d6b6_round1",
+      "main_2023_016c63403370d81c24c1ca0123de6cfa_conference",
+      "main_2023_bcdaaa1aec3ae2aa39542acefdec4e4b_conference",
+      "main_2018_a57e8915461b83adefb011530b711704_default",
+      "main_2020_36dcd524971019336af02550264b8a08_default",
+      "main_2018_dc5d637ed5e62c36ecb73b654b05ba2a_default",
+      "main_2020_123650dd0560587918b3d771cf0c0171_default",
+      "main_2021_fd2c5e4680d9a01dba3aada5ece22270_default",
+      "main_2021_1fb2a1c37b18aa4611c3949d6148d0f8_default",
+      "main_2020_d87ca511e2a8593c8039ef732f5bffed_default",
+      "main_2022_e55b33430e344a1ee23710415b1c9d87_conference",
+      "main_2019_770f8e448d07586afbf77bb59f698587_default",
+      "main_2023_e90ba1fc564a69809d7391bf76a5f087_conference",
+      "main_2024_df0e4ffa41062ca002f1f68c73269802_conference",
+      "main_2021_edc27f139c3b4e4bb29d1cdbc45663f9_default",
+      "main_2023_caba69fbc9fa0b06241b98a44cab8b31_conference",
+      "main_2023_6776737cd11cf4afa3af226898474418_conference",
+      "main_2019_67974233917cea0e42a49a2fb7eb4cf4_default",
+      "main_2019_02a32ad2669e6fe298e607fe7cc0e1a0_default",
+      "main_2024_80364062ec10e7bd976fc2d7a22730c3_conference",
+      "main_2019_48237d9f2dea8c74c2a72126cf63d933_default",
+      "main_2020_174f8f613332b27e9e8a5138adb7e920_default",
+      "main_2015_be53ee61104935234b174e62a07e53cf_default",
+      "main_2019_9be40cee5b0eee1462c82c6964087ff9_default",
+      "main_2022_83e6913572ba09b0ab53c64c016c7d1a_conference",
+      "main_2021_77b88288ebae7b17b7c8610a48c40dd1_default",
+      "main_2023_3bf4b55960aaa23553cd2a6bdc6e1b57_conference",
+      "main_2024_067437c6d5d0369b6d09200bef89715b_conference",
+      "db_2021_6cdd60ea0045eb7a6ec44c54d29ed402_round2",
+      "main_2024_751ef1e7f557a8a88f0837b61bf5070f_conference",
+      "main_2018_801fd8c2a4e79c1d24a40dc735c051ae_default",
+      "main_2022_80b7bec60081f95d900973509744a306_conference",
+      "main_2024_1456560769bbc38e4f8c5055048ea712_conference",
+      "main_2021_a2f04745390fd6897d09772b2cd1f581_default",
+      "main_2021_8d2a5f7d4afa5d0530789d3066945330_default",
+      "main_2023_8313b1920ee9c78d846c5798c1ce48be_conference",
+      "main_2024_fdff3c4130c24c40c88aa41eb52d2a27_conference",
+      "main_2018_01e9565cecc4e989123f9620c1d09c09_default",
+      "main_2019_1d54c76f48f146c3b2d66daf9d7f845e_default",
+      "main_2021_85a4413ecea7122bcc399cf0a53bba26_default",
+      "main_2023_7eeb42802d3750ca59e8a0523068e9e6_conference",
+      "main_2023_61d0a96d4a73b626367310b3ad32579d_conference",
+      "main_2015_83f97f4825290be4cb794ec6a234595f_default",
+      "main_2023_902c462e821e5e639ac3422b48b65932_conference",
+      "main_2022_2ab47c960bfee4f86dfc362f26ad066a_conference",
+      "main_2016_6c9882bbac1c7093bd25041881277658_default",
+      "main_2018_67d96d458abdef21792e6d8e590244e7_default",
+      "main_2022_ac662d74829e4407ce1d126477f4a03a_conference",
+      "main_2024_0d288dbe7a757672151aa5fb5423ef2e_conference",
+      "main_2019_ea9268cb43f55d1d12380fb6ea5bf572_default",
+      "main_2024_ef7a500bc90d45e362c82d63a0eff22d_conference",
+      "main_2022_2858f8c8683aaa8c12d487354cf328dc_conference",
+      "main_2022_bc1d640f841f752c689aae20b31198c1_conference",
+      "main_2023_2f060912eacace9ce61ef339205ec54c_conference",
+      "main_2019_6048ff4e8cb07aa60b6777b6f7384d52_default",
+      "db_2021_e2c420d928d4bf8ce0ff2ec19b371514_round2",
+      "main_2019_0224cd598e48c5041c7947fd5cb20d53_default",
+      "main_2024_87affd2029375d1be123ccdab5334c55_conference",
+      "main_2022_9a9afa70eead1805f00e3a0df2a41157_conference",
+      "main_2021_b24d516bb65a5a58079f0f3526c87c57_default",
+      "main_2023_aa5c083f9d387c49514eb5c4dc2dc16b_conference",
+      "main_2021_f26df67e8110ee2b44923db775e3e47f_default",
+      "main_2023_91edff07232fb1b55a505a9e9f6c0ff3_conference",
+      "main_2018_10ff0b5e85e5b85cc3095d431d8c08b4_default",
+      "main_2024_df22a19686a558e74f038e6277a51f68_conference",
+      "main_2019_c0e90532fb42ac6de18e25e95db73047_default",
+      "main_2020_a3842ed7b3d0fe3ac263bcabd2999790_default",
+      "main_2024_f18222190deda602622b3ed90d28bd98_conference",
+      "main_2024_fba9133d7fa896ab9414ddd1a6b1ecbf_conference",
+      "main_2024_a7ebe2e8d8cfd2fcec6cd77f9e6fd34d_conference",
+      "main_2021_ea4c796cccfc3899b5f9ae2874237c20_default",
+      "main_2019_4c5bcfec8584af0d967f1ab10179ca4b_default",
+      "main_2018_2fd0fd3efa7c4cfb034317b21f3c2d93_default",
+      "main_2023_6ad5d39b10e37915d7dfda2893d8e924_conference",
+      "main_2022_fbc9981dd6316378aee7fd5975250f21_conference",
+      "main_2022_e5aa7171449b83f8b4eec1623eac9906_conference",
+      "main_2020_6cd9313ed34ef58bad3fdd504355e72c_default",
+      "main_2022_fcd812a51b8f8d05cfea22e3c9c4b369_conference",
+      "main_2021_8e5e15c4e6d09c8333a17843461041a9_default",
+      "main_2022_1ba5f64159d67775a251cf9ce386a2b9_conference",
+      "main_2020_c1502ae5a4d514baec129f72948c266e_default",
+      "main_2022_7f970edb14104b81e70e3b03e1f5214f_conference",
+      "main_2023_ee799aff607fcf39c01df6391e96f92c_datasets_and_benchmarks",
+      "main_2022_4f3820576130a8f796ddbf204c841487_conference",
+      "main_2024_6b111780a4a1c3beecb43b708ad7415e_conference",
+      "main_2024_96af549bb29d01b1713e88e5c3899ceb_conference",
+      "main_2024_6034a661584af6c28fd97a6f23e56c0a_conference",
+      "main_2021_1f9f9d8ff75205aa73ec83e543d8b571_default",
+      "main_2023_5195825ee60d7efc1e42b7f3f3137040_conference",
+      "main_2019_56cb94cb34617aeadff1e79b53f38354_default",
+      "main_2017_11b921ef080f7736089c757404650e40_default",
+      "main_2019_ee0c1616bbc82804b2f4b635d4a055fb_default",
+      "main_2021_b2f627fff19fda463cb386442eac2b3d_default",
+      "main_2020_06d5ae105ea1bea4d800bc96491876e9_default",
+      "main_2019_cae82d4350cc23aca7fc9ae38dab38ab_default",
+      "main_2024_bc667ac84ef58f2b5022da97a465cbab_conference",
+      "main_2022_debd0ae2083160397a22a4a8831c7230_conference",
+      "main_2021_f89394c979b34a25cc4ff8e11234fbfb_default",
+      "main_2023_a3017a8d202a433be56a3dfdcac6c8eb_conference",
+      "main_2021_fd45ebc1e1d76bc1fe0ba933e60e9957_default",
+      "main_2024_e1d40e928125c515099a3fdb75f06a50_conference",
+      "main_2020_ef0d17b3bdb4ee2aa741ba28c7255c53_default",
+      "main_2021_477bdb55b231264bb53a7942fd84254d_default",
+      "main_2024_0aee38a6fe9fffc8b658cfb1d872c1d5_conference",
+      "main_2018_e82c4b19b8151ddc25d4d93baf7b908f_default",
+      "main_2018_645098b086d2f9e1e0e939c27f9f2d6f_default",
+      "main_2018_3b3dbaf68507998acd6a5a5254ab2d76_default",
+      "main_2024_c981fd12b1d5703f19bd8289da9fc996_conference",
+      "main_2024_0c7ca207a051228f978971447a56464a_conference",
+      "main_2019_6ea3f1874b188558fafbab78e8c3a968_default",
+      "main_2024_20cea6c1b36ae5f69c48427a68b67fbc_conference",
+      "main_2024_7b24015f3af598e1d9179f6e06353780_conference",
+      "main_2024_26300457961c3e056ea61c9d3ebec2a4_conference",
+      "main_2020_3c09bb10e2189124fdd8f467cc8b55a7_default",
+      "main_2022_dd73f39426a03131c38c8d943153d44b_conference",
+      "main_2024_37c6d0bc4d2917dcbea693b18504bd87_conference",
+      "main_2019_f6e794a75c5d51de081dbefa224304f9_default",
+      "main_2019_b53477c2821c1bf0da5d40e57b870d35_default",
+      "main_2024_008a16ead32f932b711788c276890456_conference",
+      "main_2017_e91068fff3d7fa1594dfdf3b4308433a_default",
+      "main_2021_d7b76edf790923bf7177f7ebba5978df_default",
+      "main_2024_bd8b52c2fefdb37e3b3953a37408e9dc_conference",
+      "main_2024_8926246e46868353aa422d3629893d20_conference",
+      "main_2024_d4bdeed749a437de2cbe2e2c7e5a6a8a_conference",
+      "main_2024_95286b5d4cd5b7953bd2bbe717300fe0_datasets_and_benchmarks_track",
+      "main_2020_d7488039246a405baf6a7cbc3613a56f_default",
+      "main_2022_486ff0b164cf92b0255fe39863bcf99e_conference",
+      "main_2019_e52ad5c9f751f599492b4f087ed7ecfc_default",
+      "main_2024_19774ce2d4b0d17a3a8aea26ad99fe8a_conference",
+      "main_2023_516fd05dc408fd6d6374940a83930193_conference",
+      "main_2023_7d535a224c8ae54ba75bac0457b6b279_conference",
+      "main_2016_53ed35c74a2ec275b837374f04396c03_default",
+      "main_2021_85ea6fd7a2ca3960d0cf5201933ac998_default",
+      "main_2016_7b4773c039d539af17c883eb9283dd14_default",
+      "main_2023_8dcc306a2522c60a78f047ab8739e631_conference",
+      "main_2018_4f164cf233807fc02da06599a1264dee_default",
+      "main_2024_7a0f8055c838df8e62329a76c7c6403d_conference",
+      "main_2024_477cde5ca7ab9254d8fc83b97e834446_conference",
+      "main_2015_1efa39bcaec6f3900149160693694536_default",
+      "main_2023_8936fa1691764912d9519e1b5673ea66_conference",
+      "main_2021_c2368d3d45705a56e51ec5940e187f8d_default",
+      "main_2023_62a24b69b820d30e9e5ad4f15ff7bf72_datasets_and_benchmarks",
+      "main_2019_378a063b8fdb1db941e34f4bde584c7d_default",
+      "main_2023_887262aeb3eafb01ef0fd0e3a87a8831_conference",
+      "db_2021_38b3eff8baf56627478ec76a704e9b52_round1",
+      "main_2024_a0cd56b91305239e2580dd9440b2e155_conference",
+      "main_2023_86c1fd74fa25bd6be0072937803e0bd1_conference",
+      "main_2015_310dcbbf4cce62f762a2aaa148d556bd_default",
+      "main_2021_cdd0500dc0ef6682fa6ec6d2e6b577c4_default",
+      "main_2022_e1f351706ab4417524e1b17f9adcc657_conference",
+      "main_2022_b653f34d576d1790481e3797cb740214_conference",
+      "main_2018_cc70903297fe1e25537ae50aea186306_default",
+      "main_2019_1019c8091693ef5c5f55970346633f92_default",
+      "main_2024_a488aa1a0c00d76db8a922ef7815a786_conference",
+      "main_2021_67e235e7f2fa8800d8375409b566e6b6_default",
+      "main_2018_08f90c1a417155361a5c4b8d297e0d78_default",
+      "main_2019_d840cc5d906c3e9c84374c8919d2074e_default",
+      "main_2017_09fb05dd477d4ae6479985ca56c5a12d_default",
+      "main_2019_dab1263d1e6a88c9ba5e7e294def5e8b_default",
+      "main_2021_2b0f658cbffd284984fb11d90254081f_default",
+      "main_2024_0e5b96f97c1813bb75f6c28532c2ecc7_conference",
+      "main_2022_480045ad846b44bf31441c1f1d9dd768_conference",
+      "main_2020_c41dd99a69df04044aa4e33ece9c9249_default",
+      "main_2024_47a287298e7887d1c25d4aabb918bd54_conference",
+      "main_2023_b87d9d19ecb5927f7e18c537908610ef_conference",
+      "main_2018_62da8c91ce7b10846231921795d6059e_default",
+      "main_2021_97108695bd93b6be52fa0334874c8722_default",
+      "main_2019_ac5dab2e99eee9cf9ec672e383691302_default",
+      "main_2023_2e37e56599e3f49cc899f40ae4f5d1fa_conference",
+      "main_2021_a02ef8389f6d40f84b50504613117f88_default",
+      "main_2024_bcbdc25dc4f0be5ae8ac07232df6e33a_conference",
+      "main_2024_1e269abc604816c35f600ae14b354efd_conference",
+      "main_2021_da11e8cd1811acb79ccf0fd62cd58f86_default",
+      "main_2024_08342dc6ab69f23167b4123086ad4d38_conference",
+      "main_2023_46b065f7d301a15a23909f6cad409a97_conference",
+      "main_2023_927962d8866377a07ee3150d2d691319_conference",
+      "main_2022_a8b8c1ad51df1b93d9e3d1fca75debbf_conference",
+      "main_2017_cbcb58ac2e496207586df2854b17995f_default",
+      "main_2016_a501bebf79d570651ff601788ea9d16d_default",
+      "main_2023_9d23562fcedc078e27a3be813ff6feb5_conference",
+      "main_2015_351b33587c5fdd93bd42ef7ac9995a28_default",
+      "main_2024_69d97a6493fbf016fff0a751f253ad18_datasets_and_benchmarks_track",
+      "main_2024_4ea6932c9845d6b2cfb89c72b41df3c5_conference",
+      "main_2022_171c3678c36e39fc0074f3e7332a9a66_conference",
+      "main_2020_c0a271bc0ecb776a094786474322cb82_default",
+      "main_2023_cde2dc73e0ad650176cdfa9b779eefc7_conference",
+      "main_2024_698cfaf72a208aef2e78bcac55b74328_conference",
+      "main_2015_2612aa892d962d6f8056b195ca6e550d_default",
+      "main_2022_f12d4e75bb8c62aba3e88d0586af96d3_conference",
+      "main_2023_19ded4cfc36a7feb7fce975393d378fd_conference"
+    ],
+    "validation_note": "The disjoint validation query sample is withheld from parameter selection, but all corpus points participate in every unsupervised fit. This tests neighbor robustness, not out-of-sample generalization.",
+    "diagnostic_definition": "Top-k Euclidean neighbors of rounded six-decimal 3D coordinates are compared with exact Euclidean neighbors in the original five scores. Trustworthiness uses original ranks among every other corpus paper. Both query samples contain512 papers.",
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "umap-learn": "0.5.11",
+      "numba": "0.68.0",
+      "pynndescent": "0.6.0"
+    },
+    "input_file_hashes": {
+      "atlas/papers.html": "20a7fa25953728873bbff4d6001313c5d5c9e0ef5e51762249c5b3a8eda7ebdc",
+      "atlas/drafts/framing-galaxy.json": "60e37d2de697575687bb428139b6441de06fd62425ca599be2f44bacf84a9463",
+      "atlas/drafts/framing-galaxy-method.json": "73a7b35491fb541c61129507b857bbce51803ad60f730f47fc710ca27d070e5f",
+      "atlas/drafts/paper-galaxy.json": "c89e4a5c545a00963e72e12527909dcaa68d1f0346ee2d02246d4a9013961277",
+      "atlas/drafts/paper-galaxy-method.json": "b6a1613f62e9d5c10a462d3bf1c6191743ad063d02957184e8aa22e58ef95966",
+      "scratch/framing-layout-comparison/compare.py": "f9afca4f8cef9698eb21c0e995acc7fe32a33db69dee650120ac449d5ef40e79"
+    },
+    "input_file_hashes_note": "These are historical input snapshots captured before the comparison, not assertions about current live paths. In particular, the two framing JSON inputs were PCA artifacts at commit 1fab45d and have since been replaced by UMAP artifacts; their preserved copies are identified below.",
+    "historical_pca_inputs": {
+      "atlas/drafts/framing-galaxy.json": {
+        "snapshot_commit": "1fab45d20011e6b090be973f562b0b60fdf5bc84",
+        "recorded_sha256": "60e37d2de697575687bb428139b6441de06fd62425ca599be2f44bacf84a9463",
+        "backup_path": "scratch/framing-layout-comparison/pca-baseline/atlas/drafts/framing-galaxy.json",
+        "backup_sha256": "60e37d2de697575687bb428139b6441de06fd62425ca599be2f44bacf84a9463",
+        "backup_matches_recorded_hash": true
+      },
+      "atlas/drafts/framing-galaxy-method.json": {
+        "snapshot_commit": "1fab45d20011e6b090be973f562b0b60fdf5bc84",
+        "recorded_sha256": "73a7b35491fb541c61129507b857bbce51803ad60f730f47fc710ca27d070e5f",
+        "backup_path": "scratch/framing-layout-comparison/pca-baseline/atlas/drafts/framing-galaxy-method.json",
+        "backup_sha256": "73a7b35491fb541c61129507b857bbce51803ad60f730f47fc710ca27d070e5f",
+        "backup_matches_recorded_hash": true
+      }
+    },
+    "configurations": {
+      "pca3": {
+        "method": "PCA",
+        "parameters": {
+          "n_components": 3,
+          "whiten": false,
+          "score_axes": [
+            "resource_benchmark_genre",
+            "formal_theory_genre",
+            "empirical_performance_evidence",
+            "scale_capability_rhetoric",
+            "artifact_release_orientation"
+          ]
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.2587890625,
+              "median_neighbor_recall": 0.2,
+              "trustworthiness": 0.9857724503114419,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.1,
+                "0.75": 0.4,
+                "0.9": 0.5
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.2947916666666667,
+              "median_neighbor_recall": 0.26666666666666666,
+              "trustworthiness": 0.9857092549858655,
+              "quantiles": {
+                "0.1": 0.06666666666666667,
+                "0.25": 0.13333333333333333,
+                "0.75": 0.4,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.35722656249999996,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9854302466768916,
+              "quantiles": {
+                "0.1": 0.16666666666666666,
+                "0.25": 0.23333333333333334,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.6
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.38055555555555554,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.39876543209876547,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.33188405797101456,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.3939393939393939,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.3436781609195403,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 7,
+              "top15_overlap": 11
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 14
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 4,
+              "top15_overlap": 7
+            }
+          ]
+        },
+        "validation": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.263671875,
+              "median_neighbor_recall": 0.2,
+              "trustworthiness": 0.9851990874008167,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.1,
+                "0.75": 0.4,
+                "0.9": 0.5
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.29270833333333335,
+              "median_neighbor_recall": 0.26666666666666666,
+              "trustworthiness": 0.9853523637613335,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.36497395833333335,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9856981695939357,
+              "quantiles": {
+                "0.1": 0.16666666666666666,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5966666666666678
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 50,
+              "mean_neighbor_recall_at15": 0.41466666666666663,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 64,
+              "mean_neighbor_recall_at15": 0.34270833333333334,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 56,
+              "mean_neighbor_recall_at15": 0.3654761904761905,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.4133333333333333,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 71,
+              "mean_neighbor_recall_at15": 0.37370892018779334,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 7,
+              "top15_overlap": 11
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 14
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 4,
+              "top15_overlap": 7
+            }
+          ]
+        }
+      },
+      "u15_m010_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 15,
+          "min_dist": 0.1,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.3759765625,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9896025763420434,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.3,
+                "0.75": 0.5,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.37591145833333334,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9887289059537353,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.6
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.37623697916666665,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9870197381690439,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5666666666666667
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.40972222222222227,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.3851851851851852,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.36956521739130427,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.43515151515151507,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.41264367816091946,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 6,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 3,
+              "top15_overlap": 8
+            }
+          ]
+        },
+        "validation": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.3826171875,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9892586151333643,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.3,
+                "0.75": 0.5,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.38359375,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9885040208505705,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.38404947916666665,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9873752149072852,
+              "quantiles": {
+                "0.1": 0.23333333333333334,
+                "0.25": 0.3,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 50,
+              "mean_neighbor_recall_at15": 0.39199999999999996,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 64,
+              "mean_neighbor_recall_at15": 0.40625,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 56,
+              "mean_neighbor_recall_at15": 0.3976190476190476,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.4278787878787877,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 71,
+              "mean_neighbor_recall_at15": 0.4262910798122065,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 6,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 3,
+              "top15_overlap": 8
+            }
+          ]
+        }
+      },
+      "u15_m035_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 15,
+          "min_dist": 0.35,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.3271484375,
+              "median_neighbor_recall": 0.3,
+              "trustworthiness": 0.9869860521503709,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.34557291666666673,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9863465742105354,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.36972656249999997,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9858426994620038,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5666666666666667
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.39999999999999997,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.38395061728395063,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.33913043478260874,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.4145454545454545,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.3839080459770115,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 6,
+              "top15_overlap": 8
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 11
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 8,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 4,
+              "top15_overlap": 7
+            }
+          ]
+        }
+      },
+      "u30_m010_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 30,
+          "min_dist": 0.1,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.32792968749999996,
+              "median_neighbor_recall": 0.3,
+              "trustworthiness": 0.9884603432484299,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.33684895833333334,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.987747764817544,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.367578125,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9863969249922342,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.3763888888888889,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.3691358024691358,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.34347826086956523,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.3769696969696969,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.367816091954023,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 5,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 6,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 3,
+              "top15_overlap": 6
+            }
+          ]
+        }
+      },
+      "u30_m035_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 30,
+          "min_dist": 0.35,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.294921875,
+              "median_neighbor_recall": 0.3,
+              "trustworthiness": 0.9865374760118633,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.5
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.32447916666666665,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9864323967059675,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.3640625,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9855251618141303,
+              "quantiles": {
+                "0.1": 0.16666666666666666,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5633333333333345
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.38611111111111107,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.3814814814814814,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.33768115942028987,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.38424242424242416,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.3655172413793104,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 6,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 8,
+              "top15_overlap": 8
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 3,
+              "top15_overlap": 6
+            }
+          ]
+        }
+      },
+      "u60_m010_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 60,
+          "min_dist": 0.1,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.29628906250000003,
+              "median_neighbor_recall": 0.3,
+              "trustworthiness": 0.9873258134159106,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.5
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.3192708333333334,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9866722095097735,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.5333333333333333
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.35130208333333335,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9857634574564469,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.43333333333333335,
+                "0.9": 0.5333333333333333
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.37361111111111117,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.3691358024691358,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.3318840579710145,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.36484848484848476,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.35517241379310344,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 4,
+              "top15_overlap": 5
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 5,
+              "top15_overlap": 8
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 1,
+              "top15_overlap": 6
+            }
+          ]
+        }
+      },
+      "u60_m035_s42": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 60,
+          "min_dist": 0.35,
+          "random_state": 42
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.26992187500000003,
+              "median_neighbor_recall": 0.3,
+              "trustworthiness": 0.9857620009336797,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.17500000000000002,
+                "0.75": 0.4,
+                "0.9": 0.5
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.30260416666666673,
+              "median_neighbor_recall": 0.26666666666666666,
+              "trustworthiness": 0.9855242713504498,
+              "quantiles": {
+                "0.1": 0.13333333333333333,
+                "0.25": 0.2,
+                "0.75": 0.4,
+                "0.9": 0.4666666666666667
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.35136718749999996,
+              "median_neighbor_recall": 0.3333333333333333,
+              "trustworthiness": 0.9852637676833372,
+              "quantiles": {
+                "0.1": 0.16666666666666666,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.43333333333333335,
+                "0.9": 0.5333333333333333
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.3680555555555556,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.3703703703703703,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.32028985507246377,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.3672727272727272,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.3413793103448276,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 5,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 9
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 2,
+              "top15_overlap": 5
+            }
+          ]
+        }
+      },
+      "u15_m010_s7": {
+        "method": "UMAP",
+        "parameters": {
+          "n_neighbors": 15,
+          "min_dist": 0.1,
+          "random_state": 7
+        },
+        "selection": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.37421875000000004,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9897742894019281,
+              "quantiles": {
+                "0.1": 0.1,
+                "0.25": 0.3,
+                "0.75": 0.5,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.3770833333333334,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9888767622362705,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.6
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.3748697916666667,
+              "median_neighbor_recall": 0.36666666666666664,
+              "trustworthiness": 0.9870636364200167,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5666666666666667
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 48,
+              "mean_neighbor_recall_at15": 0.41111111111111115,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 54,
+              "mean_neighbor_recall_at15": 0.38765432098765423,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 46,
+              "mean_neighbor_recall_at15": 0.3826086956521738,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.4315151515151514,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 58,
+              "mean_neighbor_recall_at15": 0.41494252873563214,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 5,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 8
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 4,
+              "top15_overlap": 8
+            }
+          ]
+        },
+        "validation": {
+          "sample_size": 512,
+          "candidate_pool_size": 19361,
+          "neighbor_metrics": {
+            "10": {
+              "mean_neighbor_recall": 0.383203125,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9899217013485048,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.3,
+                "0.75": 0.5,
+                "0.9": 0.6
+              }
+            },
+            "15": {
+              "mean_neighbor_recall": 0.384375,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9889040522546282,
+              "quantiles": {
+                "0.1": 0.2,
+                "0.25": 0.26666666666666666,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.6
+              }
+            },
+            "30": {
+              "mean_neighbor_recall": 0.38313802083333337,
+              "median_neighbor_recall": 0.4,
+              "trustworthiness": 0.9874591049232914,
+              "quantiles": {
+                "0.1": 0.23333333333333334,
+                "0.25": 0.3,
+                "0.75": 0.4666666666666667,
+                "0.9": 0.5333333333333333
+              }
+            }
+          },
+          "top_decile_axis_groups": {
+            "resource_benchmark_genre": {
+              "query_count": 50,
+              "mean_neighbor_recall_at15": 0.4013333333333333,
+              "original_group_size": 1938
+            },
+            "formal_theory_genre": {
+              "query_count": 64,
+              "mean_neighbor_recall_at15": 0.38541666666666663,
+              "original_group_size": 1937
+            },
+            "empirical_performance_evidence": {
+              "query_count": 56,
+              "mean_neighbor_recall_at15": 0.4047619047619048,
+              "original_group_size": 1937
+            },
+            "scale_capability_rhetoric": {
+              "query_count": 55,
+              "mean_neighbor_recall_at15": 0.4339393939393938,
+              "original_group_size": 1937
+            },
+            "artifact_release_orientation": {
+              "query_count": 71,
+              "mean_neighbor_recall_at15": 0.43474178403755853,
+              "original_group_size": 1938
+            }
+          },
+          "examples": [
+            {
+              "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+              "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+              "top10_overlap": 5,
+              "top15_overlap": 6
+            },
+            {
+              "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+              "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+              "top10_overlap": 7,
+              "top15_overlap": 8
+            },
+            {
+              "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+              "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+              "top10_overlap": 7,
+              "top15_overlap": 10
+            },
+            {
+              "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+              "title": "Algorithmic Stability and Uniform Generalization",
+              "top10_overlap": 4,
+              "top15_overlap": 8
+            }
+          ]
+        }
+      }
+    },
+    "interpretation": [
+      "The six-configuration sweep selected 15 neighbors and min_dist 0.1 by overall exact-neighbor recall, with safeguards across all five top-decile score groups, not by visual islands or theory purity.",
+      "A second seed and a disjoint query sample confirmed the global improvement. All corpus papers still participated in each unsupervised fit; this is not out-of-sample generalization.",
+      "Improvements are not universal. The selected seed's selection-query theory recall fell 1.36 percentage points; validation-query resource recall fell 2.27 points (50 queries). Other validation groups improved.",
+      "The selected seed's example top-10 overlaps changed from 7 to 6 for Frank-Wolfe and 4 to 3 for algorithmic stability; FineWeb and episodic RL remained 7. Original five-score related-paper lists are unchanged.",
+      "All framing layouts remain continuous clouds or bands. UMAP provides a broader curved shape and better local fidelity, not evidence of discrete paper categories."
+    ]
+  },
+  "neighbor_definition": "Ten exact nonself Euclidean neighbors in all five existing corpus-standardized scores, equally weighted, computed exhaustively in float64. Canonical row index resolves distance ties. These describe evidence-framing similarity, not topic similarity.",
+  "diagnostics": {
+    "sample_seed": 42,
+    "query_paper_ids": [
+      "main_2023_d1d3cdc9e28b0c67b9df90fca4d1c1b3_conference",
+      "main_2024_e6c2e85db1f1039177c4495ccd399ac4_conference",
+      "main_2020_2f3bbb9730639e9ea48f309d9a79ff01_default",
+      "main_2020_865dfbde8a344b44095495f3591f7407_default",
+      "main_2020_4dd9cec1c21bc54eecb53786a2c5fa09_default",
+      "main_2022_93e4d161bdd93d1dc0202b4044159edb_datasets_and_benchmarks",
+      "main_2022_15dce910311b9bd82ca24f634148519a_conference",
+      "main_2020_96fca94df72984fc97ee5095410d4dec_default",
+      "main_2024_5e364212327fa3a59ae3595b025c469f_conference",
+      "main_2024_c4f3846c9a230cfd3373ff419b202bd5_conference",
+      "main_2023_531998dc1fc858b5857a90b74d96ecab_conference",
+      "main_2018_7876acb66640bad41f1e1371ef30c180_default",
+      "main_2021_e0cd3f16f9e883ca91c2a4c24f47b3d9_default",
+      "main_2024_9f9e2982759f384495f4b75a33f3dd72_datasets_and_benchmarks_track",
+      "main_2024_f6adf61977467560f79b95485d1f3a79_conference",
+      "main_2018_8f7d807e1f53eff5f9efbe5cb81090fb_default",
+      "main_2021_c559da2ba967eb820766939a658022c8_default",
+      "main_2020_befe5b0172188ad14d48c3ebe9cf76bf_default",
+      "main_2023_106b2434b8d496c6aed9235d478678af_conference",
+      "main_2023_dcc337bb2a4d25afefd9ab800721debb_conference",
+      "main_2024_5f1b350fc0c2affd56f465faa36be343_conference",
+      "main_2024_a76653a4209b5d098107e5e7e9295ba8_conference",
+      "main_2023_14ecbfb2216bab76195b60bfac7efb1f_conference",
+      "main_2023_ee1e549d6fb7c58ed06557bfc264335c_conference",
+      "main_2022_944618542d80a63bbec16dfbd2bd689a_conference",
+      "main_2021_21ca6d0cf2f25c4dbb35d8dc0b679c3f_default",
+      "main_2020_24bcb4d0caa4120575bb45c8a156b651_default",
+      "main_2022_266983d0949aed78a16fa4782237dea7_conference",
+      "main_2024_14c018d2e72c521605b0567029ef0efb_conference",
+      "main_2020_567b8f5f423af15818a068235807edc0_default",
+      "main_2024_36b6180f3dab4025ba763e853b044814_conference",
+      "main_2020_b90c46963248e6d7aab1e0f429743ca0_default",
+      "main_2018_65b1e92c585fd4c2159d5f33b5030ff2_default",
+      "main_2023_64e2449d74f84e5b1a5c96ba7b3d308e_conference",
+      "main_2015_d9731321ef4e063ebbee79298fa36f56_default",
+      "main_2024_484201c6ad50072c99baa1b26228f714_conference",
+      "main_2024_0735ab358bf9bf0f30af6c871b666ec8_conference",
+      "main_2023_3c0a4c8c236144f1b99b7e1531debe9c_datasets_and_benchmarks",
+      "main_2022_2e32d3a10985fc94c7e11ee6ea165cca_conference",
+      "main_2021_ef1e491a766ce3127556063d49bc2f98_default",
+      "main_2024_1cb57fcf7ff3f6d37eebae5becc9ea6d_conference",
+      "main_2023_c9cde817d04811ba28e44071bd9f76a5_conference",
+      "main_2024_a7f67788f7b4d77fa7cd6887de3dcbe7_datasets_and_benchmarks_track",
+      "main_2019_8a0e1141fd37fa5b98d5bb769ba1a7cc_default",
+      "main_2023_06fc7ae4a11a7eb5e20fe018db6c036f_conference",
+      "main_2019_564645fbd0332f066cbd9d083ddd077c_default",
+      "main_2024_cbc50abfb446dce0caae140b89d6ca12_datasets_and_benchmarks_track",
+      "main_2015_459a4ddcb586f24efd9395aa7662bc7c_default",
+      "main_2021_d4c2e4a3297fe25a71d030b67eb83bfc_default",
+      "main_2023_d84c0dd9b1bfeee361f3268dcaebf849_conference",
+      "main_2018_fdaa09fc5ed18d3226b3a1a00f1bc48c_default",
+      "main_2023_b41907dd4df5c60f86216b73fe0c7465_conference",
+      "main_2018_54fe976ba170c19ebae453679b362263_default",
+      "main_2024_4309616aaed8e848009bc4a7ef73b493_conference",
+      "main_2023_3c557a3d6a48cc99444f85e924c66753_datasets_and_benchmarks",
+      "main_2019_1770ae9e1b6bc9f5fd2841f141557ffb_default",
+      "main_2022_c1f7b1ed763e9c75e4db74b49b76db5f_conference",
+      "main_2023_08f9de0232c0b485110237f6e6cf88f1_conference",
+      "main_2016_1aa48fc4880bb0c9b8a3bf979d3b917e_default",
+      "main_2022_62e5721247075dd097023d077d8e22f7_conference",
+      "main_2024_a0da098e0031f58269efdcba40eedf47_conference",
+      "main_2024_c55aeaa3a85954615319a7e55c81197a_conference",
+      "main_2020_b6c8cf4c587f2ead0c08955ee6e2502b_default",
+      "main_2022_84bad835faaf48f24d990072bb5b80ee_conference",
+      "main_2024_c0f7ee1901fef1da4dae2b88dfd43195_conference",
+      "main_2020_fae0b27c451c728867a567e8c1bb4e53_default",
+      "main_2023_656faa09eb6e82dd86de9a417111c3b0_conference",
+      "main_2022_71b17f00017da0d73823ccf7fbce2d4f_conference",
+      "main_2022_5297e56ac65ba2bfa70ee9fc4818c042_conference",
+      "main_2018_d43ab110ab2489d6b9b2caa394bf920f_default",
+      "main_2020_ddd808772c035aed516d42ad3559be5f_default",
+      "main_2024_d4b6ccf3acd6ccbc1093e093df345ba2_conference",
+      "main_2021_a7d8ae4569120b5bec12e7b6e9648b86_default",
+      "main_2017_da0d1111d2dc5d489242e60ebcbaf988_default",
+      "main_2024_a40ff56daab9f4808b1e18350c8a11ce_conference",
+      "main_2022_d791394d32c428aecc7a5b101fb47799_conference",
+      "main_2018_aa0d2a804a3510442f2fd40f2100b054_default",
+      "main_2021_f3a4ff4839c56a5f460c88cce3666a2b_default",
+      "main_2018_cebd648f9146a6345d604ab093b02c73_default",
+      "main_2024_34d3cf97696022b179171e5abda42c0b_conference",
+      "main_2023_ccf6d8b4a1fe9d9c8192f00c713872ea_conference",
+      "main_2017_ef0d3930a7b6c95bd2b32ed45989c61f_default",
+      "main_2023_abf3682c9cf9245a0294a4bebe4544ff_conference",
+      "main_2016_1f34004ebcb05f9acda6016d5cc52d5e_default",
+      "main_2024_1e027da6bec9ceb2ec37951ceeccae93_conference",
+      "main_2024_5e88ccc6d03f08e426de9bb918aa1bca_conference",
+      "main_2019_cb3ce9b06932da6faaa7fc70d5b5d2f4_default",
+      "main_2021_d1588e685562af341ff2448de4b674d1_default",
+      "main_2022_f0722b58f02d7793acf7d328928f933a_conference",
+      "main_2023_f25602918e8a0d0c86e3c752ecfbbaa1_conference",
+      "main_2023_903f778fe1341e5351b5b63e0e6b197f_conference",
+      "main_2024_a4c680b456b9750003c8a494a5b165dc_conference",
+      "main_2022_6fb83b240844d0e3eb8d457072a071ad_conference",
+      "main_2020_d3b1fb02964aa64e257f9f26a31f72cf_default",
+      "main_2018_a01a0380ca3c61428c26a231f0e49a09_default",
+      "main_2024_d16152d53088ad779ffa634e7bf66166_conference",
+      "main_2023_7a0f7e9d9b42b26e5bfc9ba4c6e5287c_conference",
+      "main_2015_dbe272bab69f8e13f14b405e038deb64_default",
+      "main_2018_d3157f2f0212a80a5d042c127522a2d5_default",
+      "main_2020_a5585a4d4b12277fee5cad0880611bc6_default",
+      "main_2020_2051bd70fc110a2208bdbd4a743e7f79_default",
+      "main_2019_7283518d47a05a09d33779a17adf1707_default",
+      "main_2015_a9eb812238f753132652ae09963a05e9_default",
+      "main_2024_ad217e0c7fecc71bdf48660ad6714b07_conference",
+      "main_2019_0c215f194276000be6a6df6528067151_default",
+      "main_2021_f44ec26e2ac3f1ab8c2472d4b1c2ea86_default",
+      "main_2022_66f09010d989c83faeeac2617464b6a4_conference",
+      "main_2022_65338cfb603d4871a2c38e53a3e039c9_conference",
+      "main_2024_d52ae52af3e3fcf1266fb1f282fd7206_conference",
+      "main_2021_0919b5c38396c3f0c41f1112d538e42c_default",
+      "main_2024_02ee6b7295f720407b56c457b34c54d5_datasets_and_benchmarks_track",
+      "main_2024_f03fc3545c3cfb3aa696ad6d58eed1a7_conference",
+      "main_2020_f50a6c02a3fc5a3a5d4d9391f05f3efc_default",
+      "main_2020_a8acc28734d4fe90ea24353d901ae678_default",
+      "main_2019_bf499a12e998d178afd964adf64a60cb_default",
+      "main_2016_c4492cbe90fbdbf88a5aec486aa81ed5_default",
+      "db_2021_c9e1074f5b3f9fc8ea15d152add07294_round2",
+      "main_2023_b316495425d076b4abffc065a64c2cca_conference",
+      "main_2023_0fa81c3f0d57f95b8776de3a248ef0ed_conference",
+      "main_2021_6a30e32e56fce5cf381895dfe6ca7b6f_default",
+      "main_2019_8471bda5e6201d30893c3582ee131d4d_default",
+      "main_2023_d94b46ec30adee2bbb134f813fc9dde0_conference",
+      "main_2019_2d44e06a7038f2dd98f0f54c4be35e22_default",
+      "main_2024_81858558b55a8c63763cfe088090242a_conference",
+      "main_2024_3bf80b34f731313b8292f4578e820c90_conference",
+      "main_2017_7876acb66640bad41f1e1371ef30c180_default",
+      "main_2018_a50abba8132a77191791390c3eb19fe7_default",
+      "main_2016_55b1927fdafef39c48e5b73b5d61ea60_default",
+      "main_2020_3f8b2a81da929223ae025fcec26dde0d_default",
+      "main_2024_bbd7d8bd780fcf7143add2317ba04638_conference",
+      "main_2024_b09e445cd23b356589e8a0e39e84549f_conference",
+      "main_2015_38ca89564b2259401518960f7a06f94b_default",
+      "main_2020_788d986905533aba051261497ecffcbb_default",
+      "main_2021_8606f35ec6c77858dfb80a385d0d1151_default",
+      "main_2023_da31f4275972a58406b95c277ce7bc8d_conference",
+      "main_2023_ccba10dd4e80e7276054222bb95d467c_conference",
+      "main_2018_1f4fe6a4411edc2ff625888b4093e917_default",
+      "main_2024_7b78a2a7360d5a9ad750834dc5a33bfb_conference",
+      "main_2021_793bc52a941b3951dfdb85fb04f9fd06_default",
+      "main_2021_c61aed648da48aa3893fb3eaadd88a7f_default",
+      "main_2023_67089958e98b243d5cc1881ad60418b8_conference",
+      "main_2021_286674e3082feb7e5afb92777e48821f_default",
+      "main_2023_fd750154df5f199f94df897975621306_conference",
+      "main_2016_07563a3fe3bbe7e3ba84431ad9d055af_default",
+      "main_2021_019f8b946a256d9357eadc5ace2c8678_default",
+      "main_2022_372593bd318ad8b34b3a8da77e20272b_conference",
+      "main_2022_8511d06d5590f4bda24d42087802cc81_conference",
+      "db_2021_4734ba6f3de83d861c3176a6273cac6d_round2",
+      "main_2024_837b396039248acb08c385bebb6291b4_conference",
+      "main_2020_13f3cf8c531952d72e5847c4183e6910_default",
+      "main_2024_8198901c33d24a391b4c6b3f30f253ce_conference",
+      "main_2024_4c8c6de56ecdd05e61abcd9e057c6142_datasets_and_benchmarks_track",
+      "main_2023_ddfe6bae7b869e819f842753009b94ad_conference",
+      "db_2021_fe131d7f5a6b38b23cc967316c13dae2_round2",
+      "main_2024_824f98c4e9bb301b0b96fa2ae071360b_conference",
+      "main_2019_26cd8ecadce0d4efd6cc8a8725cbd1f8_default",
+      "main_2024_ed165f2ff227cf36c7e3ef88957dadd9_conference",
+      "main_2024_d52d2281babd36913643392a09a56832_conference",
+      "main_2021_fa246d0262c3925617b0c72bb20eeb1d_default",
+      "main_2020_daf642455364613e2120c636b5a1f9c7_default",
+      "main_2016_c5ff2543b53f4cc0ad3819a36752467b_default",
+      "main_2022_9f81a6e7081497b2d458689a4ce39fc7_conference",
+      "main_2019_5446f217e9504bc593ad9dcf2ec88dda_default",
+      "main_2019_8b5040a8a5baf3e0e67386c2e3a9b903_default",
+      "main_2024_b1762f00cbbcd8dd879ddcea41b04b91_conference",
+      "main_2024_ec3c79dc0c2b85532cfd1012a4aaa923_conference",
+      "main_2020_6925f2a16026e36e4fc112f82dd79406_default",
+      "main_2024_9149fc44c95ce58e3ca529a1e34c2691_conference",
+      "main_2022_7f9a44cb707ede42a659ad85d940dd55_conference",
+      "main_2023_31994923f58ae5b2d661b300bd439107_conference",
+      "main_2020_c8067ad1937f728f51288b3eb986afaa_default",
+      "main_2023_42a0de6b8a1809ceba8fdad1661be06c_conference",
+      "main_2024_c3909e3abe8ebdb20c42a42ce0bc907d_conference",
+      "main_2019_d69768b3da745b77e82cdbddcc8bac98_default",
+      "main_2021_05d8cccb5f47e5072f0a05b5f514941a_default",
+      "main_2024_cfc1924c62e72e2cb0e0feeecb963241_conference",
+      "main_2024_2676109d49d1eb26d6bc584a8f556305_conference",
+      "main_2022_27c852e9d6c76890ca633f111c556a4f_conference",
+      "main_2024_3d5aa9a7ce28cdc710fbd044fd3610f3_datasets_and_benchmarks_track",
+      "main_2020_f5f3b8d720f34ebebceb7765e447268b_default",
+      "main_2021_7504adad8bb96320eb3afdd4df6e1f60_default",
+      "main_2022_b931c44c35ce09e942edab7003eb3daa_conference",
+      "main_2022_c76f18e65d16cd2786e50a88db00cde4_conference",
+      "main_2019_043c2ec6c6390dd0ac5519190a57c88c_default",
+      "main_2016_854d6fae5ee42911677c739ee1734486_default",
+      "main_2020_33dd6dba1d56e826aac1cbf23cdcca87_default",
+      "main_2020_23ad3e314e2a2b43b4c720507cec0723_default",
+      "main_2024_dc9544b26ad3579477e567588db18cfc_conference",
+      "main_2024_9d6d351ba8028a50382f42a065d31bf0_conference",
+      "main_2023_298281b9e89197195eb461e68ad20136_conference",
+      "main_2018_6459257ddab7b85bf4b57845e875e4d4_default",
+      "main_2021_0c215f194276000be6a6df6528067151_default",
+      "main_2023_fb8e5f198c7a5dcd48860354e38c0edc_conference",
+      "main_2024_b6145836acf918800b4b025f842512de_conference",
+      "main_2023_c20ac0df6c213db6d3a930fe9c7296c8_conference",
+      "main_2023_c72861451d6fa9dfa64831102b9bb71a_conference",
+      "main_2023_66772e6aa61e54ae16443ae1d78a7319_conference",
+      "main_2020_49ca03822497d26a3943d5084ed59130_default",
+      "main_2020_acaa23f71f963e96c8847585e71352d6_default",
+      "main_2018_94ef7214c4a90790186e255304f8fd1f_default",
+      "main_2023_7749f9c0d5ff109231be21e910a3ced2_conference",
+      "main_2023_6ed9931d6e1fb6a85efa1b2c014a47e1_conference",
+      "main_2018_66808e327dc79d135ba18e051673d906_default",
+      "main_2021_03a3655fff3e9bdea48de9f49e938e32_default",
+      "main_2022_c7589a96e8adfcf5a006c452b3758fd5_datasets_and_benchmarks",
+      "main_2020_e6384711491713d29bc63fc5eeb5ba4f_default",
+      "main_2019_024d2d699e6c1a82c9ba986386f4d824_default",
+      "main_2022_b2cac94f82928a85055987d9fd44753f_conference",
+      "main_2024_8936fa1691764912d9519e1b5673ea66_conference",
+      "main_2015_7bcdf75ad237b8e02e301f4091fb6bc8_default",
+      "main_2024_3acc054949b6948d4444b35d412cab56_conference",
+      "main_2021_671f0311e2754fcdd37f70a8550379bc_default",
+      "main_2016_03e7ef47cee6fa4ae7567394b99912b7_default",
+      "main_2020_b71f5aaf3371c2cdfb7a7c0497f569d4_default",
+      "main_2022_04543a88eae2683133c1acbef5a6bf77_datasets_and_benchmarks",
+      "main_2024_54fa8255cdf30736ecad38e842725e7f_conference",
+      "main_2022_8b21a7ea42cbcd1c29a7a88c444cce45_conference",
+      "main_2022_b734c30b9c955c535e333f0301f5e45c_conference",
+      "main_2021_23451391cd1399019fa0421129066bc6_default",
+      "main_2024_c6ec4a25a11393f277cfd64b7ea4d106_datasets_and_benchmarks_track",
+      "main_2020_8b4066554730ddfaa0266346bdc1b202_default",
+      "main_2024_28312c9491d60ed0c77f7fff4ad86dd1_conference",
+      "main_2022_3fbcfbc2b4009ae8dfa17a562532d123_conference",
+      "main_2022_b2ba568effcc3ab221912db2fb095ea9_conference",
+      "main_2022_e7feb9dbd9a94b6c552fc403fcebf2ef_conference",
+      "main_2019_48fbab00052197bc8bd943498b89dd71_default",
+      "main_2024_b6d0df730c5976ad918bbf4fb30afe7d_conference",
+      "main_2022_0904c7edde20d7134a77fc7f9cd86ea2_conference",
+      "main_2022_5c60ee4d6e8faf0f3b2f2701c983dc8c_conference",
+      "main_2023_7721f1fea280e9ffae528dc78c732576_conference",
+      "main_2022_5692c7dbc4abcaa50f9ce609819212e5_conference",
+      "main_2020_a18aa23ee676d7f5ffb34cf16df3e08c_default",
+      "main_2017_e702e51da2c0f5be4dd354bb3e295d37_default",
+      "main_2017_68053af2923e00204c3ca7c6a3150cf7_default",
+      "main_2024_0e705ac30e573d1526f81a0fd071a151_conference",
+      "main_2022_36474dd150d970be6fcb17035ecc4dce_conference",
+      "main_2022_4f550cb7b30b59553e50cd08a9dbf068_conference",
+      "main_2021_db182d2552835bec774847e06406bfa2_default",
+      "main_2024_cdcc6d47c1627350014a3076112ab824_conference",
+      "main_2019_2a845d4d23b883acb632fefd814e175f_default",
+      "db_2021_069059b7ef840f0c74a814ec9237b6ec_round2",
+      "main_2020_d530d454337fb09964237fecb4bea6ce_default",
+      "main_2023_08342dc6ab69f23167b4123086ad4d38_conference",
+      "main_2023_28bf1419b9a1f908c15f6195f58cb865_conference",
+      "main_2021_464074179972cbbd75a39abc6954cd12_default",
+      "main_2022_13f17f74ec061f1e3e231aca9a43ff23_conference",
+      "main_2022_fa567e2b2c870f8f09a87b6e73370869_conference",
+      "main_2024_eeab2e00835c71d64458ad1821e05664_conference",
+      "main_2024_aa7eb65738b5bc71c81848fba9111c97_conference",
+      "main_2020_e3251075554389fe91d17a794861d47b_default",
+      "main_2019_6a8018b3a00b69c008601b8becae392b_default",
+      "main_2024_1a63a6a092a95bd45f0237766ac878ba_conference",
+      "main_2023_052e22cfdd344c79634f7ec76fa03e22_datasets_and_benchmarks",
+      "main_2019_7a2b33c672ce223b2aa5789171ddde2f_default",
+      "main_2018_4e5046fc8d6a97d18a5f54beaed54dea_default",
+      "main_2023_819cebb05f993840e8a52d7564c5c282_conference",
+      "main_2019_1138d90ef0a0848a542e57d1595f58ea_default",
+      "main_2023_6ae7df1f40f5faeda474b36b61197822_conference",
+      "main_2021_217c0e01c1828e7279051f1b6675745d_default",
+      "main_2019_a6e4f250fb5c56aaf215a236c64e5b0a_default",
+      "main_2022_631f99d8e860054410c239fc90d18270_conference",
+      "main_2019_8a146f1a3da4700cbf03cdc55e2daae6_default",
+      "main_2016_aa486f25175cbdc3854151288a645c19_default",
+      "main_2024_14bb27f680bee45d83bc769738e7f9b5_conference",
+      "main_2021_d71fa38b648d86602d14ac610f2e6194_default",
+      "main_2023_efe36e55d80a94d1726f660b8d237a0f_conference",
+      "main_2017_f4552671f8909587cf485ea990207f3b_default",
+      "main_2023_3eceb70f47690051d6769739fbf6294b_conference",
+      "main_2023_5d1233f819202ade06023346df80a6d2_conference",
+      "main_2018_22fb0cee7e1f3bde58293de743871417_default",
+      "main_2023_0113ef4642264adc2e6924a3cbbdf532_conference",
+      "main_2019_03573b32b2746e6e8ca98b9123f2249b_default",
+      "main_2023_3d17b7f7d52c83ab6e97e2dc0bda2e71_conference",
+      "main_2020_f6876a9f998f6472cc26708e27444456_default",
+      "main_2021_f8905bd3df64ace64a68e154ba72f24c_default",
+      "main_2023_6ec2be0bb10be9a0e5db4cc2a921f301_conference",
+      "main_2023_bbb330189ce02be00cf7346167028ab1_datasets_and_benchmarks",
+      "main_2022_623307df18da128262aaf394cdcfb235_conference",
+      "main_2023_f249db9ab5975586f36df46f8958c008_conference",
+      "main_2015_f18a6d1cde4b205199de8729a6637b42_default",
+      "main_2024_6008facedac886858acdb76c09da2097_conference",
+      "main_2024_ffee3090eac0aae698b2d77ac5642c2c_conference",
+      "main_2019_812b4ba287f5ee0bc9d43bbf5bbe87fb_default",
+      "main_2022_be7b70477c8fca697f14b1dbb1c086d1_conference",
+      "main_2022_f94d5edb5c01715d879693ddbfdc1b98_datasets_and_benchmarks",
+      "main_2024_2c23b3c72127e15fedc276722faee927_conference",
+      "main_2020_f10f2da9a238b746d2bac55759915f0d_default",
+      "main_2023_bf215fa7fe70a38c5e967e59c44a99d0_conference",
+      "main_2019_d921c3c762b1522c475ac8fc0811bb0f_default",
+      "main_2023_a74b697bce4cac6c91896372abaa8863_datasets_and_benchmarks",
+      "main_2022_24f420aa4c99642dbb9aae18b166bbbc_conference",
+      "main_2018_c3a690be93aa602ee2dc0ccab5b7b67e_default",
+      "main_2024_942d5e890e4e0ab0e7a5f8cbcef5b9ff_conference",
+      "main_2022_15d45097f9806983f0629a77e93ee60f_conference",
+      "main_2018_2ba8698b79439589fdd2b0f7218d8b07_default",
+      "main_2017_d3a7f48c12e697d50c8a7ae7684644ef_default",
+      "main_2020_9b72e31dac81715466cd580a448cf823_default",
+      "main_2023_d5c56ec4f69c9a473089b16000d3f8cd_conference",
+      "main_2022_190dd6a5735822f05646dc27decff19b_datasets_and_benchmarks",
+      "main_2024_179a2b276b954a1369ec9119c4badabb_conference",
+      "main_2023_b8e2046160a568145af6d42eeef199f4_conference",
+      "main_2020_7b41bfa5085806dfa24b8c9de0ce567f_default",
+      "main_2024_0d11b4035d54e449320fc36b0f64ebb7_conference",
+      "main_2020_83eaa6722798a773dd55e8fc7443aa09_default",
+      "main_2024_dc89a0709f213fd0ac4b1172719b2c38_conference",
+      "main_2023_fba4a59c7a569fce120eea9aa9227052_conference",
+      "main_2020_8b9e7ab295e87570551db122a04c6f7c_default",
+      "main_2022_286a371d8a0a559281f682f8fbf89834_conference",
+      "main_2023_a237f11d6aad94f59a182d70405d3fdb_conference",
+      "main_2022_666dd0d92a64396e753c691db93493d4_conference",
+      "main_2024_9b77f07301b1ef1fe810aae96c12cb7b_conference",
+      "main_2021_6ffad86b9a8dd4a3e98df1b0830d1c8c_default",
+      "main_2024_d5a1f97d2b922da92e880d13b7d2bf02_conference",
+      "main_2021_347665597cbfaef834886adbb848011f_default",
+      "main_2018_93d65641ff3f1586614cf2c1ad240b6c_default",
+      "main_2021_3df1d4b96d8976ff5986393e8767f5b2_default",
+      "main_2018_0655f117444fc1911ab9c6f6b0139051_default",
+      "main_2024_d37c9ad425fe5b65304d500c6edcba00_conference",
+      "main_2021_678004486c119599ed7d199f47da043a_default",
+      "main_2023_2432e9646556f3a98dc78c1f4a10481b_datasets_and_benchmarks",
+      "main_2023_42eb37cdbefd7abae0835f4b67548c39_conference",
+      "main_2023_8d7060b2ee6ff728692398783e3d59d1_conference",
+      "main_2020_e94550c93cd70fe748e6982b3439ad3b_default",
+      "main_2020_3fe94a002317b5f9259f82690aeea4cd_default",
+      "main_2021_8fd7f981e10b41330b618129afcaab2d_default",
+      "main_2019_5e69fda38cda2060819766569fd93aa5_default",
+      "main_2022_159f7fe5b51ecd663b85337e8e28ce65_conference",
+      "main_2022_677ccf45da6d04ac8e76600821bd05ce_conference",
+      "main_2023_9ed1c94a6c87276f25ebb65231c86c3e_conference",
+      "main_2022_6a934325ec64639ba83b492b9c317085_conference",
+      "main_2019_2f4fe03d77724a7217006e5d16728874_default",
+      "main_2024_bc427eb348789b190e3ea050cceff8a3_conference",
+      "main_2022_710aae9186778a91b656e609778f7898_conference",
+      "main_2024_9421261e06f1a63a352b068f1ac90609_conference",
+      "main_2019_4eff0720836a198b6174eecf02cbfdbf_default",
+      "main_2023_bad8ddaed5feb552f9e8f2e37c0531a1_conference",
+      "main_2022_31421b112e5f7faf4fc577b74e45dab2_conference",
+      "main_2023_9f94298bac4668db4dc77ddb0a244301_conference",
+      "main_2023_c3532dd633e600e9f6db57aa7ae0c858_conference",
+      "main_2024_061d5d1b7d97117764f205d4e038f9eb_conference",
+      "main_2018_125b93c9b50703fe9dac43ec231f5f83_default",
+      "main_2018_5f93f983524def3dca464469d2cf9f3e_default",
+      "main_2016_0d73a25092e5c1c9769a9f3255caa65a_default",
+      "main_2021_2c7f9ccb5a39073e24babc3a4cb45e60_default",
+      "main_2019_60cb558c40e4f18479664069d9642d5a_default",
+      "main_2021_1371bccec2447b5aa6d96d2a540fb401_default",
+      "main_2024_3477ca0ce484aa2fa42c1361ab601c25_conference",
+      "main_2021_dfccdb8b1cc7e4dab6d33db0fef12b88_default",
+      "main_2021_c7502c55f8db540625b59d9a42638520_default",
+      "main_2021_cca289d2a4acd14c1cd9a84ffb41dd29_default",
+      "main_2023_746cf1bc2337700f7f0c35c7b02638cc_conference",
+      "main_2024_fc9f83d9925e6885e8f1ae1e17b3c44b_conference",
+      "main_2024_1529a05fdff470f4e7c239c80d85e28e_conference",
+      "main_2022_782b6152c04e9948c2cb3833e9a288ef_conference",
+      "main_2022_d36dfcdb14473a8526111c221660f2ab_conference",
+      "main_2018_c042f4db68f23406c6cecf84a7ebb0fe_default",
+      "main_2023_707a2d58641b2192203b4bf4c532cfe1_conference",
+      "main_2022_020e313d40a7c060ed07a10cef287750_conference",
+      "main_2020_d714d2c5a796d5814c565d78dd16188d_default",
+      "main_2024_a7f89793b9e6f8c6568dbbb6ff727b9b_conference",
+      "main_2020_b599e8250e4481aaa405a715419c8179_default",
+      "main_2024_630d25bf5c0862dc1c49ba2096cedc2d_conference",
+      "main_2017_35936504a37d53e03abdfbc7318d9ec7_default",
+      "main_2024_3d4c0a618d0acd7921493e4f30395c22_conference",
+      "main_2020_33a5435d4f945aa6154b31a73bab3b73_default",
+      "main_2016_7750ca3559e5b8e1f44210283368fc16_default",
+      "main_2024_60f81431bdf32f139438c69787e12b3f_conference",
+      "main_2024_f9743a7bfee6592e3ff913ffadd8a857_conference",
+      "main_2021_cc4af25fa9d2d5c953496579b75f6f6c_default",
+      "main_2020_a851bd0d418b13310dd1e5e3ac7318ab_default",
+      "main_2020_05128e44e27c36bdba71221bfccf735d_default",
+      "main_2024_ee5bb72130c332c3d4bf8d231e617506_conference",
+      "main_2022_075b2875e2b671ddd74aeec0ac9f0357_conference",
+      "main_2021_4be49c79f233b4f4070794825c323733_default",
+      "main_2016_51ef186e18dc00c2d31982567235c559_default",
+      "main_2023_1f69928210578f4cf5b538a8c8806798_conference",
+      "main_2020_f02208a057804ee16ac72ff4d3cec53b_default",
+      "main_2024_21315abf210cef71317e887e9cda78b3_conference",
+      "main_2022_d9888cc7baa04c2e44e8115588133515_conference",
+      "main_2018_1458e7509aa5f47ecfb92536e7dd1dc7_default",
+      "main_2022_cf78a15772ec1a6aee9bbee2d2b382c3_conference",
+      "db_2021_3988c7f88ebcb58c6ce932b957b6f332_round1",
+      "main_2023_4c5722bad9759216474df8fc46c97af2_conference",
+      "main_2022_f5537b8d8fd126c7fe9d7429b181b1eb_conference",
+      "main_2024_0147d967a5db3b8dde08d2a327b24568_conference",
+      "main_2017_d7a84628c025d30f7b2c52c958767e76_default",
+      "main_2022_e4bab1843c8d5a69f5abfd0824593493_conference",
+      "main_2024_63e8bc7bbf1cfea36d1d1b6538aecce5_conference",
+      "main_2022_429d69979c22b06d6baa65caf3ab1e10_conference",
+      "main_2023_68c33c4e6fc97f7b31c964dc83303a28_datasets_and_benchmarks",
+      "main_2023_7bc3fe234454107149fa9d44faacaa64_conference",
+      "main_2022_0cd1eec0eeaf5ce1bf6d8875a7c1d095_conference",
+      "main_2018_8643c8e2107ba86c47371e037059c4b7_default",
+      "main_2020_55d491cf951b1b920900684d71419282_default",
+      "main_2019_04df4d434d481c5bb723be1b6df1ee65_default",
+      "main_2016_872488f88d1b2db54d55bc8bba2fad1b_default",
+      "main_2022_eb3c8135137c8a60425a0320869ad87e_conference",
+      "main_2022_7b122d0a0dcb1a86ffa25ccba154652b_conference",
+      "main_2022_2eb74636e69ca26ab6cba8b724b0776e_conference",
+      "main_2022_d346d91999074dd8d6073d4c3b13733b_conference",
+      "main_2024_143ea4a156ef64f32d4d905206cf32e1_conference",
+      "main_2020_aa2a77371374094fe9e0bc1de3f94ed9_default",
+      "main_2023_ada418ae9b6677dcda32d9dca0f7441f_conference",
+      "main_2022_43f55776896a2e33239c2954519f605e_conference",
+      "main_2023_770cabd044c4eacb6dc5924d9a686dce_conference",
+      "main_2024_140edeced4facf41b14ca4f71a2322b7_conference",
+      "main_2024_1a000ee0f122d0bbd3edb9bf55170ea3_conference",
+      "main_2024_24c523085d10743633f9964e0623dbe0_conference",
+      "main_2015_51d92be1c60d1db1d2e5e7a07da55b26_default",
+      "main_2024_2d69e771d9f274f7c624198ea74f5b98_conference",
+      "main_2019_d5b3d8dadd770c460b1cde910a711987_default",
+      "db_2021_7cbbc409ec990f19c78c75bd1e06f215_round1",
+      "main_2019_05ae14d7ae387b93370d142d82220f1b_default",
+      "main_2023_510ad3018bbdc5b6e3b10646e2e35771_conference",
+      "main_2023_9032e5c9ec394ce768a2fa9bdc56af6c_conference",
+      "main_2020_45c166d697d65080d54501403b433256_default",
+      "main_2020_ca7be8306ecc3f5fa30ff2c41e64fa7b_default",
+      "main_2024_9566607d423f8c32a2d5ce09a8b62232_datasets_and_benchmarks_track",
+      "main_2021_a18aa23ee676d7f5ffb34cf16df3e08c_default",
+      "main_2024_5623c35f3ab5e2c72aeb3abce27dc28f_conference",
+      "main_2024_2d9c6cdb4cfe93869c090fea7375044b_conference",
+      "main_2022_062f9525a7476942f61a6c3b42d0a63f_conference",
+      "main_2024_4ae7d78ebbe48f772e31c5c3fcc04c43_conference",
+      "main_2024_05b69cc4c8ff6e24c5de1ecd27223d37_conference",
+      "main_2021_0415740eaa4d9decbc8da001d3fd805f_default",
+      "main_2018_331316d4efb44682092a006307b9ae3a_default",
+      "main_2023_a8e21789027e92739f89df92cc172bcf_conference",
+      "main_2023_46e37aeccafc3b4b697b17b8a36f3b30_conference",
+      "main_2024_4b70484ebef62484e0c8cdd269e482fd_conference",
+      "main_2019_4fc848051e4459b8a6afeb210c3664ec_default",
+      "main_2022_09d22e4155aa4fdadf3dac8c6bd940fe_conference",
+      "main_2024_c3fa3a7d50b34732c6d08f6f66380d75_conference",
+      "main_2023_7f77492bb8070a5c825a87c0c5181da2_conference",
+      "main_2022_e5daf532498ebba4fe6544d49c811678_conference",
+      "main_2020_23378a2d0a25c6ade2c1da1c06c5213f_default",
+      "main_2021_27debb435021eb68b3965290b5e24c49_default",
+      "main_2022_4ce7fe1d2730f53cb3857032952cd1b8_conference",
+      "main_2023_9690d4746230cfea3d067fca695ba648_conference",
+      "main_2018_d54e99a6c03704e95e6965532dec148b_default",
+      "main_2022_37a413841a614b5414b333585e7613b8_conference",
+      "main_2019_b139e104214a08ae3f2ebcce149cdf6e_default",
+      "main_2024_24f3041067ab24157912330344dc3bbd_conference",
+      "main_2022_421fa4f5e0bef2f044f1f4616fd17343_conference",
+      "main_2017_c24cd76e1ce41366a4bbe8a49b02a028_default",
+      "main_2021_806d926414ce19d907700e23177ab4ff_default",
+      "main_2024_9f7f063144103bf6debb09a3f15e00fb_conference",
+      "main_2021_204904e461002b28511d5880e1c36a0f_default",
+      "main_2021_d58e2f077670f4de9cd7963c857f2534_default",
+      "main_2024_e2ba11d128034f0c544693374c59e49a_conference",
+      "main_2021_76c538125fc5c9ec6ad1d05650a57de5_default",
+      "main_2023_e95da8078ec8389533c802e368da5298_conference",
+      "main_2024_b1c62bdeee97b38c34dcda152c829511_conference",
+      "main_2023_9278abf072b58caf21d48dd670b4c721_conference",
+      "main_2023_e75dce944052276caf89c17aca8963d3_conference",
+      "main_2019_392526094bcba21af9fd4102ce5ed092_default",
+      "main_2022_c6b71f8d79d0b2d7bdac66ff3a3ba243_conference",
+      "main_2016_c3395dd46c34fa7fd8d729d8cf88b7a8_default",
+      "main_2022_7103444259031cc58051f8c9a4868533_conference",
+      "main_2022_3df874367ce2c43891aab1ab23ae6959_conference",
+      "main_2021_70efdf2ec9b086079795c442636b55fb_default",
+      "main_2019_c46482dd5d39742f0bfd417b492d0e8e_default",
+      "main_2023_fe318a2b6c699808019a456b706cd845_conference",
+      "main_2024_14730e0dd6ac1c4a5765310909fd51b1_conference",
+      "main_2023_8c3c666820ea055a77726d66fc7d447f_datasets_and_benchmarks",
+      "main_2024_9328208f88ec69420031647e6ff97727_conference",
+      "main_2022_1968ea7d985aa377e3a610b05fc79be0_conference",
+      "main_2024_e6c967a0e4168df9614a81ed4195ba78_conference",
+      "main_2017_8208974663db80265e9bfe7b222dcb18_default",
+      "main_2021_5db60c98209913790e4fcce4597ee37c_default",
+      "main_2023_ab3f114401f0523ca1cc09de0621f400_conference",
+      "main_2023_fc0e3f908a2116ba529ad0a1530a3675_conference",
+      "main_2019_5f8e2fa1718d1bbcadf1cd9c7a54fb8c_default",
+      "main_2023_4c454d34f3a4c8d6b4ca85a918e5d7ba_conference",
+      "main_2020_abc99d6b9938aa86d1f30f8ee0fd169f_default",
+      "main_2024_4822d9adc9cec7a39e254d007aa78276_conference",
+      "main_2024_6d0f9c415e2d779c78f32b74668e9d02_datasets_and_benchmarks_track",
+      "main_2017_64a08e5f1e6c39faeb90108c430eb120_default",
+      "main_2024_8deff86036ee6a73cda883dc7d2d6b07_conference",
+      "main_2022_d6383e7643415842b48a5077a1b09c98_conference",
+      "main_2018_1c6a0198177bfcc9bd93f6aab94aad3c_default",
+      "main_2020_24bea84d52e6a1f8025e313c2ffff50a_default",
+      "main_2022_23ee05bf1f4ade71c0f8f5ca722df601_datasets_and_benchmarks",
+      "main_2022_16e71d1a24b98a02c17b1be1f634f979_conference",
+      "main_2022_c5ee2a08fbe743b171b0b4b2bdfd6f86_conference",
+      "main_2024_43d1d3bdd92204c96fa4ac3c578f6a33_conference",
+      "main_2021_c4d2ce3f3ebb5393a77c33c0cd95dc93_default",
+      "main_2023_5f02c76bc411a6f7c9a8bb2cbf981260_conference",
+      "main_2024_17bae482066287ce54814514cf12f248_conference",
+      "main_2024_b88318174aad2cc174a4e05ab6bfad80_conference",
+      "main_2019_9bdb8b1faffa4b3d41779bb495d79fb9_default",
+      "main_2021_82ca5dd156cc926b2992f73c2896f761_default",
+      "main_2022_76bea0a1cf7bf9b78f842009f6de15a1_conference",
+      "main_2022_2433fec2144ccf5fea1c9c5ebdbc3924_conference",
+      "main_2024_57f6683e550eb067936c9e9f0bcb8e31_datasets_and_benchmarks_track",
+      "main_2018_ce5140df15d046a66883807d18d0264b_default",
+      "main_2022_8b2fc235787852ead92da2268cd9e90c_conference",
+      "main_2024_1d3591b6746204b332acb464b775d38d_conference",
+      "main_2023_c4bf73386022473a652a18941e9ea6f8_conference",
+      "main_2024_0235cbb8cd6425d0b55daefce388fc0b_datasets_and_benchmarks_track",
+      "main_2023_ded1a89e2b3b925444ada973af66336e_datasets_and_benchmarks",
+      "main_2024_edcd1aa172dceda2ea9d45a48f25d3e3_conference",
+      "main_2022_a559a5a8aa5ae6682ced009ad97cdb16_conference",
+      "main_2018_27e8e17134dd7083b050476733207ea1_default",
+      "main_2019_ddb4955263e6c08179393d1beaf18602_default",
+      "main_2023_a8b148559549ce33261e79b4400e0d77_conference",
+      "main_2018_033cc385728c51d97360020ed57776f0_default",
+      "main_2024_6efcc7fd8efeee29a050a79c843c90e0_conference",
+      "main_2022_057405fd73dd7ba7f32a7cb34fb7c7f5_conference",
+      "main_2022_1074541383db5ef12d6ac66d2f8e8d34_conference",
+      "main_2023_6dea02c16a492682d66c6f626c306db2_conference",
+      "main_2024_1119587863e78451f080da2a768c4935_conference",
+      "main_2018_12092a75caa75e4644fd2869f0b6c45a_default"
+    ],
+    "candidate_pool_size": 19361,
+    "query_sampling": "Fixed random query sample from the fitted corpus; not held-out data or a generalization test.",
+    "definition": "Top-15 exact neighbor recall and rank-penalty trustworthiness against original five-score Euclidean distances, using every other corpus paper as a candidate; evaluates the six-decimal coordinates actually exported.",
+    "trustworthiness_formula": "1 - 2 * sum(max(original_rank(projected_neighbor) - k, 0)) / (sample_size * k * (2*N - 3*k - 1))",
+    "sample_size": 512,
+    "neighbors": 15,
+    "mean_neighbor_recall": 0.37591145833333334,
+    "trustworthiness": 0.9887289059537353,
+    "median_neighbor_recall": 0.4,
+    "neighbor_recall_quantiles": {
+      "0.1": 0.2,
+      "0.25": 0.26666666666666666,
+      "0.75": 0.4666666666666667,
+      "0.9": 0.6
+    },
+    "high_theory_group_sanity_check": {
+      "definition": "At or above the existing corpus-wide formal-theory score 90th percentile, ties included; this is not a proof-content label.",
+      "threshold": 1.4678,
+      "group_size": 1937,
+      "chance_same_group_fraction_excluding_self": 0.1,
+      "original_five_score": {
+        "mean_same_group_neighbor_fraction": 0.8826019617965926,
+        "median_same_group_neighbor_fraction": 1.0,
+        "zero_same_group_neighbor_count": 1
+      },
+      "umap3": {
+        "mean_same_group_neighbor_fraction": 0.8212700051626227,
+        "median_same_group_neighbor_fraction": 1.0,
+        "zero_same_group_neighbor_count": 30
+      }
+    }
+  },
+  "example_neighborhoods": [
+    {
+      "paper_id": "main_2015_309fee4e541e51de2e41f21bebb342aa_default",
+      "title": "Sample Complexity of Episodic Fixed-Horizon Reinforcement Learning",
+      "exact_five_score_neighbors": [
+        {
+          "paper_id": "main_2024_3acbe9dc3a1e8d48a57b16e9aef91879_conference",
+          "title": "Span-Based Optimal Sample Complexity for Weakly Communicating and General Average Reward MDPs"
+        },
+        {
+          "paper_id": "main_2022_6590cb829f5ffef50050f3e5845fbb4c_conference",
+          "title": "Better Best of Both Worlds Bounds for Bandits with Switching Costs"
+        },
+        {
+          "paper_id": "main_2020_a3c788c57e423fa9c177544a4d5d1239_default",
+          "title": "Learning Utilities and Equilibria in Non-Truthful Auctions"
+        },
+        {
+          "paper_id": "main_2023_61d0a96d4a73b626367310b3ad32579d_conference",
+          "title": "List and Certificate Complexities in Replicable Learning"
+        },
+        {
+          "paper_id": "main_2019_b3dd760eb02d2e669c604f6b2f1e803f_default",
+          "title": "Elliptical Perturbations for Differential Privacy"
+        },
+        {
+          "paper_id": "main_2024_06e9029d3d4d6cee71c5d9b8502f891b_conference",
+          "title": "Testably Learning Polynomial Threshold Functions"
+        },
+        {
+          "paper_id": "main_2020_f06edc8ab534b2c7ecbd4c2051d9cb1e_default",
+          "title": "Learning discrete distributions: user vs item-level privacy"
+        },
+        {
+          "paper_id": "main_2021_7c2c48a32443ad8f805e48520f3b26a4_default",
+          "title": "A Central Limit Theorem for Differentially Private Query Answering"
+        },
+        {
+          "paper_id": "main_2021_9570efef719d705326f0ff817ef084e6_default",
+          "title": "The Pareto Frontier of model selection for general Contextual Bandits"
+        },
+        {
+          "paper_id": "main_2024_243697ace81f57daef8737ff2c5cffd3_conference",
+          "title": "Public-data Assisted Private Stochastic Optimization: Power and Limitations"
+        }
+      ],
+      "projected_neighbors": [
+        {
+          "paper_id": "main_2016_69a5b5995110b36a9a347898d97a610e_default",
+          "title": "On the Recursive Teaching Dimension of VC Classes"
+        },
+        {
+          "paper_id": "main_2019_b3dd760eb02d2e669c604f6b2f1e803f_default",
+          "title": "Elliptical Perturbations for Differential Privacy"
+        },
+        {
+          "paper_id": "main_2023_61d0a96d4a73b626367310b3ad32579d_conference",
+          "title": "List and Certificate Complexities in Replicable Learning"
+        },
+        {
+          "paper_id": "main_2022_6590cb829f5ffef50050f3e5845fbb4c_conference",
+          "title": "Better Best of Both Worlds Bounds for Bandits with Switching Costs"
+        },
+        {
+          "paper_id": "main_2024_06e9029d3d4d6cee71c5d9b8502f891b_conference",
+          "title": "Testably Learning Polynomial Threshold Functions"
+        },
+        {
+          "paper_id": "main_2024_3acbe9dc3a1e8d48a57b16e9aef91879_conference",
+          "title": "Span-Based Optimal Sample Complexity for Weakly Communicating and General Average Reward MDPs"
+        },
+        {
+          "paper_id": "main_2020_a3c788c57e423fa9c177544a4d5d1239_default",
+          "title": "Learning Utilities and Equilibria in Non-Truthful Auctions"
+        },
+        {
+          "paper_id": "main_2020_f06edc8ab534b2c7ecbd4c2051d9cb1e_default",
+          "title": "Learning discrete distributions: user vs item-level privacy"
+        },
+        {
+          "paper_id": "main_2024_6f244818d72b2a4be9b1225d1344e950_conference",
+          "title": "Multiclass Transductive Online Learning"
+        },
+        {
+          "paper_id": "main_2023_0d00a699f60e642b310eb04b76cc7731_conference",
+          "title": "SQ Lower Bounds for Non-Gaussian Component Analysis with Weaker Assumptions"
+        }
+      ],
+      "top10_identity_overlap": 7
+    },
+    {
+      "paper_id": "main_2015_6512bd43d9caa6e02c990b0a82652dca_default",
+      "title": "Algorithmic Stability and Uniform Generalization",
+      "exact_five_score_neighbors": [
+        {
+          "paper_id": "main_2015_7fec306d1e665bc9c748b5d2b99a6e97_default",
+          "title": "Communication Complexity of Distributed Convex Learning and Optimization"
+        },
+        {
+          "paper_id": "main_2022_01db36a646c07c64dd39a92b4eceb417_conference",
+          "title": "Decentralized Gossip-Based Stochastic Bilevel Optimization over Communication Networks"
+        },
+        {
+          "paper_id": "main_2023_71c31ebf577ffdad5f4a74156daad518_conference",
+          "title": "Training Fully Connected Neural Networks is $\\exists\\mathbb{R}$-Complete"
+        },
+        {
+          "paper_id": "main_2022_6530274c68e81047e1f4a2ceb0b8c0ef_conference",
+          "title": "Approaching Quartic Convergence Rates for Quasi-Stochastic Approximation with Application to Gradient-Free Optimization"
+        },
+        {
+          "paper_id": "main_2022_fad7c708dda11f3e72cc1629bb130379_conference",
+          "title": "Multi-agent Performative Prediction with Greedy Deployment and Consensus Seeking Agents"
+        },
+        {
+          "paper_id": "main_2022_a548ef984f30bca3abdc09f43743827f_conference",
+          "title": "Fast Algorithms for Packing Proportional Fairness and its Dual"
+        },
+        {
+          "paper_id": "main_2020_1b9a80606d74d3da6db2f1274557e644_default",
+          "title": "Stochasticity of Deterministic Gradient Descent: Large Learning Rate for Multiscale Objective Function"
+        },
+        {
+          "paper_id": "main_2021_c44bebb973e14fe539676e0e9155b121_default",
+          "title": "Recurrent Submodular Welfare and Matroid Blocking Semi-Bandits"
+        },
+        {
+          "paper_id": "main_2024_f949c1f490beb42124a267b7476cd353_conference",
+          "title": "Computing the Bias of Constant-step Stochastic Approximation with Markovian Noise"
+        },
+        {
+          "paper_id": "main_2015_ab817c9349cf9c4f6877e1894a1faa00_default",
+          "title": "Black-box optimization of noisy functions with unknown smoothness"
+        }
+      ],
+      "projected_neighbors": [
+        {
+          "paper_id": "main_2020_b30958093daeed059670b35173654dc9_default",
+          "title": "A Unified Switching System Perspective and Convergence Analysis of Q-Learning Algorithms"
+        },
+        {
+          "paper_id": "main_2017_643de7cf7ba769c7466ccbc4adfd7fac_default",
+          "title": "Acceleration and Averaging in Stochastic Descent Dynamics"
+        },
+        {
+          "paper_id": "main_2022_01db36a646c07c64dd39a92b4eceb417_conference",
+          "title": "Decentralized Gossip-Based Stochastic Bilevel Optimization over Communication Networks"
+        },
+        {
+          "paper_id": "main_2022_fad7c708dda11f3e72cc1629bb130379_conference",
+          "title": "Multi-agent Performative Prediction with Greedy Deployment and Consensus Seeking Agents"
+        },
+        {
+          "paper_id": "main_2022_c6a79e139ec4f371701ea8cc9e06018e_conference",
+          "title": "Decomposable Non-Smooth Convex Optimization with Nearly-Linear Gradient Oracle Complexity"
+        },
+        {
+          "paper_id": "main_2021_62e7f2e090fe150ef8deb4466fdc81b3_default",
+          "title": "Stochastic optimization under time drift: iterate averaging, step-decay schedules, and high probability guarantees"
+        },
+        {
+          "paper_id": "main_2018_5a4be1fa34e62bb8a6ec6b91d2462f5a_default",
+          "title": "Neural Tangent Kernel: Convergence and Generalization in Neural Networks"
+        },
+        {
+          "paper_id": "main_2015_7fec306d1e665bc9c748b5d2b99a6e97_default",
+          "title": "Communication Complexity of Distributed Convex Learning and Optimization"
+        },
+        {
+          "paper_id": "main_2022_97b983c974551153d20ddfabb62a5203_conference",
+          "title": "SQ Lower Bounds for Learning Single Neurons with Massart Noise"
+        },
+        {
+          "paper_id": "main_2023_b07091c16719ad3990e3d1ccee6641f1_conference",
+          "title": "New Complexity-Theoretic Frontiers of Tractability for Neural Network Training"
+        }
+      ],
+      "top10_identity_overlap": 3
+    },
+    {
+      "paper_id": "main_2015_c058f544c737782deacefa532d9add4c_default",
+      "title": "On the Global Linear Convergence of Frank-Wolfe Optimization Variants",
+      "exact_five_score_neighbors": [
+        {
+          "paper_id": "main_2021_76c073d8a82d9ddaf993300be03ac70f_default",
+          "title": "Convergence of adaptive algorithms for constrained weakly convex optimization"
+        },
+        {
+          "paper_id": "main_2018_0ae3f79a30234b6c45a6f7d298ba1310_default",
+          "title": "Regret Bounds for Robust Adaptive Control of the Linear Quadratic Regulator"
+        },
+        {
+          "paper_id": "main_2017_dfeb9598fbfb97cc6bbcc0aff2c785d6_default",
+          "title": "Convergence of Gradient EM on Multi-component Mixture of Gaussians"
+        },
+        {
+          "paper_id": "main_2017_024d7f84fff11dd7e8d9c510137a2381_default",
+          "title": "Accelerated consensus via Min-Sum Splitting"
+        },
+        {
+          "paper_id": "main_2022_20bd42d82998bc61732c00452228e814_conference",
+          "title": "Escaping Saddle Points with Bias-Variance Reduced Local Perturbed SGD for Communication Efficient Nonconvex Distributed Learning"
+        },
+        {
+          "paper_id": "main_2020_174f8f613332b27e9e8a5138adb7e920_default",
+          "title": "Towards Problem-dependent Optimal Learning Rates"
+        },
+        {
+          "paper_id": "main_2021_2b323d6eb28422cef49b266557dd31ad_default",
+          "title": "Simple steps are all you need: Frank-Wolfe and generalized self-concordant functions"
+        },
+        {
+          "paper_id": "main_2020_d4b5b5c16df28e61124e13181db7774c_default",
+          "title": "Decentralized Accelerated Proximal Gradient Descent"
+        },
+        {
+          "paper_id": "main_2018_44968aece94f667e4095002d140b5896_default",
+          "title": "Direct Runge-Kutta Discretization Achieves Acceleration"
+        },
+        {
+          "paper_id": "main_2023_470e23d14e330ab0daa5387916b95f9c_conference",
+          "title": "Delayed Algorithms for Distributed Stochastic Weakly Convex Optimization"
+        }
+      ],
+      "projected_neighbors": [
+        {
+          "paper_id": "main_2015_df9028fcb6b065e000ffe8a4f03eeb38_default",
+          "title": "A Universal Primal-Dual Convex Optimization Framework"
+        },
+        {
+          "paper_id": "main_2021_76c073d8a82d9ddaf993300be03ac70f_default",
+          "title": "Convergence of adaptive algorithms for constrained weakly convex optimization"
+        },
+        {
+          "paper_id": "main_2021_2b323d6eb28422cef49b266557dd31ad_default",
+          "title": "Simple steps are all you need: Frank-Wolfe and generalized self-concordant functions"
+        },
+        {
+          "paper_id": "main_2020_174f8f613332b27e9e8a5138adb7e920_default",
+          "title": "Towards Problem-dependent Optimal Learning Rates"
+        },
+        {
+          "paper_id": "main_2020_5f7695debd8cde8db5abcb9f161b49ea_default",
+          "title": "Natural Policy Gradient Primal-Dual Method for Constrained Markov Decision Processes"
+        },
+        {
+          "paper_id": "main_2018_0ae3f79a30234b6c45a6f7d298ba1310_default",
+          "title": "Regret Bounds for Robust Adaptive Control of the Linear Quadratic Regulator"
+        },
+        {
+          "paper_id": "main_2023_dfaa29ed28dfa175bcc5e2a54aa199f8_conference",
+          "title": "Finding Safe Zones of Markov Decision Processes Policies"
+        },
+        {
+          "paper_id": "main_2016_8248a99e81e752cb9b41da3fc43fbe7f_default",
+          "title": "Mixed Linear Regression with Multiple Components"
+        },
+        {
+          "paper_id": "main_2017_dfeb9598fbfb97cc6bbcc0aff2c785d6_default",
+          "title": "Convergence of Gradient EM on Multi-component Mixture of Gaussians"
+        },
+        {
+          "paper_id": "main_2022_20bd42d82998bc61732c00452228e814_conference",
+          "title": "Escaping Saddle Points with Bias-Variance Reduced Local Perturbed SGD for Communication Efficient Nonconvex Distributed Learning"
+        }
+      ],
+      "top10_identity_overlap": 6
+    },
+    {
+      "paper_id": "main_2024_370df50ccfdf8bde18f8f9c2d9151bda_datasets_and_benchmarks_track",
+      "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+      "exact_five_score_neighbors": [
+        {
+          "paper_id": "main_2022_07f560092a0edceabf55af32a40eaee3_datasets_and_benchmarks",
+          "title": "A Large Scale Search Dataset for Unbiased Learning to Rank"
+        },
+        {
+          "paper_id": "main_2024_fda026cf2423a01fcbcf1e1e43ee9a50_datasets_and_benchmarks_track",
+          "title": "TGB 2.0: A Benchmark for Learning on Temporal Knowledge Graphs and Heterogeneous Graphs"
+        },
+        {
+          "paper_id": "main_2024_548551c07a68c8f0a87d67c6167cedb1_conference",
+          "title": "Prompt Tuning Strikes Back: Customizing Foundation Models with Low-Rank Prompt Adaptation"
+        },
+        {
+          "paper_id": "main_2023_066b98e63313162f6562b35962671288_datasets_and_benchmarks",
+          "title": "Temporal Graph Benchmark for Machine Learning on Temporal Graphs"
+        },
+        {
+          "paper_id": "main_2024_40b9196c25fe1d64d87ca3a80a91d0ce_datasets_and_benchmarks_track",
+          "title": "MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens"
+        },
+        {
+          "paper_id": "main_2024_2fd67447702c8eff5683dda507a1b0a2_datasets_and_benchmarks_track",
+          "title": "4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on RDBs"
+        },
+        {
+          "paper_id": "main_2024_4847447cae911dde321ca19afe7d8707_datasets_and_benchmarks_track",
+          "title": "WikiDBs: A Large-Scale Corpus Of Relational Databases From Wikidata"
+        },
+        {
+          "paper_id": "main_2023_45e604a3e33d10fba508e755faa72345_datasets_and_benchmarks",
+          "title": "Improving multimodal datasets with image captioning"
+        },
+        {
+          "paper_id": "main_2024_39a746f507dc5087bd85cc39ded8c52f_conference",
+          "title": "Stylus: Automatic Adapter Selection for Diffusion Models"
+        },
+        {
+          "paper_id": "db_2021_9a1158154dfa42caddbd0694a4e9bdc8_round2",
+          "title": "Relational Pattern Benchmarking on the Knowledge Graph Link Prediction Task"
+        }
+      ],
+      "projected_neighbors": [
+        {
+          "paper_id": "main_2024_2fd67447702c8eff5683dda507a1b0a2_datasets_and_benchmarks_track",
+          "title": "4DBInfer: A 4D Benchmarking Toolbox for Graph-Centric Predictive Modeling on RDBs"
+        },
+        {
+          "paper_id": "main_2024_25cd345233c65fac1fec0ce61d0f7836_datasets_and_benchmarks_track",
+          "title": "RelBench: A Benchmark for Deep Learning on Relational Databases"
+        },
+        {
+          "paper_id": "main_2022_07f560092a0edceabf55af32a40eaee3_datasets_and_benchmarks",
+          "title": "A Large Scale Search Dataset for Unbiased Learning to Rank"
+        },
+        {
+          "paper_id": "main_2024_548551c07a68c8f0a87d67c6167cedb1_conference",
+          "title": "Prompt Tuning Strikes Back: Customizing Foundation Models with Low-Rank Prompt Adaptation"
+        },
+        {
+          "paper_id": "main_2024_40b9196c25fe1d64d87ca3a80a91d0ce_datasets_and_benchmarks_track",
+          "title": "MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens"
+        },
+        {
+          "paper_id": "main_2023_32ebb6b560ee58abbdae834e5f37cb5d_conference",
+          "title": "Parameter-efficient Tuning of Large-scale Multimodal Foundation Model"
+        },
+        {
+          "paper_id": "db_2021_069059b7ef840f0c74a814ec9237b6ec_round2",
+          "title": "DUE: End-to-End Document Understanding Benchmark"
+        },
+        {
+          "paper_id": "main_2024_fda026cf2423a01fcbcf1e1e43ee9a50_datasets_and_benchmarks_track",
+          "title": "TGB 2.0: A Benchmark for Learning on Temporal Knowledge Graphs and Heterogeneous Graphs"
+        },
+        {
+          "paper_id": "main_2023_066b98e63313162f6562b35962671288_datasets_and_benchmarks",
+          "title": "Temporal Graph Benchmark for Machine Learning on Temporal Graphs"
+        },
+        {
+          "paper_id": "main_2024_39a746f507dc5087bd85cc39ded8c52f_conference",
+          "title": "Stylus: Automatic Adapter Selection for Diffusion Models"
+        }
+      ],
+      "top10_identity_overlap": 7
+    }
+  ],
+  "limitations": [
+    "This view groups similar values on five operational evidence-framing scores, not research topics, full-paper proof content, or scientific quality.",
+    "For PCA, variance retained is not the proportion of exact neighbors preserved. For UMAP, global distances, density, gaps, and apparent group sizes are not faithful measurements of the original space.",
+    "Use the exact original five-score neighbor list for similar framing; nearby projected points are approximate.",
+    "The five axes coexist, are correlated, and share an embedding-based measurement method. Equal weighting does not make them independent evidence sources.",
+    "Coordinates do not define discrete paper categories. No labels or targets were used to force clusters; the framing distribution remains a continuous band.",
+    "Framing and topic layouts use different input spaces and metrics; their diagnostic values are not a controlled head-to-head comparison of algorithms.",
+    "High-theory neighborhood enrichment is a descriptive input-space check, not independent validation that a paper contains formal proofs."
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "umap-learn": "0.5.11",
+      "numba": "0.68.0",
+      "llvmlite": "0.50.0",
+      "pynndescent": "0.6.0",
+      "threadpoolctl": "3.7.0"
+    },
+    "seconds_before_write": 17.661561499990057
+  },
+  "browser_artifact": {
+    "path": "atlas/drafts/framing-galaxy.json",
+    "sha256": "85142cfeeccc4b23cb91b04386c6cf0099155d20a1123f57ba04a7299c2fee46",
+    "bytes": 2723054
+  },
+  "provenance_updated_at": "2026-10-24T03:29:09.458605+00:00",
+  "provenance_update_note": "Historical input paths and interpretation prose clarified without refitting or changing the browser artifact."
+}
