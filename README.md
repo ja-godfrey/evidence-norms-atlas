@@ -12,7 +12,7 @@ These are measurements of public evidence framing, not research quality, author 
 
 ## Source and reproduction
 
-The Atlas assets come from the already published `reproducibility-code/atlas/` snapshot in Kaggle version 4. Embedded scientific data are unchanged. Hosting adapts the page header, research links, section navigation, animation controls, metadata, and an entry-point alias. `PROVENANCE.json` records the original asset hashes and the unchanged embedded payloads.
+The Atlas starts from the published `reproducibility-code/atlas/` snapshot in Kaggle version 4. Embedded scientific data are unchanged. Hosting adapts the page header, research links, section navigation, animation captions and controls, map interaction, metadata, and an entry-point alias. `PROVENANCE.json` records the original asset hashes, updated presentation assets, and unchanged embedded payloads.
 
 Kaggle version 4 remains the paper's fixed data-and-reproduction-code release, including validation outputs and complete reproduction instructions. This repository contains the web presentation. Cite the accompanying paper when using the resource.
 
@@ -23,6 +23,8 @@ Open `index.html` in a current browser, or run `python3 -m http.server 8000` in 
 GitHub Pages serves the `main` branch root; `.nojekyll` preserves these static files. The desktop animation is 16:9; the mobile animation is 9:16. Annual and paper profiles, search, and maps run in the browser.
 
 The left navigation marks the current section and links to the summary, yearly profiles, paper search, and paper galaxy. On narrow screens it uses compact markers; keyboard focus or pointer hover shows their labels. The native video controls remain available, and reduced-motion preferences show a still preview until the user chooses Play. Scrolling over the galaxy zooms the map; scrolling elsewhere moves the page.
+
+To rebuild the summary media, use Python 3.12 and FFmpeg. Install `tools/requirements-render.txt` in a virtual environment, then run `python tools/render_summary.py --layout landscape` and `python tools/render_summary.py --layout portrait`. The renderer reads the embedded data in `index.html` and writes the MP4s, GIFs, stills and source records to `drafts/`. The summary's 0.76 SD comparison is the unadjusted difference between the 2024 and 2015 resource-and-benchmark annual means, not a percentage of papers or a fitted decade slope.
 
 ## License
 

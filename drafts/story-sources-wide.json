@@ -1,5 +1,5 @@
 {
-  "status": "Local story animation for feedback; excluded from the release package",
+  "status": "Hosted summary animation; presentation update based on Kaggle v4 scientific data",
   "duration_seconds": 41,
   "video_fps": 30,
   "gif_fps": 25,
@@ -272,22 +272,30 @@
         27,
         35
       ],
-      "scene": "FineWeb, flowing web pages and its 2024 dataset scale"
+      "scene": "The aggregate 2024 resource-framing shift, with FineWeb as an illustrative resource and its 2024 dataset scale"
     },
     {
       "seconds": [
         35,
         41
       ],
-      "scene": "The current FineWeb headline fades into the unchanged approved final slide"
+      "scene": "The current resource-framing headline fades into the unchanged approved final slide"
     }
   ],
+  "resource_framing_comparison": {
+    "axis": "resource_benchmark_genre",
+    "baseline_year": 2015,
+    "comparison_year": 2024,
+    "change_sd": 0.7636370062713289,
+    "display": "0.76 standard deviations higher than in 2015",
+    "interpretation": "Unadjusted difference in annual mean framing scores; not a percentage of papers or a fitted decade slope."
+  },
   "headlines": [
     "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
     "Back then, formal-theory framing was at its highest level of the decade.",
     "But as time went on, accepted papers placed more emphasis on other contributions.",
     "By 2024, formal-theory framing had fallen to its decade low.",
-    "By contrast, FineWeb builds a resource that other researchers can use.",
+    "By contrast, in 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
     "NeurIPS framing shifted away from formal theory and toward resources and benchmarks."
   ],
   "headline_layout": "The same six sentences reflow in a left reading column; the illustrations retain equal x/y scaling in a right column. Timings, annual means and narrative are shared with the portrait version.",
@@ -296,12 +304,12 @@
   "layout": "landscape",
   "artifacts": {
     "evidence-framing-shift-wide.gif": {
-      "bytes": 16209285,
-      "sha256": "ca99b199101584777c1d7ed8110eb5803f0a46fcebb031f81ec499ff8670c1a9"
+      "bytes": 16407907,
+      "sha256": "a9937a7102d5089247fcf0789155e95407db834ccdff8cd65e3219c4f8e19f14"
     },
     "evidence-framing-shift-wide.mp4": {
-      "bytes": 1873827,
-      "sha256": "bf9e4cd3b5a129cf82fe5d1e4f5839d3ae63fe73a0704e95c6648fffca27e662"
+      "bytes": 1872950,
+      "sha256": "d1f5c2fa146d21f83e54bbbf0286ae9e912f3221992d340c6be58481fc41dbe3"
     }
   }
 }

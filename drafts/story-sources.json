@@ -1,5 +1,5 @@
 {
-  "status": "Local story animation for feedback; excluded from the release package",
+  "status": "Hosted summary animation; presentation update based on Kaggle v4 scientific data",
   "duration_seconds": 41,
   "video_fps": 30,
   "gif_fps": 25,
@@ -272,22 +272,30 @@
         27,
         35
       ],
-      "scene": "FineWeb, flowing web pages and its 2024 dataset scale"
+      "scene": "The aggregate 2024 resource-framing shift, with FineWeb as an illustrative resource and its 2024 dataset scale"
     },
     {
       "seconds": [
         35,
         41
       ],
-      "scene": "The current FineWeb headline fades into the unchanged approved final slide"
+      "scene": "The current resource-framing headline fades into the unchanged approved final slide"
     }
   ],
+  "resource_framing_comparison": {
+    "axis": "resource_benchmark_genre",
+    "baseline_year": 2015,
+    "comparison_year": 2024,
+    "change_sd": 0.7636370062713289,
+    "display": "0.76 standard deviations higher than in 2015",
+    "interpretation": "Unadjusted difference in annual mean framing scores; not a percentage of papers or a fitted decade slope."
+  },
   "headlines": [
     "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
     "Back then, formal-theory framing was at its highest level of the decade.",
     "But as time went on, accepted papers placed more emphasis on other contributions.",
     "By 2024, formal-theory framing had fallen to its decade low.",
-    "By contrast, FineWeb builds a resource that other researchers can use.",
+    "By contrast, in 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
     "NeurIPS framing shifted away from formal theory and toward resources and benchmarks."
   ],
   "headline_layout": "Each scene has one complete sentence in a fixed top-third reading area. Temporal and contrastive transitions connect the sentences into a continuous account of the paper's central finding. A separate large current-year label updates from 2015 to 2024 while the chart and timeline cursor move continuously. The year stays fully legible between updates.",
@@ -295,12 +303,12 @@
   "interpretation": "Accepted papers' titles and abstracts, 2015–2024. Examples illustrate framing, not typicality or research quality. Annual averages are unadjusted and partly reflect topic and track composition. Formal-theory framing declined; it did not disappear.",
   "artifacts": {
     "evidence-framing-shift.gif": {
-      "bytes": 20826904,
-      "sha256": "46e5722fee5cace5c51866bbf57d2e97d7e1ba773c6e04ecab147ae5c389a62a"
+      "bytes": 20873696,
+      "sha256": "11971888897ea9e67f840fc33848789f19d2d477533baadf17887f3aaa0b2a96"
     },
     "evidence-framing-shift.mp4": {
-      "bytes": 2173988,
-      "sha256": "e919421cce0e989b94855e4820911e72db9d5c1d82f589ae473fd9a438a4f396"
+      "bytes": 2201240,
+      "sha256": "581415483734d537e03c424b80413b397e0ea8ccf0d09af400a6979e075a9421"
     }
   }
 }

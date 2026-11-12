@@ -41,7 +41,8 @@
     "Add responsive left section bookmarks with scroll-position tracking and native anchor navigation",
     "Retain native video controls, reduced-motion still previews, and visibility-based playback",
     "Rename the first section bookmark to Summary",
-    "Zoom the galaxy with mouse-wheel or trackpad scrolling over its canvas; retain normal page scrolling outside the canvas"
+    "Zoom the galaxy with mouse-wheel or trackpad scrolling over its canvas; retain normal page scrolling outside the canvas",
+    "Replace the FineWeb headline with the approved 2024-versus-2015 aggregate comparison (+0.76 corpus SD); rebuild both MP4/GIF layouts and version media URLs to refresh cached playback"
   ],
   "embedded_payload_sha256": {
     "atlasData": "0785af1200f240f757af4f2eecab6aa6789a04183c31c704688a84f8d9e842b8",
@@ -63,12 +64,12 @@
     "eb584fc09845b8f1c5684313fa3f7e49969ac592e068923dd233654103671605",
     "78d1818e43d6971948205914faa586bdad9af146414dae338aa4307970faa96a",
     "7fee043447a81f10b2a46ee28a901cf5e8b8413814ccc14913f7cdd428a81eab",
-    "fdc388c0d7d12a4948da5e120be72b26c63ab2b9e53b25c7b5ef61563d5c5ea6",
+    "7fc5cb1c4a29c4e47608a934cb59652b1544090be42162a557d79979d86de4fb",
     "9f752055f25afda72a544200579a8cc872267773e1ff9fb0c859e42759c69b5f",
     "0e4c0f69ece0a0185431495a0e9f207da1abe6335de880363ba0ce06b932652f"
   ],
   "public_entry_url": "https://jasongodfrey.com/atlas",
-  "updated_at_utc": "2026-11-12T16:55:00.171716+00:00",
+  "updated_at_utc": "2026-11-12T17:06:33.487947+00:00",
   "release_script_element_sha256": [
     "78d1818e43d6971948205914faa586bdad9af146414dae338aa4307970faa96a",
     "7fee043447a81f10b2a46ee28a901cf5e8b8413814ccc14913f7cdd428a81eab",
@@ -80,5 +81,31 @@
     "section-nav.js": "e6204dc9751c7b3c42a34b03c838811f4f010edc6f8c3b5f8219ba6d922d874d"
   },
   "scientific_explorer_and_galaxy_scripts_byte_identical_to_release": false,
-  "script_changes": "The playback script removes custom Replay behavior and default status copy. The galaxy script adds wheel zoom and updates its accessible controls description. section-nav.js is new. Embedded data and the paper explorer script remain byte-identical; galaxy scientific calculations and selection behavior are unchanged."
+  "script_changes": "The playback script removes custom Replay behavior and default status copy, and uses versioned URLs for updated summary media. The galaxy script adds wheel zoom and updates its accessible controls description. section-nav.js is new. Embedded data and the paper explorer script remain byte-identical; galaxy scientific calculations and selection behavior are unchanged.",
+  "hosted_asset_sha256": {
+    "drafts/story-sources.json": "d540b7e40e59d1712180c74379c1b6cd06857ffdbe785692a92d1f052d1cf9c5",
+    "drafts/evidence-framing-shift.gif": "11971888897ea9e67f840fc33848789f19d2d477533baadf17887f3aaa0b2a96",
+    "drafts/evidence-framing-shift.mp4": "581415483734d537e03c424b80413b397e0ea8ccf0d09af400a6979e075a9421",
+    "drafts/evidence-framing-shift-2024.png": "0ca4d66abce329df0976aa3eff7a99acf10a130bbb49e44fdbb29976a4c07f3c",
+    "drafts/story-sources-wide.json": "2227549de01c8f6f04c51480118a0f27b3eeb36bb3212671dc84ff338b4e9cc1",
+    "drafts/evidence-framing-shift-wide-2024.png": "046e414564352efd9b45654e93d36485e60f6d8559c0add8476374eb222c2f21",
+    "drafts/evidence-framing-shift-wide.mp4": "d1f5c2fa146d21f83e54bbbf0286ae9e912f3221992d340c6be58481fc41dbe3",
+    "drafts/evidence-framing-shift-wide.gif": "a9937a7102d5089247fcf0789155e95407db834ccdff8cd65e3219c4f8e19f14"
+  },
+  "animation_renderer": {
+    "path": "tools/render_summary.py",
+    "sha256": "bef5da566bb1c3d93cc13fc2ef2adbf10deec2ebef42fe678ef4e279a04c3ee2",
+    "dependencies": "tools/requirements-render.txt",
+    "adapted_from": "Existing build_framing_animation.py renderer used for the published Atlas media",
+    "source_html": "index.html",
+    "comparison": {
+      "axis": "resource_benchmark_genre",
+      "baseline_year": 2015,
+      "comparison_year": 2024,
+      "change_sd": 0.7636370062713289,
+      "display": "0.76 standard deviations higher than in 2015",
+      "interpretation": "Unadjusted difference in annual mean framing scores; not a percentage of papers or a fitted decade slope."
+    },
+    "prior_renderer_sha256": "47464a555d7681b0dffd0d75a9b1f8879ccbba57c8887ae31f6281d79bd09579"
+  }
 }
