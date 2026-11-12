@@ -62,18 +62,18 @@ LABELS = ["Resources &\nbenchmarks", "Formal\ntheory", "Empirical\nperformance",
 COLORS = [CYAN, THEORY, BLUE, VIOLET, GREEN]
 STORY_HEADLINES = [
     "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
-    "Back then, formal-theory framing was at its highest level of the decade.",
+    "Back then, accepted NeurIPS papers emphasized formal theory more than in any other year studied.",
     "But as time went on, accepted papers placed more emphasis on other contributions.",
-    "By 2024, formal-theory framing had fallen to its decade low.",
-    "By contrast, in 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
+    "By contrast, in 2024, accepted papers emphasized formal theory less than in any other year studied.",
+    "In 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
     "NeurIPS framing shifted away from formal theory and toward resources and benchmarks.",
 ]
 HEADLINE_LINES = [
     ["This NeurIPS paper used", "formal theory to prove how", "fast an algorithm converges."],
-    ["Back then, formal-theory", "framing was at its highest", "level of the decade."],
+    ["Back then, accepted NeurIPS", "papers emphasized formal theory", "more than in any other", "year studied."],
     ["But as time went on, accepted", "papers placed more emphasis", "on other contributions."],
-    ["By 2024, formal-theory", "framing had fallen", "to its decade low."],
-    ["By contrast, in 2024,", "resource-and-benchmark framing", "was 0.76 standard deviations", "higher than in 2015."],
+    ["By contrast, in 2024,", "accepted papers emphasized", "formal theory less than in", "any other year studied."],
+    ["In 2024,", "resource-and-benchmark framing", "was 0.76 standard deviations", "higher than in 2015."],
     ["NeurIPS framing shifted away", "from formal theory and toward", "resources and benchmarks."],
 ]
 # Preserve the approved closing design while fading the current resource-framing headline.

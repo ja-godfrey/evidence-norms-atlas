@@ -292,10 +292,10 @@
   },
   "headlines": [
     "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
-    "Back then, formal-theory framing was at its highest level of the decade.",
+    "Back then, accepted NeurIPS papers emphasized formal theory more than in any other year studied.",
     "But as time went on, accepted papers placed more emphasis on other contributions.",
-    "By 2024, formal-theory framing had fallen to its decade low.",
-    "By contrast, in 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
+    "By contrast, in 2024, accepted papers emphasized formal theory less than in any other year studied.",
+    "In 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
     "NeurIPS framing shifted away from formal theory and toward resources and benchmarks."
   ],
   "headline_layout": "Each scene has one complete sentence in a fixed top-third reading area. Temporal and contrastive transitions connect the sentences into a continuous account of the paper's central finding. A separate large current-year label updates from 2015 to 2024 while the chart and timeline cursor move continuously. The year stays fully legible between updates.",
@@ -303,12 +303,12 @@
   "interpretation": "Accepted papers' titles and abstracts, 2015–2024. Examples illustrate framing, not typicality or research quality. Annual averages are unadjusted and partly reflect topic and track composition. Formal-theory framing declined; it did not disappear.",
   "artifacts": {
     "evidence-framing-shift.gif": {
-      "bytes": 20873696,
-      "sha256": "11971888897ea9e67f840fc33848789f19d2d477533baadf17887f3aaa0b2a96"
+      "bytes": 21247786,
+      "sha256": "11be80e4f5a03c823c1b9ea44bf198f5f3d4f8c973696cf83947332b8d29757d"
     },
     "evidence-framing-shift.mp4": {
-      "bytes": 2201240,
-      "sha256": "581415483734d537e03c424b80413b397e0ea8ccf0d09af400a6979e075a9421"
+      "bytes": 2255913,
+      "sha256": "9c86cda5631f1bafcc2934702fd3f9a852df118976e0035db255ae0f83dbf340"
     }
   }
 }

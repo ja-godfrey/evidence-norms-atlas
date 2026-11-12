@@ -292,10 +292,10 @@
   },
   "headlines": [
     "This NeurIPS paper used formal theory to prove how fast an algorithm converges.",
-    "Back then, formal-theory framing was at its highest level of the decade.",
+    "Back then, accepted NeurIPS papers emphasized formal theory more than in any other year studied.",
     "But as time went on, accepted papers placed more emphasis on other contributions.",
-    "By 2024, formal-theory framing had fallen to its decade low.",
-    "By contrast, in 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
+    "By contrast, in 2024, accepted papers emphasized formal theory less than in any other year studied.",
+    "In 2024, resource-and-benchmark framing was 0.76 standard deviations higher than in 2015.",
     "NeurIPS framing shifted away from formal theory and toward resources and benchmarks."
   ],
   "headline_layout": "The same six sentences reflow in a left reading column; the illustrations retain equal x/y scaling in a right column. Timings, annual means and narrative are shared with the portrait version.",
@@ -304,12 +304,12 @@
   "layout": "landscape",
   "artifacts": {
     "evidence-framing-shift-wide.gif": {
-      "bytes": 16407907,
-      "sha256": "a9937a7102d5089247fcf0789155e95407db834ccdff8cd65e3219c4f8e19f14"
+      "bytes": 16748377,
+      "sha256": "4b4182944d0bbdfc8f149d6dee08026c3f2718fd5cdd2cc837fa7cfcc3d99189"
     },
     "evidence-framing-shift-wide.mp4": {
-      "bytes": 1872950,
-      "sha256": "d1f5c2fa146d21f83e54bbbf0286ae9e912f3221992d340c6be58481fc41dbe3"
+      "bytes": 1934181,
+      "sha256": "915dabc4b38b70dc571f4f0e5117c7911d4a76f317ec99535112e91196e272ec"
     }
   }
 }

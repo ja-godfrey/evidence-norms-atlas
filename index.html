@@ -165,9 +165,9 @@
       <section class="story-intro" id="storyIntro" aria-label="Summary" data-atlas-section tabindex="-1">
     <div class="story-frame">
       <video id="animation" controls muted loop playsinline preload="metadata" poster="drafts/evidence-framing-shift-wide-poster.png" aria-label="Evidence-framing animation, 2015 to 2024" aria-describedby="storyDescription">
-        <source src="drafts/evidence-framing-shift.mp4?v=20261112-summary" media="(max-width:680px)" type="video/mp4">
-        <source src="drafts/evidence-framing-shift-wide.mp4?v=20261112-summary" type="video/mp4">
-        <p><a href="drafts/evidence-framing-shift-wide.mp4?v=20261112-summary">Open the animation as an MP4.</a></p>
+        <source src="drafts/evidence-framing-shift.mp4?v=20261112-theory" media="(max-width:680px)" type="video/mp4">
+        <source src="drafts/evidence-framing-shift-wide.mp4?v=20261112-theory" type="video/mp4">
+        <p><a href="drafts/evidence-framing-shift-wide.mp4?v=20261112-theory">Open the animation as an MP4.</a></p>
       </video>
       <div class="story-still" id="stillPreview" hidden><picture><source media="(max-width:680px)" srcset="drafts/evidence-framing-shift-poster.png"><img src="drafts/evidence-framing-shift-wide-poster.png" alt="Still preview of the evidence-framing animation"></picture></div>
     </div>
@@ -177,7 +177,7 @@
       <summary>Animation sources and downloads</summary>
       <p id="storyDescription">The profiles show annual mean framing on a fixed shared scale. Movement between years is interpolated. The two paper examples illustrate contrasting framing; they are not representative of their years.</p>
       <p>Examples: <a href="https://proceedings.neurips.cc/paper_files/paper/2015/hash/c058f544c737782deacefa532d9add4c-Abstract.html">On the Global Linear Convergence of Frank-Wolfe Optimization Variants</a> (2015) and <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/370df50ccfdf8bde18f8f9c2d9151bda-Abstract-Datasets_and_Benchmarks_Track.html">The FineWeb Datasets</a> (2024).</p>
-      <div class="story-downloads"><a id="downloadAnimation" href="drafts/evidence-framing-shift-wide.mp4?v=20261112-summary" download>MP4 · 16:9</a><a id="downloadGif" href="drafts/evidence-framing-shift-wide.gif?v=20261112-summary" download>GIF · 16:9</a><a id="downloadStill" href="drafts/evidence-framing-shift-wide-poster.png">Still image</a><a id="animationSources" href="drafts/story-sources-wide.json?v=20261112-summary">Sources and data</a></div>
+      <div class="story-downloads"><a id="downloadAnimation" href="drafts/evidence-framing-shift-wide.mp4?v=20261112-theory" download>MP4 · 16:9</a><a id="downloadGif" href="drafts/evidence-framing-shift-wide.gif?v=20261112-theory" download>GIF · 16:9</a><a id="downloadStill" href="drafts/evidence-framing-shift-wide-poster.png">Still image</a><a id="animationSources" href="drafts/story-sources-wide.json?v=20261112-theory">Sources and data</a></div>
     </details>
 
 </section>
@@ -584,7 +584,7 @@
   const status = document.getElementById('animationStatus');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobile = window.matchMedia('(max-width:680px)');
-  const mediaVersion = '?v=20261112-summary';
+  const mediaVersion = '?v=20261112-theory';
   let inView = true;
   let pausedByVisibility = false;
   let formatRevision = 0;

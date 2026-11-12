@@ -24,7 +24,7 @@ GitHub Pages serves the `main` branch root; `.nojekyll` preserves these static f
 
 The left navigation marks the current section and links to the summary, yearly profiles, paper search, and paper galaxy. On narrow screens it uses compact markers; keyboard focus or pointer hover shows their labels. The native video controls remain available, and reduced-motion preferences show a still preview until the user chooses Play. Scrolling over the galaxy zooms the map; scrolling elsewhere moves the page.
 
-To rebuild the summary media, use Python 3.12 and FFmpeg. Install `tools/requirements-render.txt` in a virtual environment, then run `python tools/render_summary.py --layout landscape` and `python tools/render_summary.py --layout portrait`. The renderer reads the embedded data in `index.html` and writes the MP4s, GIFs, stills and source records to `drafts/`. The summary's 0.76 SD comparison is the unadjusted difference between the 2024 and 2015 resource-and-benchmark annual means, not a percentage of papers or a fitted decade slope.
+To rebuild the summary media, use Python 3.12 and FFmpeg. Install `tools/requirements-render.txt` in a virtual environment, then run `python tools/render_summary.py --layout landscape` and `python tools/render_summary.py --layout portrait`. The renderer reads the embedded data in `index.html` and writes the MP4s, GIFs, stills and source records to `drafts/`. The summary's 0.76 SD comparison is the unadjusted difference between the 2024 and 2015 resource-and-benchmark annual means, not a percentage of papers or a fitted decade slope. The theory comparison likewise ranks annual mean framing scores across 2015–2024; it does not count or rank paper types.
 
 ## License
 
