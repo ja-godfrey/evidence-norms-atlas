@@ -22,7 +22,7 @@ Open `index.html` in a current browser, or run `python3 -m http.server 8000` in 
 
 GitHub Pages serves the `main` branch root; `.nojekyll` preserves these static files. The desktop animation is 16:9; the mobile animation is 9:16. Annual and paper profiles, search, and maps run in the browser.
 
-The left navigation marks the current section and links to the animation, yearly profiles, paper search, and paper galaxy. On narrow screens it uses compact markers; keyboard focus or pointer hover shows their labels. The native video controls remain available, and reduced-motion preferences show a still preview until the user chooses Play.
+The left navigation marks the current section and links to the summary, yearly profiles, paper search, and paper galaxy. On narrow screens it uses compact markers; keyboard focus or pointer hover shows their labels. The native video controls remain available, and reduced-motion preferences show a still preview until the user chooses Play. Scrolling over the galaxy zooms the map; scrolling elsewhere moves the page.
 
 ## License
 

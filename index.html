@@ -149,7 +149,7 @@
   <div class="runtime-status" id="runtimeStatus">Loading the papers.</div>
   <nav class="section-nav" aria-label="Page sections">
     <ol>
-      <li><a href="#storyIntro" aria-label="Animation" aria-current="location"><span class="section-nav-label" aria-hidden="true">Animation</span></a></li>
+      <li><a href="#storyIntro" aria-label="Summary" aria-current="location"><span class="section-nav-label" aria-hidden="true">Summary</span></a></li>
       <li><a href="#annualProfiles" aria-label="Yearly profiles"><span class="section-nav-label" aria-hidden="true">Yearly profiles</span></a></li>
       <li><a href="#paperExplorer" aria-label="Find a paper"><span class="section-nav-label" aria-hidden="true">Find a paper</span></a></li>
       <li><a href="#paperGalaxy" aria-label="Paper galaxy"><span class="section-nav-label" aria-hidden="true">Paper galaxy</span></a></li>
@@ -162,7 +162,7 @@
     </header>
     <noscript><p class="runtime-status">Enable JavaScript to explore the charts and search papers. This page works offline.</p></noscript>
     <section class="overview" aria-label="Animation and yearly profiles">
-      <section class="story-intro" id="storyIntro" aria-label="Animation" data-atlas-section tabindex="-1">
+      <section class="story-intro" id="storyIntro" aria-label="Summary" data-atlas-section tabindex="-1">
     <div class="story-frame">
       <video id="animation" controls muted loop playsinline preload="metadata" poster="drafts/evidence-framing-shift-wide-poster.png" aria-label="Evidence-framing animation, 2015 to 2024" aria-describedby="storyDescription">
         <source src="drafts/evidence-framing-shift.mp4" media="(max-width:680px)" type="video/mp4">
@@ -240,9 +240,9 @@
   </div>
   <div class="galaxy-layout">
     <div class="galaxy-stage">
-      <canvas id="galaxyCanvas" tabindex="0" role="img" aria-label="Interactive three-dimensional map of paper similarity. Drag or use arrow keys to rotate, plus and minus to zoom. Use paper search or Related papers to select a paper with the keyboard.">Search above or use the Related papers links to explore paper similarity.</canvas>
+      <canvas id="galaxyCanvas" tabindex="0" role="img" aria-label="Interactive three-dimensional map of paper similarity. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom. Use paper search or Related papers to select a paper with the keyboard.">Search above or use the Related papers links to explore paper similarity.</canvas>
       <div class="galaxy-tooltip" id="galaxyTooltip" hidden aria-hidden="true"></div>
-      <div class="galaxy-stage-note"><span>Drag to rotate · click a paper</span><span class="galaxy-year-key"><span>2015</span><i class="galaxy-gradient"></i><span>2024</span></span></div>
+      <div class="galaxy-stage-note"><span>Drag to rotate · scroll to zoom · click a paper</span><span class="galaxy-year-key"><span>2015</span><i class="galaxy-gradient"></i><span>2024</span></span></div>
     </div>
     <div class="galaxy-selection">
       <div class="galaxy-meta" id="galaxySelectedYear"></div>
@@ -816,7 +816,7 @@
     canvas.dataset.mode = mode;
     const framing = mode === 'framing';
     const nonlinearFraming = framing && model.method === 'UMAP';
-    canvas.setAttribute('aria-label', `Interactive three-dimensional map of ${framing ? 'evidence-framing' : 'title-and-abstract topic'} similarity. Drag or use arrow keys to rotate, plus and minus to zoom. Use paper search or the ${framing ? 'Similar framing' : 'Related topics'} links to select a paper with the keyboard.`);
+    canvas.setAttribute('aria-label', `Interactive three-dimensional map of ${framing ? 'evidence-framing' : 'title-and-abstract topic'} similarity. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom. Use paper search or the ${framing ? 'Similar framing' : 'Related topics'} links to select a paper with the keyboard.`);
     document.getElementById('galaxyRelatedLabel').textContent = framing ? 'Similar framing' : 'Related topics';
     document.getElementById('galaxyCaption').textContent = framing
       ? 'A 3D view of evidence-framing similarity. Related papers use all five radar axes.'
@@ -847,6 +847,14 @@
   canvas.addEventListener('pointercancel',()=>{drag=null;tooltip.hidden=true;});
   canvas.addEventListener('pointerleave',()=>{tooltip.hidden=true;});
   function adjustZoom(delta){zoom=Math.max(.55,Math.min(4,zoom*delta));schedule();}
+  canvas.addEventListener('wheel', e => {
+    e.preventDefault();
+    tooltip.hidden = true;
+    // Normalize mouse-wheel lines and pages to the pixel deltas used by trackpads.
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? height : 1;
+    const delta = Math.max(-240, Math.min(240, e.deltaY * unit));
+    adjustZoom(Math.exp(-delta * .002));
+  }, {passive: false});
   function reset(){yaw=initialYaw;pitch=initialPitch;zoom=1;tooltip.hidden=true;schedule();}
   document.getElementById('galaxyZoomIn').addEventListener('click',()=>adjustZoom(1.2));
   document.getElementById('galaxyZoomOut').addEventListener('click',()=>adjustZoom(1/1.2));

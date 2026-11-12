@@ -39,7 +39,9 @@
     "Use the current paper title in the masthead and metadata; link the author name to the personal website and omit the web byline affiliation",
     "Remove the animation runtime label, custom Replay button, default controls hint, and annual-profile search shortcut",
     "Add responsive left section bookmarks with scroll-position tracking and native anchor navigation",
-    "Retain native video controls, reduced-motion still previews, and visibility-based playback"
+    "Retain native video controls, reduced-motion still previews, and visibility-based playback",
+    "Rename the first section bookmark to Summary",
+    "Zoom the galaxy with mouse-wheel or trackpad scrolling over its canvas; retain normal page scrolling outside the canvas"
   ],
   "embedded_payload_sha256": {
     "atlasData": "0785af1200f240f757af4f2eecab6aa6789a04183c31c704688a84f8d9e842b8",
@@ -63,10 +65,10 @@
     "7fee043447a81f10b2a46ee28a901cf5e8b8413814ccc14913f7cdd428a81eab",
     "fdc388c0d7d12a4948da5e120be72b26c63ab2b9e53b25c7b5ef61563d5c5ea6",
     "9f752055f25afda72a544200579a8cc872267773e1ff9fb0c859e42759c69b5f",
-    "4aadb78d97a642f150dc253da4a6a1f48189a98fec74a7d18fec40f97b531733"
+    "0e4c0f69ece0a0185431495a0e9f207da1abe6335de880363ba0ce06b932652f"
   ],
   "public_entry_url": "https://jasongodfrey.com/atlas",
-  "updated_at_utc": "2026-11-12T16:44:16.483877+00:00",
+  "updated_at_utc": "2026-11-12T16:55:00.171716+00:00",
   "release_script_element_sha256": [
     "78d1818e43d6971948205914faa586bdad9af146414dae338aa4307970faa96a",
     "7fee043447a81f10b2a46ee28a901cf5e8b8413814ccc14913f7cdd428a81eab",
@@ -77,6 +79,6 @@
   "external_script_sha256": {
     "section-nav.js": "e6204dc9751c7b3c42a34b03c838811f4f010edc6f8c3b5f8219ba6d922d874d"
   },
-  "scientific_explorer_and_galaxy_scripts_byte_identical_to_release": true,
-  "script_changes": "Only the presentation playback script differs from the original inline scripts; section-nav.js is new. Scientific data, annual profiles, paper search, and galaxy behavior remain byte-identical."
+  "scientific_explorer_and_galaxy_scripts_byte_identical_to_release": false,
+  "script_changes": "The playback script removes custom Replay behavior and default status copy. The galaxy script adds wheel zoom and updates its accessible controls description. section-nav.js is new. Embedded data and the paper explorer script remain byte-identical; galaxy scientific calculations and selection behavior are unchanged."
 }
