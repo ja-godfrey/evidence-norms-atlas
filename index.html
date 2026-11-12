@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evidence Norms Atlas | NeurIPS 2015–2024</title>
+  <title>Auditing Evidence Framing at NeurIPS: A Decade-Scale Study of Accepted Papers</title>
   <style>
     :root{--bg:#eef3f1;--surface:#fffdf8;--ink:#172c30;--muted:#53676a;--line:#d2dfda;--line-strong:#7c9894;--teal:#007c89;--gold:#a65f00}
     *{box-sizing:border-box}[hidden]{display:none!important}
@@ -17,7 +17,6 @@
     .annual-panel{min-width:0;display:grid;gap:8px;align-content:start;padding:28px 24px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
     .section-heading{display:block;max-width:780px;margin:auto;text-align:center}
     .annual-panel>.helper{text-align:center}
-    .section-heading a{display:inline-block;margin-top:8px;font-size:.82rem;white-space:nowrap}
     .helper{font-size:.8rem;color:var(--muted);line-height:1.5}
     .radar{width:100%;max-width:540px;margin:auto;min-width:0}
     .radar svg{width:100%;height:auto;display:block}
@@ -49,24 +48,22 @@
     .methods{padding:17px 0 14px;margin-top:8px}footer{padding-top:12px;border-top:1px solid var(--line);font-size:.8rem}
     .runtime-status{margin:12px auto;max-width:700px;border:1px solid #ccb17c;border-radius:6px;padding:12px;background:#fff8e5;color:#503916}
     @media(max-width:900px){.search-layout{gap:20px}.page{width:calc(100% - 28px)}}
-    @media(max-width:680px){.overview{gap:14px}.annual-panel{width:100%;padding:22px 14px}.section-heading h1{font-size:1.35rem}.search-layout{grid-template-columns:1fr;gap:18px}.explorer{padding:16px;margin-top:14px}.explorer-heading{display:block}.explorer-heading .helper{margin-top:5px}.paper-list{max-height:280px}.paper-profile{border-top:1px solid var(--line);padding-top:16px}.profile-actions .back-to-results{display:inline-block}.radar{max-width:480px}.radar .axis-name{font-size:22px}.page{padding-top:14px}.legend{font-size:.75rem;gap:8px 14px}}
+    @media(max-width:680px){.overview{gap:14px}.annual-panel{width:100%;padding:22px 14px}.section-heading h2{font-size:1.35rem}.search-layout{grid-template-columns:1fr;gap:18px}.explorer{padding:16px;margin-top:14px}.explorer-heading{display:block}.explorer-heading .helper{margin-top:5px}.paper-list{max-height:280px}.paper-profile{border-top:1px solid var(--line);padding-top:16px}.profile-actions .back-to-results{display:inline-block}.radar{max-width:480px}.radar .axis-name{font-size:22px}.page{padding-top:14px}.legend{font-size:.75rem;gap:8px 14px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
   <style id="storyStyles">
   .story-intro{width:100%;min-width:0;justify-self:center;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
-  .story-player-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
-  .story-runtime{color:var(--muted);font-size:.7rem;font-weight:650;letter-spacing:.04em}
-  .story-replay{min-height:44px;border:1px solid var(--line);border-radius:5px;padding:7px 12px;background:var(--surface);color:var(--ink);font-size:.8rem;cursor:pointer}
   .story-frame{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line-strong);border-radius:9px;background:#10151f}
   .story-frame video,.story-frame picture,.story-frame img{display:block;width:100%;height:100%;object-fit:contain}
   .story-still{position:absolute;inset:0}
   .story-still-controls{display:flex;justify-content:center;padding-top:8px}
   .story-play{min-height:44px;border:0;border-radius:6px;padding:8px 14px;background:var(--ink);color:var(--surface);font-weight:650;cursor:pointer}
-  .story-status{font-size:.7rem;color:var(--muted);margin-top:6px;min-height:1.4em}
+  .story-status{font-size:.7rem;color:var(--muted);margin-top:6px}
+  .story-status:empty{display:none}
   .story-sources{margin-top:4px;font-size:.73rem;line-height:1.5}
   .story-sources p{margin:8px 0 0}
   .story-downloads{display:flex;flex-wrap:wrap;gap:5px 12px;margin-top:8px}
-  @media(max-width:680px){.story-intro{padding:12px}.story-frame{aspect-ratio:9/16;max-width:360px;margin:auto}.story-player-bar,.story-status,.story-sources{max-width:360px;margin-left:auto;margin-right:auto}}
+  @media(max-width:680px){.story-intro{padding:12px}.story-frame{aspect-ratio:9/16;max-width:360px;margin:auto}.story-status,.story-sources{max-width:360px;margin-left:auto;margin-right:auto}}
 </style>
 <style id="galaxyStyles">
   .galaxy-section{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
@@ -108,32 +105,64 @@
 </style>
   <meta name="description" content="Explore evidence framing in 19,361 accepted NeurIPS papers from 2015 to 2024, with annual profiles, paper search, and interactive maps.">
   <link rel="canonical" href="https://ja-godfrey.github.io/evidence-norms-atlas/">
-  <meta property="og:title" content="Evidence Norms Atlas">
+  <meta property="og:title" content="Auditing Evidence Framing at NeurIPS: A Decade-Scale Study of Accepted Papers">
   <meta property="og:description" content="An interactive companion to Auditing Evidence Framing at NeurIPS: A Decade-Scale Study of Accepted Papers.">
   <meta property="og:url" content="https://ja-godfrey.github.io/evidence-norms-atlas/">
   <meta property="og:type" content="website">
   <meta name="author" content="Jason Godfrey">
   <style id="hostingStyles">
     .atlas-masthead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 18px;flex-wrap:wrap}
-    .atlas-brand{font-size:1.1rem;font-weight:750;letter-spacing:-.02em}
+    .atlas-heading{flex:1 1 540px;min-width:0}
+    .atlas-brand{font-size:1.1rem;font-weight:750;letter-spacing:-.02em;line-height:1.35}
     .atlas-byline{font-size:.78rem;color:var(--muted);margin-top:2px}
+    .atlas-byline a{display:inline-flex;align-items:center;min-height:32px;color:inherit}
     .atlas-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem}
     .atlas-links a{display:inline-flex;align-items:center;min-height:40px}
-    @media(max-width:680px){.atlas-masthead{gap:4px;padding-bottom:12px}.atlas-links{width:100%;gap:6px 20px}}
+    .section-heading h2{font-size:1.5rem;letter-spacing:-.025em}
+    .page{width:min(1100px,calc(100% - 200px));margin-left:max(180px,calc((100% - 1100px)/2));margin-right:auto}
+    [data-atlas-section]{scroll-margin-top:20px}
+    .section-nav{position:fixed;left:max(24px,calc((100% - 1400px)/2));top:50%;transform:translateY(-50%);width:128px;z-index:5}
+    .section-nav::before{content:"";position:absolute;left:4px;top:22px;bottom:22px;width:1px;background:var(--line)}
+    .section-nav ol{list-style:none;margin:0;padding:0}
+    .section-nav a{position:relative;display:flex;align-items:center;gap:12px;min-height:44px;color:var(--muted);font-size:.75rem;text-decoration:none}
+    .section-nav a::before{content:"";flex:0 0 9px;height:9px;border:1px solid var(--line-strong);border-radius:50%;background:var(--bg)}
+    .section-nav a[aria-current=location]{color:var(--ink);font-weight:650}
+    .section-nav a[aria-current=location]::before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 3px var(--bg)}
+    .section-nav a:hover{color:var(--ink)}
+    .section-nav a:hover::before{border-color:var(--teal)}
+    @media(max-width:1020px){
+      .page{width:calc(100% - 64px);margin-left:48px}
+      .section-nav{left:8px;width:28px}
+      .section-nav::before{left:13px}
+      .section-nav a{justify-content:center}
+      .section-nav-label{position:absolute;left:36px;white-space:nowrap;padding:5px 9px;border:1px solid var(--line);border-radius:5px;background:var(--surface);opacity:0;pointer-events:none}
+      .section-nav a:focus-visible .section-nav-label{opacity:1}
+    }
+    @media(max-width:1020px) and (hover:hover){.section-nav a:hover .section-nav-label{opacity:1}}
+    @media(max-width:680px){.atlas-masthead{gap:4px;padding-bottom:12px}.atlas-links{width:100%;gap:6px 20px}.section-heading h2{font-size:1.35rem}}
+    @media print{.section-nav{display:none}.page{width:100%;margin:0}}
   </style>
+  <script src="section-nav.js" defer></script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23fffdf8%22%2F%3E%3Cpath%20d%3D%22M32%207%2057%2025%2047%2055%2017%2055%207%2025Z%22%20fill%3D%22none%22%20stroke%3D%22%239eb9b4%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M32%2013%2041%2029%2045%2051%2022%2048%2014%2026Z%22%20fill%3D%22%23007c8930%22%20stroke%3D%22%23007c89%22%20stroke-width%3D%223%22%2F%3E%3C%2Fsvg%3E">
 </head>
 <body>
   <div class="runtime-status" id="runtimeStatus">Loading the papers.</div>
+  <nav class="section-nav" aria-label="Page sections">
+    <ol>
+      <li><a href="#storyIntro" aria-label="Animation" aria-current="location"><span class="section-nav-label" aria-hidden="true">Animation</span></a></li>
+      <li><a href="#annualProfiles" aria-label="Yearly profiles"><span class="section-nav-label" aria-hidden="true">Yearly profiles</span></a></li>
+      <li><a href="#paperExplorer" aria-label="Find a paper"><span class="section-nav-label" aria-hidden="true">Find a paper</span></a></li>
+      <li><a href="#paperGalaxy" aria-label="Paper galaxy"><span class="section-nav-label" aria-hidden="true">Paper galaxy</span></a></li>
+    </ol>
+  </nav>
   <main class="page">
     <header class="atlas-masthead">
-      <div><p class="atlas-brand">Evidence Norms Atlas</p><p class="atlas-byline">Jason Godfrey · University of Michigan</p></div>
+      <div class="atlas-heading"><h1 class="atlas-brand">Auditing Evidence Framing at NeurIPS: A Decade-Scale Study of Accepted Papers</h1><p class="atlas-byline"><a href="https://jasongodfrey.com/">Jason Godfrey</a></p></div>
       <nav class="atlas-links" aria-label="Research resources"><a href="https://openreview.net/forum?id=d3J7bxCLHH">Paper</a><a href="https://www.kaggle.com/datasets/jasongodfrey/neurips-evidence-framing-audit/versions/4">Data &amp; code</a><a href="https://github.com/ja-godfrey/evidence-norms-atlas">Site source</a></nav>
     </header>
     <noscript><p class="runtime-status">Enable JavaScript to explore the charts and search papers. This page works offline.</p></noscript>
     <section class="overview" aria-label="Animation and yearly profiles">
-      <header class="story-intro" id="storyIntro">
-    <div class="story-player-bar"><span class="story-runtime">The shift in 41 seconds</span><button class="story-replay" id="replayAnimation" type="button">Replay ↻</button></div>
+      <section class="story-intro" id="storyIntro" aria-label="Animation" data-atlas-section tabindex="-1">
     <div class="story-frame">
       <video id="animation" controls muted loop playsinline preload="metadata" poster="drafts/evidence-framing-shift-wide-poster.png" aria-label="Evidence-framing animation, 2015 to 2024" aria-describedby="storyDescription">
         <source src="drafts/evidence-framing-shift.mp4" media="(max-width:680px)" type="video/mp4">
@@ -143,7 +172,7 @@
       <div class="story-still" id="stillPreview" hidden><picture><source media="(max-width:680px)" srcset="drafts/evidence-framing-shift-poster.png"><img src="drafts/evidence-framing-shift-wide-poster.png" alt="Still preview of the evidence-framing animation"></picture></div>
     </div>
     <div class="story-still-controls" id="stillControls" hidden><button class="story-play" id="playAnimation" type="button">Play animation</button></div>
-    <p class="story-status" id="animationStatus" role="status">Pause or scrub with the video controls.</p>
+    <p class="story-status" id="animationStatus" role="status"></p>
     <details class="story-sources" id="storySources">
       <summary>Animation sources and downloads</summary>
       <p id="storyDescription">The profiles show annual mean framing on a fixed shared scale. Movement between years is interpolated. The two paper examples illustrate contrasting framing; they are not representative of their years.</p>
@@ -151,9 +180,9 @@
       <div class="story-downloads"><a id="downloadAnimation" href="drafts/evidence-framing-shift-wide.mp4" download>MP4 · 16:9</a><a id="downloadGif" href="drafts/evidence-framing-shift-wide.gif" download>GIF · 16:9</a><a id="downloadStill" href="drafts/evidence-framing-shift-wide-poster.png">Still image</a><a id="animationSources" href="drafts/story-sources-wide.json">Sources and data</a></div>
     </details>
 
-</header>
-      <section class="annual-panel" aria-labelledby="annualTitle">
-        <div class="section-heading"><h1 id="annualTitle">NeurIPS’s evidence framing shifted away from formal theory toward resources and benchmarks.</h1><a href="#paperSearch">Find your paper ↓</a></div>
+</section>
+      <section class="annual-panel" id="annualProfiles" aria-labelledby="annualTitle" data-atlas-section tabindex="-1">
+        <div class="section-heading"><h2 id="annualTitle">NeurIPS’s evidence framing shifted away from formal theory toward resources and benchmarks.</h2></div>
         <p class="helper">Move the year slider to compare each annual profile with 2015.</p>
         <div class="radar" id="yearlyRadar"></div>
         <div class="legend"><span><i class="swatch baseline" aria-hidden="true"></i>2015 baseline</span><span><i class="swatch" aria-hidden="true"></i><b id="yearLegend">2024</b></span></div>
@@ -163,7 +192,7 @@
         </div>
       </section>
     </section>
-    <section class="explorer" id="paperExplorer" aria-labelledby="searchTitle">
+    <section class="explorer" id="paperExplorer" aria-labelledby="searchTitle" data-atlas-section tabindex="-1">
       <div class="explorer-heading"><h2 id="searchTitle">Find your paper</h2><p class="helper">Select a paper to see it over its publication-year average.</p></div>
       <div class="paper-examples" id="paperExamples" aria-label="Examples from the animation">
         <span>Examples:</span>
@@ -191,7 +220,7 @@
         </section>
       </div>
     </section>
-    <section id="paperGalaxy" class="galaxy-section" aria-labelledby="galaxyTitle">
+    <section id="paperGalaxy" class="galaxy-section" aria-labelledby="galaxyTitle" data-atlas-section tabindex="-1">
   <div class="galaxy-heading">
     <div class="galaxy-heading-main">
       <h2 id="galaxyTitle">Paper galaxy</h2>
@@ -603,18 +632,16 @@
     controls.hidden = false;
     status.textContent = 'Still preview · Play when you’re ready.';
   }
-  async function play(restart = false) {
+  async function play() {
     still.hidden = true;
     controls.hidden = true;
     video.hidden = false;
     if (restoreState) {
       restoreState.playing = true;
-      if (restart) restoreState.time = 0;
     }
-    if (restart) video.currentTime = 0;
     try {
       await video.play();
-      status.textContent = 'Pause or scrub with the video controls.';
+      status.textContent = '';
     } catch (error) {
       if (error.name !== 'AbortError') status.textContent = 'Press Play in the video controls to start.';
     }
@@ -634,7 +661,6 @@
     play();
     video.focus({preventScroll: true});
   });
-  document.getElementById('replayAnimation').addEventListener('click', () => play(true));
   motion.addEventListener('change', event => { if (event.matches) showStill(); });
   mobile.addEventListener('change', () => selectFormat());
   document.addEventListener('visibilitychange', updateVisibility);
